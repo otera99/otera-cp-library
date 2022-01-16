@@ -207,6 +207,11 @@ data:
     - icon: ':warning:'
       path: ac-library/tools/generate_zip.py
       title: ac-library/tools/generate_zip.py
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: expander.py
+      title: expander.py
   - name: library/data_structure
     pages:
     - icon: ':x:'
