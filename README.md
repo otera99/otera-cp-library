@@ -1,5 +1,7 @@
 # otera-cp-library
 
+[![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://otera99.github.io/otera-cp-library/)
+
 ## 概要
 
 競技プログラミング向けの C++ ライブラリです．[AtCoder Library (ACL)](https://github.com/atcoder/ac-library) の使用を前提としています.
