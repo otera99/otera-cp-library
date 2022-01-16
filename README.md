@@ -1,5 +1,6 @@
 # otera-cp-library
 
+[![Actions Status](https://github.com/otera99/otera-cp-library/workflows/verify/badge.svg)](https://github.com/otera99/otera-cp-library/actions)
 [![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://otera99.github.io/otera-cp-library/)
 
 ## 概要
