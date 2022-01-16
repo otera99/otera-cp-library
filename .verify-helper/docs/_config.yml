@@ -1,1 +1,1 @@
-exclude: [scripts/, ac-library/]
+exclude: [expander.py, ac-library/]
