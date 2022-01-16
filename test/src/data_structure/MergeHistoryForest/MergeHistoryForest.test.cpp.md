@@ -2,24 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':x:'
-    path: ac-library/atcoder/convolution.hpp
-    title: ac-library/atcoder/convolution.hpp
-  - icon: ':x:'
-    path: ac-library/atcoder/dsu.hpp
-    title: ac-library/atcoder/dsu.hpp
-  - icon: ':x:'
-    path: ac-library/atcoder/internal_bit.hpp
-    title: ac-library/atcoder/internal_bit.hpp
-  - icon: ':x:'
-    path: ac-library/atcoder/internal_math.hpp
-    title: ac-library/atcoder/internal_math.hpp
-  - icon: ':x:'
-    path: ac-library/atcoder/internal_type_traits.hpp
-    title: ac-library/atcoder/internal_type_traits.hpp
-  - icon: ':x:'
-    path: ac-library/atcoder/modint.hpp
-    title: ac-library/atcoder/modint.hpp
-  - icon: ':x:'
     path: library/data_structure/MergeHistoryForest.hpp
     title: library/data_structure/MergeHistoryForest.hpp
   _extendedRequiredBy: []
@@ -36,76 +18,37 @@ data:
   bundledCode: "#line 1 \"test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
     \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n//\
     \ verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
-    #line 1 \"library/data_structure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
-    \nnamespace otera {\n    struct MergeHistoryForest {\n        MergeHistoryForest()\
-    \ : MergeHistoryForest(0) {}\n        MergeHistoryForest(int n) : _n(n), g(2 *\
-    \ n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {\n        \
-    \    ite = n;\n            count = 1;\n            for(int i = 0; i < n; ++ i)\
-    \ {\n                ids[i] = i;\n                root[i] = true;\n          \
-    \  }\n        }\n \n        int node_num() const {\n            return ite;\n\
-    \        }\n        const auto& get_dsu() const {\n            return uf;\n  \
-    \      }\n        const auto& get_forest() const {\n            return g;\n  \
-    \      }\n        auto get_roots() const {\n            std::vector<int> roots;\n\
-    \            for(int i = 0; i < 2 * _n - 1; ++ i) {\n                if(root[i])\
-    \ {\n                    roots.emplace_back(i);\n                }\n         \
-    \   }\n            return roots;\n        }\n \n        void merge(int a, int\
-    \ b) {\n            if(uf.same(a, b)) return;\n            int ida = ids[uf.leader(a)],\
-    \ idb = ids[uf.leader(b)];\n            root[ida] = root[idb] = false;\n     \
-    \       uf.merge(a, b);\n            ids[uf.leader(a)] = ite;\n            root[ite]\
-    \ = true;\n            g[ite].emplace_back(ida);\n            g[ite].emplace_back(idb);\n\
-    \            ++ ite;\n        }\n \n        void merge_simultaneously(std::vector<std::pair<int,\
-    \ int>> edges) {\n            for(auto &[a, b]: edges) {\n                if(!uf.same(a,\
-    \ b)) {\n                    int ida = ids[uf.leader(a)], idb = ids[uf.leader(b)];\n\
-    \                    if(count == time[ida]) {\n                        if(count\
-    \ == time[idb]) {\n                            if((int)g[ida].size() < (int)g[idb].size())\
-    \ {\n                                std::swap(a, b);\n                      \
-    \          std::swap(ida, idb);\n                            }\n             \
-    \               for(int nv: g[idb]) {\n                                g[ida].emplace_back(nv);\n\
-    \                            }\n                            root[idb] = false;\n\
-    \                            uf.merge(a, b);\n                            ids[uf.leader(a)]\
-    \ = ida;\n                        } else {\n                            g[ida].emplace_back(idb);\n\
-    \                            root[idb] = false;\n                            uf.merge(a,\
-    \ b);\n                            ids[uf.leader(a)] = ida;\n                \
-    \        }\n                    } else if(count == time[idb]) {\n            \
-    \            g[idb].emplace_back(ida);\n                        root[ida] = false;\n\
-    \                        uf.merge(a, b);\n                        ids[uf.leader(a)]\
-    \ = idb;\n                    } else {\n                        time[ite] = count;\n\
-    \                        merge(a, b);\n                    }\n               \
-    \ }\n            }\n            ++ count;\n        }\n \n    private:\n      \
-    \  int _n;\n        mutable int ite;\n        mutable int count;\n        std::vector<std::vector<int>>\
-    \ g;\n        mutable atcoder::dsu uf;\n        std::vector<int> ids;\n      \
-    \  std::vector<bool> root;\n        std::vector<int> time;\n    };\n} // namespace\
-    \ otera\n#line 6 \"test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
-    \nusing namespace otera;\n\n#include<bits/stdc++.h>\n#include<atcoder/modint>\n\
-    #include<atcoder/convolution>\nusing namespace std;\n\nusing ll = long long;\n\
-    using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
-    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
-    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
-    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
-    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
-    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
-    \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
-    #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
-    \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
-    \ sc second\n#define all(c) c.begin(),c.end()\n#define lb(c, x) distance((c).begin(),\
-    \ lower_bound(all(c), (x)))\n#define ub(c, x) distance((c).begin(), upper_bound(all(c),\
-    \ (x)))\n#define Sort(a) sort(all(a))\n#define Rev(a) reverse(all(a))\n#define\
-    \ Uniq(a) sort(all(a));a.erase(unique(all(a)),end(a))\n#define si(c) (int)(c).size()\n\
-    inline ll popcnt(ull a){ return __builtin_popcountll(a); }\n#define tpow(n) (1LL<<(n))\n\
-    #define unless(A) if(!(A))\nll intpow(ll a, ll b){ ll ans = 1; while(b){ if(b\
-    \ & 1) ans *= a; a *= a; b /= 2; } return ans; }\nll intpow(ll a, ll b, ll m)\
-    \ {ll ans = 1; while(b){ if(b & 1) (ans *= a) %= m; (a *= a) %= m; b /= 2; } return\
-    \ ans; }\ntemplate<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b;\
-    \ return 1; } return 0; }\ntemplate<class T> inline bool chmin(T& a, T b) { if\
-    \ (a > b) { a = b; return 1; } return 0; }\n#define INT(...) int __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define LL(...) ll __VA_ARGS__;in(__VA_ARGS__)\n#define ULL(...) ull __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define STR(...) string __VA_ARGS__;in(__VA_ARGS__)\n#define CHR(...) char __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define DBL(...) double __VA_ARGS__;in(__VA_ARGS__)\n#define LD(...) ld __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define vec(type,name,...) vector<type>name(__VA_ARGS__)\n#define VEC(type,name,size)\
-    \ vector<type>name(size);in(name)\n#define vv(type,name,h,...) vector<vector<type>>name(h,vector<type>(__VA_ARGS__))\n\
-    #define VV(type,name,h,w) vector<vector<type>>name(h,vector<type>(w));in(name)\n\
-    #define vvv(type,name,h,w,...) vector<vector<vector<type>>>name(h,vector<vector<type>>(w,vector<type>(__VA_ARGS__)))\n\
+    #include<library/data_structure/MergeHistoryForest.hpp>\nusing namespace otera;\n\
+    \n#include<bits/stdc++.h>\n#include<atcoder/modint>\n#include<atcoder/convolution>\n\
+    using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
+    \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
+    \ i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
+    \ repc(i, a, b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d,\
+    \ e, ...) e\n#define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n\
+    #define rep1a(i, n) for(int i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int\
+    \ i = a; i <= b; ++ i)\n#define rep1c(i, a, b, c) for(int i = a; i <= b; i +=\
+    \ c)\n#define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)\n\
+    #define per(i,n) for(int i=n-1;i>=0;i--)\n#define per1(i,n) for(int i=n;i>=1;i--)\n\
+    typedef pair<int, int> P;\ntypedef pair<ll, ll> LP;\n#define pb push_back\n#define\
+    \ eb emplace_back\n#define fr first\n#define sc second\n#define all(c) c.begin(),c.end()\n\
+    #define lb(c, x) distance((c).begin(), lower_bound(all(c), (x)))\n#define ub(c,\
+    \ x) distance((c).begin(), upper_bound(all(c), (x)))\n#define Sort(a) sort(all(a))\n\
+    #define Rev(a) reverse(all(a))\n#define Uniq(a) sort(all(a));a.erase(unique(all(a)),end(a))\n\
+    #define si(c) (int)(c).size()\ninline ll popcnt(ull a){ return __builtin_popcountll(a);\
+    \ }\n#define tpow(n) (1LL<<(n))\n#define unless(A) if(!(A))\nll intpow(ll a, ll\
+    \ b){ ll ans = 1; while(b){ if(b & 1) ans *= a; a *= a; b /= 2; } return ans;\
+    \ }\nll intpow(ll a, ll b, ll m) {ll ans = 1; while(b){ if(b & 1) (ans *= a) %=\
+    \ m; (a *= a) %= m; b /= 2; } return ans; }\ntemplate<class T> inline bool chmax(T&\
+    \ a, T b) { if (a < b) { a = b; return 1; } return 0; }\ntemplate<class T> inline\
+    \ bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }\n#define\
+    \ INT(...) int __VA_ARGS__;in(__VA_ARGS__)\n#define LL(...) ll __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define ULL(...) ull __VA_ARGS__;in(__VA_ARGS__)\n#define STR(...) string __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define CHR(...) char __VA_ARGS__;in(__VA_ARGS__)\n#define DBL(...) double __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define LD(...) ld __VA_ARGS__;in(__VA_ARGS__)\n#define vec(type,name,...) vector<type>name(__VA_ARGS__)\n\
+    #define VEC(type,name,size) vector<type>name(size);in(name)\n#define vv(type,name,h,...)\
+    \ vector<vector<type>>name(h,vector<type>(__VA_ARGS__))\n#define VV(type,name,h,w)\
+    \ vector<vector<type>>name(h,vector<type>(w));in(name)\n#define vvv(type,name,h,w,...)\
+    \ vector<vector<vector<type>>>name(h,vector<vector<type>>(w,vector<type>(__VA_ARGS__)))\n\
     template <class T> using vc = vector<T>;\ntemplate <class T> using vvc = vector<vc<T>>;\n\
     template <class T> using vvvc = vector<vvc<T>>;\ntemplate <class T> using vvvvc\
     \ = vector<vvvc<T>>;\ntemplate <class T> using pq = priority_queue<T>;\ntemplate\
@@ -153,7 +96,7 @@ data:
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n\
     // verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
-    #include \"library/data_structure/MergeHistoryForest.hpp\"\nusing namespace otera;\n\
+    #include<library/data_structure/MergeHistoryForest.hpp>\nusing namespace otera;\n\
     \n#include<bits/stdc++.h>\n#include<atcoder/modint>\n#include<atcoder/convolution>\n\
     using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
     \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
@@ -231,16 +174,10 @@ data:
     \ 0;\n}"
   dependsOn:
   - library/data_structure/MergeHistoryForest.hpp
-  - ac-library/atcoder/dsu.hpp
-  - ac-library/atcoder/modint.hpp
-  - ac-library/atcoder/internal_math.hpp
-  - ac-library/atcoder/internal_type_traits.hpp
-  - ac-library/atcoder/convolution.hpp
-  - ac-library/atcoder/internal_bit.hpp
   isVerificationFile: true
   path: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
-  timestamp: '2022-01-16 18:57:24+09:00'
+  timestamp: '2022-01-17 00:39:01+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
