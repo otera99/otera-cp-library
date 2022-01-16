@@ -92,7 +92,6 @@ typedef pair<ll, P> P2;
 
 void solve() {
     INT(n, m, k);
-    atcoder::dsu uf(n);
     map<int, vc<P>> mp;
     rep(i, m) {
         INT(a, b); -- a, -- b; LL(c);

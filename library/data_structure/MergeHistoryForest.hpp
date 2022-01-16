@@ -32,13 +32,14 @@ namespace otera {
         }
  
         void merge(int a, int b) {
+            if(uf.same(a, b)) return;
             int ida = ids[uf.leader(a)], idb = ids[uf.leader(b)];
             root[ida] = root[idb] = false;
             uf.merge(a, b);
             ids[uf.leader(a)] = ite;
             root[ite] = true;
             g[ite].emplace_back(ida);
-            g[_ite].emplace_back(idb);
+            g[ite].emplace_back(idb);
             ++ ite;
         }
  
@@ -49,27 +50,28 @@ namespace otera {
                     if(count == time[ida]) {
                         if(count == time[idb]) {
                             if((int)g[ida].size() < (int)g[idb].size()) {
-                                swap(a, b);
-                                swap(ida, idb);
+                                std::swap(a, b);
+                                std::swap(ida, idb);
                             }
                             for(int nv: g[idb]) {
-                                g[ida].eb(nv);
+                                g[ida].emplace_back(nv);
                             }
                             root[idb] = false;
                             uf.merge(a, b);
                             ids[uf.leader(a)] = ida;
                         } else {
-                            g[ida].eb(idb);
+                            g[ida].emplace_back(idb);
                             root[idb] = false;
                             uf.merge(a, b);
                             ids[uf.leader(a)] = ida;
                         }
                     } else if(count == time[idb]) {
-                        g[idb].eb(ida);
+                        g[idb].emplace_back(ida);
                         root[ida] = false;
                         uf.merge(a, b);
                         ids[uf.leader(a)] = idb;
                     } else {
+                        time[ite] = count;
                         merge(a, b);
                     }
                 }
