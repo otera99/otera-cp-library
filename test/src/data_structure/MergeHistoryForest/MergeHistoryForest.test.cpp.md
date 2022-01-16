@@ -31,10 +31,12 @@ data:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_h
     links:
+    - https://atcoder.jp/contests/abc235/submissions/28582201
     - https://atcoder.jp/contests/abc235/tasks/abc235_h
   bundledCode: "#line 1 \"test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
-    \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n#line\
-    \ 1 \"library/data_structure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
+    \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n//\
+    \ verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
+    #line 1 \"library/data_structure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
     \nnamespace otera {\n    struct MergeHistoryForest {\n        MergeHistoryForest()\
     \ : MergeHistoryForest(0) {}\n        MergeHistoryForest(int n) : _n(n), g(2 *\
     \ n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {\n        \
@@ -73,7 +75,7 @@ data:
     \  int _n;\n        mutable int ite;\n        mutable int count;\n        std::vector<std::vector<int>>\
     \ g;\n        mutable atcoder::dsu uf;\n        std::vector<int> ids;\n      \
     \  std::vector<bool> root;\n        std::vector<int> time;\n    };\n} // namespace\
-    \ otera\n#line 4 \"test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
+    \ otera\n#line 6 \"test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
     \nusing namespace otera;\n\n#include<bits/stdc++.h>\n#include<atcoder/modint>\n\
     #include<atcoder/convolution>\nusing namespace std;\n\nusing ll = long long;\n\
     using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
@@ -150,6 +152,7 @@ data:
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n\
+    // verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
     #include \"library/data_structure/MergeHistoryForest.hpp\"\nusing namespace otera;\n\
     \n#include<bits/stdc++.h>\n#include<atcoder/modint>\n#include<atcoder/convolution>\n\
     using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
@@ -237,7 +240,7 @@ data:
   isVerificationFile: true
   path: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
-  timestamp: '2022-01-16 17:02:33+09:00'
+  timestamp: '2022-01-16 18:57:24+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
