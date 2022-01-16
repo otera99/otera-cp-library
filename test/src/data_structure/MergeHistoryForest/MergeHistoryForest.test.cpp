@@ -2,7 +2,7 @@
 
 // verified by "https://atcoder.jp/contests/abc235/submissions/28582201"
 
-#include "library/data_structure/MergeHistoryForest.hpp"
+#include<library/data_structure/MergeHistoryForest.hpp>
 using namespace otera;
 
 #include<bits/stdc++.h>

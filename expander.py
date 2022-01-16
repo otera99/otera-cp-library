@@ -1,4 +1,4 @@
-# this code is mainly writed by AtCoder Library (https://github.com/atcoder/ac-library)
+# this code is mainly writed by AtCoder Library (https://github.com/atcoder/ac-library).
 #!/usr/bin/env python3
 
 import re
