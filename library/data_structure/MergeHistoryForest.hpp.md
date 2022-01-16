@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':x:'
+    path: ac-library/atcoder/dsu.hpp
+    title: ac-library/atcoder/dsu.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':x:'
@@ -90,7 +93,8 @@ data:
     \ g;\n        mutable atcoder::dsu uf;\n        std::vector<int> ids;\n      \
     \  std::vector<bool> root;\n        std::vector<int> time;\n    };\n} // namespace\
     \ otera"
-  dependsOn: []
+  dependsOn:
+  - ac-library/atcoder/dsu.hpp
   isVerificationFile: false
   path: library/data_structure/MergeHistoryForest.hpp
   requiredBy: []

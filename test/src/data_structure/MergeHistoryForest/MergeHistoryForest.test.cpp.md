@@ -2,6 +2,24 @@
 data:
   _extendedDependsOn:
   - icon: ':x:'
+    path: ac-library/atcoder/convolution.hpp
+    title: ac-library/atcoder/convolution.hpp
+  - icon: ':x:'
+    path: ac-library/atcoder/dsu.hpp
+    title: ac-library/atcoder/dsu.hpp
+  - icon: ':x:'
+    path: ac-library/atcoder/internal_bit.hpp
+    title: ac-library/atcoder/internal_bit.hpp
+  - icon: ':x:'
+    path: ac-library/atcoder/internal_math.hpp
+    title: ac-library/atcoder/internal_math.hpp
+  - icon: ':x:'
+    path: ac-library/atcoder/internal_type_traits.hpp
+    title: ac-library/atcoder/internal_type_traits.hpp
+  - icon: ':x:'
+    path: ac-library/atcoder/modint.hpp
+    title: ac-library/atcoder/modint.hpp
+  - icon: ':x:'
     path: library/data_structure/MergeHistoryForest.hpp
     title: library/data_structure/MergeHistoryForest.hpp
   _extendedRequiredBy: []
@@ -9,7 +27,11 @@ data:
   _isVerificationFailed: true
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
-  attributes: {}
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_h
+    links:
+    - https://atcoder.jp/contests/abc235/tasks/abc235_h
   bundledCode: "#line 1 \"test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
     \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n#line\
     \ 1 \"library/data_structure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
@@ -206,6 +228,12 @@ data:
     \ 0;\n}"
   dependsOn:
   - library/data_structure/MergeHistoryForest.hpp
+  - ac-library/atcoder/dsu.hpp
+  - ac-library/atcoder/modint.hpp
+  - ac-library/atcoder/internal_math.hpp
+  - ac-library/atcoder/internal_type_traits.hpp
+  - ac-library/atcoder/convolution.hpp
+  - ac-library/atcoder/internal_bit.hpp
   isVerificationFile: true
   path: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
