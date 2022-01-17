@@ -1,5 +1,4 @@
 .vscode/*
-/**/combined.cpp
 .verify-helper/_config.toml
-library/experimental
-test/src/experimental
+/**/combined.cpp
+/**/a.out
