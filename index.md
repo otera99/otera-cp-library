@@ -1,16 +1,26 @@
 ---
 data:
   libraryCategories:
-  - name: library/data_structure
+  - name: library/DataStructure
     pages:
-    - icon: ':x:'
-      path: library/data_structure/MergeHistoryForest.hpp
-      title: library/data_structure/MergeHistoryForest.hpp
+    - icon: ':warning:'
+      path: library/DataStructure/MergeHistoryForest.hpp
+      title: library/DataStructure/MergeHistoryForest.hpp
+  - name: library/Tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: library/Tree/LCA.hpp
+      title: library/Tree/LCA.hpp
   verificationCategories:
-  - name: test/src/data_structure/MergeHistoryForest
+  - name: test/src/DataStructure/MergeHistoryForest
     pages:
     - icon: ':x:'
-      path: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
-      title: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
+      path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+      title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+  - name: test/src/Tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/src/Tree/LCA.test.cpp
+      title: test/src/Tree/LCA.test.cpp
 layout: toppage
 ---

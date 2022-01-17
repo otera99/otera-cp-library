@@ -1,24 +1,16 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':x:'
-    path: library/data_structure/MergeHistoryForest.hpp
-    title: library/data_structure/MergeHistoryForest.hpp
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
-  attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_h
-    links:
-    - https://atcoder.jp/contests/abc235/submissions/28582201
-    - https://atcoder.jp/contests/abc235/tasks/abc235_h
-  bundledCode: "#line 1 \"test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
+  attributes: {}
+  bundledCode: "#line 1 \"test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
     \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n//\
     \ verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
-    #include<library/data_structure/MergeHistoryForest.hpp>\nusing namespace otera;\n\
+    #include<library/DataStruture/MergeHistoryForest.hpp>\nusing namespace otera;\n\
     \n#include<bits/stdc++.h>\n#include<atcoder/modint>\n#include<atcoder/convolution>\n\
     using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
     \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
@@ -96,7 +88,7 @@ data:
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n\
     // verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
-    #include<library/data_structure/MergeHistoryForest.hpp>\nusing namespace otera;\n\
+    #include<library/DataStruture/MergeHistoryForest.hpp>\nusing namespace otera;\n\
     \n#include<bits/stdc++.h>\n#include<atcoder/modint>\n#include<atcoder/convolution>\n\
     using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
     \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
@@ -172,18 +164,17 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}"
-  dependsOn:
-  - library/data_structure/MergeHistoryForest.hpp
+  dependsOn: []
   isVerificationFile: true
-  path: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
+  path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
-  timestamp: '2022-01-17 00:39:01+09:00'
+  timestamp: '2022-01-17 21:01:44+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
+documentation_of: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
 layout: document
 redirect_from:
-- /verify/test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
-- /verify/test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp.html
-title: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
+- /verify/test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+- /verify/test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp.html
+title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
 ---

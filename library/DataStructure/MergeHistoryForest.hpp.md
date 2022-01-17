@@ -2,16 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
-    title: test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/data_structure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
+  bundledCode: "#line 1 \"library/DataStructure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
     \nnamespace otera {\n    struct MergeHistoryForest {\n        MergeHistoryForest()\
     \ : MergeHistoryForest(0) {}\n        MergeHistoryForest(int n) : _n(n), g(2 *\
     \ n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {\n        \
@@ -92,16 +89,15 @@ data:
     \ otera"
   dependsOn: []
   isVerificationFile: false
-  path: library/data_structure/MergeHistoryForest.hpp
+  path: library/DataStructure/MergeHistoryForest.hpp
   requiredBy: []
-  timestamp: '2022-01-16 17:02:33+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/src/data_structure/MergeHistoryForest/MergeHistoryForest.test.cpp
-documentation_of: library/data_structure/MergeHistoryForest.hpp
+  timestamp: '2022-01-17 21:01:44+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: library/DataStructure/MergeHistoryForest.hpp
 layout: document
 redirect_from:
-- /library/library/data_structure/MergeHistoryForest.hpp
-- /library/library/data_structure/MergeHistoryForest.hpp.html
-title: library/data_structure/MergeHistoryForest.hpp
+- /library/library/DataStructure/MergeHistoryForest.hpp
+- /library/library/DataStructure/MergeHistoryForest.hpp.html
+title: library/DataStructure/MergeHistoryForest.hpp
 ---
