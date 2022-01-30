@@ -1,1 +1,1 @@
-exclude: [expander.py, ac-library/, otera/]
+exclude: [expander.py, library_generater.py, ac-library/, otera/]
