@@ -14,6 +14,11 @@ class Generator:
     def generate(self, lib_path, file_name, otera_path):
         print("generate: " + file_name)
         copy(lib_path, otera_path + '/' + file_name)
+        new_file_path = otera_path + '/' + file_name[:-4]
+        new_file = open(new_file_path, 'w')
+        file_include = "#include <" + otera_path + '/' + file_name + '>'
+        new_file.write(file_include)
+        new_file.close()
 
     def file_check(self, lib_path, file_name):
         if path.isdir(lib_path):
