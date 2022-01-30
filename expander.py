@@ -5,10 +5,10 @@ import re
 import sys
 import argparse
 from logging import Logger, basicConfig, getLogger
-from os import getenv, environ, pathsep
-from pathlib import Path
+from os import getenv, environ, pathsep, fspath
+from pathlib import Path, PurePath
 from typing import List, Set, Optional
-
+from subprocess import call
 
 logger = getLogger(__name__)  # type: Logger
 
@@ -89,6 +89,7 @@ if __name__ == "__main__":
     parser.add_argument('-c', '--console',
                         action='store_true', help='Print to Console')
     parser.add_argument('--lib', help='Path to Otera Library')
+    parser.add_argument('-ac', '--atcoder', action='store_true', help='Expand ac-library')
     opts = parser.parse_args()
 
     lib_paths = []
@@ -107,3 +108,7 @@ if __name__ == "__main__":
     else:
         with open('combined_otera.cpp', 'w') as f:
             f.write(output)
+
+    if opts.atcoder:
+        expande_ac_command = ["python3", fspath(PurePath(opts.lib)) + "/ac-library/expander.py", "--lib", fspath(PurePath(opts.lib)) + "/ac-library", opts.source]
+        call(expande_ac_command)

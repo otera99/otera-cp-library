@@ -1,0 +1,248 @@
+#define PROBLEM "https://atcoder.jp/contests/abc235/tasks/abc235_h"
+
+// verified by "https://atcoder.jp/contests/abc235/submissions/28582201"
+
+#include<atcoder/dsu>
+
+namespace otera {
+    struct MergeHistoryForest {
+        MergeHistoryForest() : MergeHistoryForest(0) {}
+        MergeHistoryForest(int n) : _n(n), g(2 * n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {
+            ite = n;
+            count = 1;
+            for(int i = 0; i < n; ++ i) {
+                ids[i] = i;
+                root[i] = true;
+            }
+        }
+ 
+        int node_num() const {
+            return ite;
+        }
+        const auto& get_dsu() const {
+            return uf;
+        }
+        const auto& get_forest() const {
+            return g;
+        }
+        auto get_roots() const {
+            std::vector<int> roots;
+            for(int i = 0; i < 2 * _n - 1; ++ i) {
+                if(root[i]) {
+                    roots.emplace_back(i);
+                }
+            }
+            return roots;
+        }
+ 
+        void merge(int a, int b) {
+            if(uf.same(a, b)) return;
+            int ida = ids[uf.leader(a)], idb = ids[uf.leader(b)];
+            root[ida] = root[idb] = false;
+            uf.merge(a, b);
+            ids[uf.leader(a)] = ite;
+            root[ite] = true;
+            g[ite].emplace_back(ida);
+            g[ite].emplace_back(idb);
+            ++ ite;
+        }
+ 
+        void merge_simultaneously(std::vector<std::pair<int, int>> edges) {
+            for(auto &[a, b]: edges) {
+                if(!uf.same(a, b)) {
+                    int ida = ids[uf.leader(a)], idb = ids[uf.leader(b)];
+                    if(count == time[ida]) {
+                        if(count == time[idb]) {
+                            if((int)g[ida].size() < (int)g[idb].size()) {
+                                std::swap(a, b);
+                                std::swap(ida, idb);
+                            }
+                            for(int nv: g[idb]) {
+                                g[ida].emplace_back(nv);
+                            }
+                            root[idb] = false;
+                            uf.merge(a, b);
+                            ids[uf.leader(a)] = ida;
+                        } else {
+                            g[ida].emplace_back(idb);
+                            root[idb] = false;
+                            uf.merge(a, b);
+                            ids[uf.leader(a)] = ida;
+                        }
+                    } else if(count == time[idb]) {
+                        g[idb].emplace_back(ida);
+                        root[ida] = false;
+                        uf.merge(a, b);
+                        ids[uf.leader(a)] = idb;
+                    } else {
+                        time[ite] = count;
+                        merge(a, b);
+                    }
+                }
+            }
+            ++ count;
+        }
+ 
+    private:
+        int _n;
+        mutable int ite;
+        mutable int count;
+        std::vector<std::vector<int>> g;
+        mutable atcoder::dsu uf;
+        std::vector<int> ids;
+        std::vector<bool> root;
+        std::vector<int> time;
+    };
+} // namespace otera
+using namespace otera;
+
+#include<bits/stdc++.h>
+#include<atcoder/modint>
+#include<atcoder/convolution>
+using namespace std;
+
+using ll = long long;
+using ld = long double;
+using ull = unsigned long long;
+using uint = unsigned;
+#define repa(i, n) for(int i = 0; i < n; ++ i)
+#define repb(i, a, b) for(int i = a; i < b; ++ i)
+#define repc(i, a, b, c) for(int i = a; i < b; i += c)
+#define overload4(a, b, c, d, e, ...) e
+#define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)
+#define rep1a(i, n) for(int i = 0; i <= n; ++ i)
+#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)
+#define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)
+#define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)
+#define per(i,n) for(int i=n-1;i>=0;i--)
+#define per1(i,n) for(int i=n;i>=1;i--)
+typedef pair<int, int> P;
+typedef pair<ll, ll> LP;
+#define pb push_back
+#define eb emplace_back
+#define fr first
+#define sc second
+#define all(c) c.begin(),c.end()
+#define lb(c, x) distance((c).begin(), lower_bound(all(c), (x)))
+#define ub(c, x) distance((c).begin(), upper_bound(all(c), (x)))
+#define Sort(a) sort(all(a))
+#define Rev(a) reverse(all(a))
+#define Uniq(a) sort(all(a));a.erase(unique(all(a)),end(a))
+#define si(c) (int)(c).size()
+inline ll popcnt(ull a){ return __builtin_popcountll(a); }
+#define tpow(n) (1LL<<(n))
+#define unless(A) if(!(A))
+ll intpow(ll a, ll b){ ll ans = 1; while(b){ if(b & 1) ans *= a; a *= a; b /= 2; } return ans; }
+ll intpow(ll a, ll b, ll m) {ll ans = 1; while(b){ if(b & 1) (ans *= a) %= m; (a *= a) %= m; b /= 2; } return ans; }
+template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
+template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
+#define INT(...) int __VA_ARGS__;in(__VA_ARGS__)
+#define LL(...) ll __VA_ARGS__;in(__VA_ARGS__)
+#define ULL(...) ull __VA_ARGS__;in(__VA_ARGS__)
+#define STR(...) string __VA_ARGS__;in(__VA_ARGS__)
+#define CHR(...) char __VA_ARGS__;in(__VA_ARGS__)
+#define DBL(...) double __VA_ARGS__;in(__VA_ARGS__)
+#define LD(...) ld __VA_ARGS__;in(__VA_ARGS__)
+#define vec(type,name,...) vector<type>name(__VA_ARGS__)
+#define VEC(type,name,size) vector<type>name(size);in(name)
+#define vv(type,name,h,...) vector<vector<type>>name(h,vector<type>(__VA_ARGS__))
+#define VV(type,name,h,w) vector<vector<type>>name(h,vector<type>(w));in(name)
+#define vvv(type,name,h,w,...) vector<vector<vector<type>>>name(h,vector<vector<type>>(w,vector<type>(__VA_ARGS__)))
+template <class T> using vc = vector<T>;
+template <class T> using vvc = vector<vc<T>>;
+template <class T> using vvvc = vector<vvc<T>>;
+template <class T> using vvvvc = vector<vvvc<T>>;
+template <class T> using pq = priority_queue<T>;
+template <class T> using pqg = priority_queue<T, vector<T>, greater<T>>;
+template<class T> void scan(T& a){ cin >> a; }
+template<class T> void scan(vector<T>& a){ for(auto&& i : a) scan(i); }
+void in(){}
+template <class Head, class... Tail> void in(Head& head, Tail&... tail){ scan(head); in(tail...); }
+void print(){ cout << ' '; }
+template<class T> void print(const T& a){ cout << a; }
+template<class T> void print(const vector<T>& a){ if(a.empty()) return; print(a[0]); for(auto i = a.begin(); ++i != a.end(); ){ cout << ' '; print(*i); } }
+int out(){ cout << '\n'; return 0; }
+template<class T> int out(const T& t){ print(t); cout << '\n'; return 0; }
+template<class Head, class... Tail> int out(const Head& head, const Tail&... tail){ print(head); cout << ' '; out(tail...); return 0; }
+#define CHOOSE(a) CHOOSE2 a
+#define CHOOSE2(a0,a1,a2,a3,a4,x,...) x
+#define debug_1(x1) cout<<#x1<<": "<<x1<<endl
+#define debug_2(x1,x2) cout<<#x1<<": "<<x1<<", "#x2<<": "<<x2<<endl
+#define debug_3(x1,x2,x3) cout<<#x1<<": "<<x1<<", "#x2<<": "<<x2<<", "#x3<<": "<<x3<<endl
+#define debug_4(x1,x2,x3,x4) cout<<#x1<<": "<<x1<<", "#x2<<": "<<x2<<", "#x3<<": "<<x3<<", "#x4<<": "<<x4<<endl
+#define debug_5(x1,x2,x3,x4,x5) cout<<#x1<<": "<<x1<<", "#x2<<": "<<x2<<", "#x3<<": "<<x3<<", "#x4<<": "<<x4<<", "#x5<<": "<<x5<<endl
+#ifdef DEBUG
+#define debug(...) CHOOSE((__VA_ARGS__,debug_5,debug_4,debug_3,debug_2,debug_1,~))(__VA_ARGS__)
+#define dump(...) { print(#__VA_ARGS__); print(":"); out(__VA_ARGS__); }
+#else
+#define debug(...)
+#define dump(...)
+#endif
+
+using mint = atcoder::modint998244353;
+
+typedef pair<ll, P> P2;
+
+void solve() {
+    INT(n, m, k);
+    map<int, vc<P>> mp;
+    rep(i, m) {
+        INT(a, b); -- a, -- b; LL(c);
+        mp[c].eb(a, b);
+    }
+    MergeHistoryForest uf(n);
+    for(auto &[c, es]: mp) {
+        uf.merge_simultaneously(es);
+    }
+    vvc<mint> dp(2 * n - 1);
+    vvc<int> g = uf.get_forest();
+    auto dfs = [&](auto&&dfs, int v) -> void {
+        if(g[v].empty()) {
+            dp[v] = {1, 1};
+            return;
+        }
+        for(int nv: g[v]) dfs(dfs, nv);
+        int sv = g[v][0];
+        vc<mint> dp2 = dp[sv], ndp2;
+        int cnt = 1;
+        rep(i, si(g[v])) {
+            if(i == 0) continue;
+            int nv = g[v][i];
+            int sz = si(dp2);
+            int sz2 = min({sz + si(dp[nv]) - 1, k + 1});
+            ndp2.assign(sz2, 0);
+            rep(i, si(dp[nv])) {
+                rep(j, sz) {
+                    if(i + j > k) break;
+                    ndp2[i + j] += dp[nv][i] * dp2[j];
+                }
+            }
+            ++ cnt;
+            swap(dp2, ndp2);
+        }
+        dp2[1] ++;
+        dp2[cnt] --;
+        dp[v] = dp2;
+        return;
+    };
+    vc<mint> now = {1};
+    for(int i: uf.get_roots()) {
+        dfs(dfs, i);
+        now = atcoder::convolution(now, dp[i]);
+        if(si(now) > k) now.resize(k + 1);
+    }
+    mint ans = 0;
+    for(int i = 0; i <= min(k, si(now) - 1); ++ i) {
+        ans += now[i];
+    }
+    out(ans.val());
+}
+
+signed main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    // cout << fixed << setprecision(20);
+    // INT(t); rep(i, t)solve();
+    solve();
+    return 0;
+}
