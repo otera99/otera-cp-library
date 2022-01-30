@@ -2,17 +2,14 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/src/Util/Compressor.test.cpp
-    title: test/src/Util/Compressor.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links:
     - https://suisen-cp.github.io/cp-library-cpp/library/util/coordinate_compressor.hpp
-  bundledCode: "#line 1 \"library/Util/Compressor.hpp\"\nnamespace otera {\n    template\
+  bundledCode: "#line 1 \"otera/Compressor.hpp\"\nnamespace otera {\n    template\
     \ <typename T>\n    struct Compressor {\n        public:\n            static constexpr\
     \ int absent = -1;\n\n            Compressor(const std::vector<T> &vs) {\n   \
     \             add(vs);\n            }\n\n            void add(const std::vector<T>\
@@ -118,16 +115,15 @@ data:
     \ otera"
   dependsOn: []
   isVerificationFile: false
-  path: library/Util/Compressor.hpp
+  path: otera/Compressor.hpp
   requiredBy: []
   timestamp: '2022-01-31 06:00:39+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/src/Util/Compressor.test.cpp
-documentation_of: library/Util/Compressor.hpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: otera/Compressor.hpp
 layout: document
 redirect_from:
-- /library/library/Util/Compressor.hpp
-- /library/library/Util/Compressor.hpp.html
-title: library/Util/Compressor.hpp
+- /library/otera/Compressor.hpp
+- /library/otera/Compressor.hpp.html
+title: otera/Compressor.hpp
 ---
