@@ -7,6 +7,10 @@
 
 競技プログラミング向けの C++ ライブラリです．[AtCoder Library (ACL)](https://github.com/atcoder/ac-library) の使用を前提としています.
 
+## ライブラリ追加方法
+
+`library`下にライブラリを追加してから`library_generator.py`を走らせると、`otera`下にライブラリが生成されます.(mac以外で使う時は、`library_generator.py`を書き換えてから使ってください.)
+
 ## バグ報告など
 
 [@otera1999](https://twitter.com/otera1999) まで報告を頂けるとありがたいです．

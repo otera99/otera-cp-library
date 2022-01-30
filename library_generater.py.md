@@ -17,7 +17,10 @@ data:
     \ = 'otera'\n\nlogger = getLogger(__name__)  # type: Logger\n\nclass Generator:\n\
     \    def __init__(self):\n        pass\n\n    def generate(self, lib_path, file_name,\
     \ otera_path):\n        print(\"generate: \" + file_name)\n        copy(lib_path,\
-    \ otera_path + '/' + file_name)\n\n    def file_check(self, lib_path, file_name):\n\
+    \ otera_path + '/' + file_name)\n        new_file_path = otera_path + '/' + file_name[:-4]\n\
+    \        new_file = open(new_file_path, 'w')\n        file_include = \"#include\
+    \ <\" + otera_path + '/' + file_name + '>'\n        new_file.write(file_include)\n\
+    \        new_file.close()\n\n    def file_check(self, lib_path, file_name):\n\
     \        if path.isdir(lib_path):\n            files = listdir(lib_path)\n   \
     \         for file in files:\n                self.file_check(lib_path + '/' +\
     \ file, file)\n\n        else:\n            if lib_path[-4:] == '.hpp':\n    \
