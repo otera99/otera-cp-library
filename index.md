@@ -21,17 +21,6 @@ data:
     - icon: ':warning:'
       path: library_generater.py
       title: library_generater.py
-  - name: otera
-    pages:
-    - icon: ':warning:'
-      path: otera/Compressor.hpp
-      title: otera/Compressor.hpp
-    - icon: ':warning:'
-      path: otera/LCA.hpp
-      title: otera/LCA.hpp
-    - icon: ':warning:'
-      path: otera/MergeHistoryForest.hpp
-      title: otera/MergeHistoryForest.hpp
   verificationCategories:
   - name: test/src/DataStructure/MergeHistoryForest
     pages:
