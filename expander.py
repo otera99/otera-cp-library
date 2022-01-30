@@ -15,7 +15,7 @@ logger = getLogger(__name__)  # type: Logger
 
 class Expander:
     library_include = re.compile(
-        r'#include\s*["<](library/[a-z_/A-Z]*(|.hpp))[">]\s*')
+        r'#include\s*["<](otera/[a-z_/A-Z]*(|.hpp))[">]\s*')
 
     include_guard = re.compile(r'#.*LIBRARY_[A-Z_]*_HPP')
 
@@ -105,5 +105,5 @@ if __name__ == "__main__":
     if opts.console:
         print(output)
     else:
-        with open('combined.cpp', 'w') as f:
+        with open('combined_otera.cpp', 'w') as f:
             f.write(output)

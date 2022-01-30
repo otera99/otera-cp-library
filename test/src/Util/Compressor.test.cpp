@@ -2,7 +2,7 @@
 
 #include<bits/stdc++.h>
 
-#include<library/Util/Compressor.hpp>
+#include<otera/Compressor.hpp>
 
 using namespace std;
 
