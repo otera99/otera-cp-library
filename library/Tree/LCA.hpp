@@ -35,9 +35,8 @@ namespace otera {
                 }
                 return parent[0][u];
             }
-            int dist(int u, int v) const {
-                return dep[u] + dep[v] - 2 * dep[operator()(u, v)];
-            }
+            int depth(int u) const { return dep[u]; }
+            int dist(int u, int v) const { return dep[u] + dep[v] - 2 * dep[operator()(u, v)]; }
             int operator()(int u, int v) const { return lca(u, v); }
         private:
             std::vector<int> dep;
