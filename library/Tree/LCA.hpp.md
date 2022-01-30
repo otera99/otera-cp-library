@@ -29,16 +29,17 @@ data:
     \        if(parent[i][u] != parent[i][v]) {\n                        u = parent[i][u];\n\
     \                        v = parent[i][v];\n                    }\n          \
     \      }\n                return parent[0][u];\n            }\n            int\
-    \ dist(int u, int v) const {\n                return dep[u] + dep[v] - 2 * dep[operator()(u,\
-    \ v)];\n            }\n            int operator()(int u, int v) const { return\
-    \ lca(u, v); }\n        private:\n            std::vector<int> dep;\n        \
-    \    std::vector<std::vector<int>> parent;\n\n            void dfs(const std::vector<std::vector<int>>\
-    \ &g, int root) {\n                auto rec = [&](auto &&self, int v, int p, int\
-    \ d) -> void {\n                    dep[v] = d;\n                    parent[0][v]\
-    \ = p;\n                    for(int nv: g[v]) {\n                        if(nv\
-    \ == p) continue;\n                        self(self, nv, v, d + 1);\n       \
-    \             }\n                };\n                rec(rec, root, -1, 0);\n\
-    \            }\n    };\n} // namespace otera\n"
+    \ depth(int u) const { return dep[u]; }\n            int dist(int u, int v) const\
+    \ { return dep[u] + dep[v] - 2 * dep[operator()(u, v)]; }\n            int operator()(int\
+    \ u, int v) const { return lca(u, v); }\n        private:\n            std::vector<int>\
+    \ dep;\n            std::vector<std::vector<int>> parent;\n\n            void\
+    \ dfs(const std::vector<std::vector<int>> &g, int root) {\n                auto\
+    \ rec = [&](auto &&self, int v, int p, int d) -> void {\n                    dep[v]\
+    \ = d;\n                    parent[0][v] = p;\n                    for(int nv:\
+    \ g[v]) {\n                        if(nv == p) continue;\n                   \
+    \     self(self, nv, v, d + 1);\n                    }\n                };\n \
+    \               rec(rec, root, -1, 0);\n            }\n    };\n} // namespace\
+    \ otera\n"
   code: "#include<vector>\n\nnamespace otera {\n    class LCA {\n        public:\n\
     \            LCA(const std::vector<std::vector<int>> &g, int root = 0) {\n   \
     \             int _n = (int)g.size();\n                int _N = 1;\n         \
@@ -56,22 +57,23 @@ data:
     \ = (int)parent.size() - 1; i >= 0; -- i) {\n                    if(parent[i][u]\
     \ != parent[i][v]) {\n                        u = parent[i][u];\n            \
     \            v = parent[i][v];\n                    }\n                }\n   \
-    \             return parent[0][u];\n            }\n            int dist(int u,\
-    \ int v) const {\n                return dep[u] + dep[v] - 2 * dep[operator()(u,\
-    \ v)];\n            }\n            int operator()(int u, int v) const { return\
-    \ lca(u, v); }\n        private:\n            std::vector<int> dep;\n        \
-    \    std::vector<std::vector<int>> parent;\n\n            void dfs(const std::vector<std::vector<int>>\
-    \ &g, int root) {\n                auto rec = [&](auto &&self, int v, int p, int\
-    \ d) -> void {\n                    dep[v] = d;\n                    parent[0][v]\
-    \ = p;\n                    for(int nv: g[v]) {\n                        if(nv\
-    \ == p) continue;\n                        self(self, nv, v, d + 1);\n       \
-    \             }\n                };\n                rec(rec, root, -1, 0);\n\
-    \            }\n    };\n} // namespace otera"
+    \             return parent[0][u];\n            }\n            int depth(int u)\
+    \ const { return dep[u]; }\n            int dist(int u, int v) const { return\
+    \ dep[u] + dep[v] - 2 * dep[operator()(u, v)]; }\n            int operator()(int\
+    \ u, int v) const { return lca(u, v); }\n        private:\n            std::vector<int>\
+    \ dep;\n            std::vector<std::vector<int>> parent;\n\n            void\
+    \ dfs(const std::vector<std::vector<int>> &g, int root) {\n                auto\
+    \ rec = [&](auto &&self, int v, int p, int d) -> void {\n                    dep[v]\
+    \ = d;\n                    parent[0][v] = p;\n                    for(int nv:\
+    \ g[v]) {\n                        if(nv == p) continue;\n                   \
+    \     self(self, nv, v, d + 1);\n                    }\n                };\n \
+    \               rec(rec, root, -1, 0);\n            }\n    };\n} // namespace\
+    \ otera"
   dependsOn: []
   isVerificationFile: false
   path: library/Tree/LCA.hpp
   requiredBy: []
-  timestamp: '2022-01-17 21:01:44+09:00'
+  timestamp: '2022-01-30 20:29:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/src/Tree/LCA.test.cpp

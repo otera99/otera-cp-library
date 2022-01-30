@@ -11,6 +11,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/Tree/LCA.hpp
       title: library/Tree/LCA.hpp
+  - name: library/Util
+    pages:
+    - icon: ':x:'
+      path: library/Util/Compressor.hpp
+      title: library/Util/Compressor.hpp
   verificationCategories:
   - name: test/src/DataStructure/MergeHistoryForest
     pages:
@@ -22,5 +27,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/src/Tree/LCA.test.cpp
       title: test/src/Tree/LCA.test.cpp
+  - name: test/src/Util
+    pages:
+    - icon: ':x:'
+      path: test/src/Util/Compressor.test.cpp
+      title: test/src/Util/Compressor.test.cpp
 layout: toppage
 ---
