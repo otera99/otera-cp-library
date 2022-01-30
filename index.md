@@ -8,12 +8,12 @@ data:
       title: library/DataStructure/MergeHistoryForest.hpp
   - name: library/Tree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: library/Tree/LCA.hpp
       title: library/Tree/LCA.hpp
   - name: library/Util
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
   verificationCategories:

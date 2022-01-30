@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/src/Util/Compressor.test.cpp
-    title: test/src/Util/Compressor.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links:
     - https://suisen-cp.github.io/cp-library-cpp/library/util/coordinate_compressor.hpp
@@ -121,9 +118,8 @@ data:
   path: library/Util/Compressor.hpp
   requiredBy: []
   timestamp: '2022-01-31 06:00:39+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/src/Util/Compressor.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: library/Util/Compressor.hpp
 layout: document
 redirect_from:

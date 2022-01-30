@@ -9,7 +9,7 @@
 
 ## ライブラリ追加方法
 
-`library`下にライブラリを追加してから`library_generator.py`を走らせると、`otera`下にライブラリが生成されます.(mac以外で使う時は、`library_generator.py`を書き換えてから使ってください.)
+`library`下に.hppファイルのライブラリを追加してから`library_generator.py`を走らせると、`otera`下にライブラリが生成されます.(mac以外で使う時は、`library_generator.py`を書き換えてから使ってください.)
 
 ## バグ報告など
 
