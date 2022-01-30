@@ -1,4 +1,5 @@
 .vscode/*
 .verify-helper/_config.toml
 /**/combined.cpp
+/**/combined_otera.cpp
 /**/a.out
