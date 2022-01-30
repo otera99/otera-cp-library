@@ -16,11 +16,6 @@ data:
     - icon: ':x:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
-  - name: .
-    pages:
-    - icon: ':warning:'
-      path: library_generater.py
-      title: library_generater.py
   verificationCategories:
   - name: test/src/DataStructure/MergeHistoryForest
     pages:
