@@ -110,5 +110,5 @@ if __name__ == "__main__":
             f.write(output)
 
     if opts.atcoder:
-        expande_ac_command = ["python3", fspath(PurePath(opts.lib)) + "/ac-library/expander.py", "--lib", fspath(PurePath(opts.lib)) + "/ac-library", opts.source]
+        expande_ac_command = ["python3", fspath(PurePath(opts.lib)) + "/ac-library/expander.py", "--lib", fspath(PurePath(opts.lib)) + "/ac-library", "combined_otera.cpp"]
         call(expande_ac_command)
