@@ -6,6 +6,7 @@ namespace otera {
 
             Compressor(const std::vector<T> &vs) {
                 add(vs);
+                build();
             }
 
             void add(const std::vector<T> &vs) {
@@ -46,7 +47,6 @@ namespace otera {
                 return _xs[compressed_index];
             }
 
-            // from "https://suisen-cp.github.io/cp-library-cpp/library/util/coordinate_compressor.hpp"
             // Return the minimum registered value greater than `e`. if not exists, return `default_value`.
             T min_gt(const T &e, const T &default_value) const {
                 auto it = std::upper_bound(_xs.begin(), _xs.end(), e);
