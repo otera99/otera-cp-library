@@ -12,17 +12,17 @@ data:
     - https://atcoder.jp/contests/abc235/submissions/28582201
     - https://atcoder.jp/contests/abc235/tasks/abc235_h
   bundledCode: "#line 1 \"test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
-    \n// #define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n\
-    // verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
-    #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
-    #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
-    \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
-    using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
-    \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
-    \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
-    \ overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int\
-    \ i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n\
-    #define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+    \n// PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n// verified\
+    \ by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n#include<otera/MergeHistoryForest>\n\
+    using namespace otera;\n\n#include<bits/stdc++.h>\n#include<atcoder/modint>\n\
+    #include<atcoder/convolution>\nusing namespace std;\n\nusing ll = long long;\n\
+    using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
+    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
+    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
+    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
+    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
+    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
+    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
     \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
     #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
     \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
@@ -89,17 +89,17 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
-  code: "// #define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\
-    \n// verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\
-    \n#include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
-    #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
-    \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
-    using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
-    \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
-    \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
-    \ overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int\
-    \ i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n\
-    #define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+  code: "// PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n// verified\
+    \ by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n#include<otera/MergeHistoryForest>\n\
+    using namespace otera;\n\n#include<bits/stdc++.h>\n#include<atcoder/modint>\n\
+    #include<atcoder/convolution>\nusing namespace std;\n\nusing ll = long long;\n\
+    using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
+    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
+    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
+    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
+    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
+    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
+    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
     \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
     #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
     \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
@@ -170,7 +170,7 @@ data:
   isVerificationFile: true
   path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
-  timestamp: '2022-01-31 17:11:08+09:00'
+  timestamp: '2022-01-31 17:20:56+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
