@@ -3,13 +3,14 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://codeforces.com/contest/1626/submission/144768069
-  bundledCode: "#line 1 \"test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp\"\
+  bundledCode: "#line 1 \"test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp\"\
     \n// https://codeforces.com/contest/1626/submission/144768069\n#include<bits/stdc++.h>\n\
     #include<otera/Compressor>\nusing namespace std;\n\nusing ll = long long;\nusing\
     \ ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
@@ -147,16 +148,16 @@ data:
     \    cin.tie(0);\n    // cout << fixed << setprecision(20);\n    INT(t); \n  \
     \  rep(i, t)solve();\n    // solve();\n    return 0;\n}"
   dependsOn: []
-  isVerificationFile: false
-  path: test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp
+  isVerificationFile: true
+  path: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
   requiredBy: []
-  timestamp: '2022-02-01 03:09:33+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2022-02-01 03:13:33+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp
+documentation_of: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
 layout: document
 redirect_from:
-- /library/test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp
-- /library/test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp.html
-title: test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp
+- /verify/test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
+- /verify/test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp.html
+title: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
 ---

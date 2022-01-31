@@ -3,13 +3,14 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
     links:
     - https://atcoder.jp/contests/abc036/submissions/28965263
-  bundledCode: "#line 1 \"test/src/Util/Compressor_test_ABC036.cpp\"\n// https://atcoder.jp/contests/abc036/submissions/28965263\n\
+  bundledCode: "#line 1 \"test/src/Util/Compressor_ABC036.test.cpp\"\n// https://atcoder.jp/contests/abc036/submissions/28965263\n\
     \n#include<bits/stdc++.h>\n\n#include<otera/Compressor.hpp>\n\nusing namespace\
     \ std;\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
     \ long long;\nusing uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n;\
@@ -127,16 +128,16 @@ data:
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}"
   dependsOn: []
-  isVerificationFile: false
-  path: test/src/Util/Compressor_test_ABC036.cpp
+  isVerificationFile: true
+  path: test/src/Util/Compressor_ABC036.test.cpp
   requiredBy: []
-  timestamp: '2022-02-01 03:11:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2022-02-01 03:13:33+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/src/Util/Compressor_test_ABC036.cpp
+documentation_of: test/src/Util/Compressor_ABC036.test.cpp
 layout: document
 redirect_from:
-- /library/test/src/Util/Compressor_test_ABC036.cpp
-- /library/test/src/Util/Compressor_test_ABC036.cpp.html
-title: test/src/Util/Compressor_test_ABC036.cpp
+- /verify/test/src/Util/Compressor_ABC036.test.cpp
+- /verify/test/src/Util/Compressor_ABC036.test.cpp.html
+title: test/src/Util/Compressor_ABC036.test.cpp
 ---
