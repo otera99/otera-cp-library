@@ -13,7 +13,7 @@ data:
     \ <typename T>\n    struct Compressor {\n        public:\n            static constexpr\
     \ int absent = -1;\n\n            Compressor(const std::vector<T> &vs) {\n   \
     \             add(vs);\n            }\n\n            void add(const std::vector<T>\
-    \ &vs) {\n                copy(vs.begin(), vs.end(), std::back_inserter(_xs));\n\
+    \ &vs) {\n                std::copy(vs.begin(), vs.end(), std::back_inserter(_xs));\n\
     \            }\n\n            void add(const T &e) {\n                _xs.emplace_back(e);\n\
     \            }\n\n            void build() {\n                std::sort(_xs.begin(),\
     \ _xs.end());\n                _xs.erase(std::unique(_xs.begin(), _xs.end()),\
@@ -64,7 +64,7 @@ data:
   code: "namespace otera {\n    template <typename T>\n    struct Compressor {\n \
     \       public:\n            static constexpr int absent = -1;\n\n           \
     \ Compressor(const std::vector<T> &vs) {\n                add(vs);\n         \
-    \   }\n\n            void add(const std::vector<T> &vs) {\n                copy(vs.begin(),\
+    \   }\n\n            void add(const std::vector<T> &vs) {\n                std::copy(vs.begin(),\
     \ vs.end(), std::back_inserter(_xs));\n            }\n\n            void add(const\
     \ T &e) {\n                _xs.emplace_back(e);\n            }\n\n           \
     \ void build() {\n                std::sort(_xs.begin(), _xs.end());\n       \
@@ -117,7 +117,7 @@ data:
   isVerificationFile: false
   path: library/Util/Compressor.hpp
   requiredBy: []
-  timestamp: '2022-01-31 06:00:39+09:00'
+  timestamp: '2022-01-31 17:11:08+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/Compressor.hpp

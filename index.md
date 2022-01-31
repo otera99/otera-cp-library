@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: library/AtCoder
+    pages:
+    - icon: ':warning:'
+      path: library/AtCoder/modint.hpp
+      title: library/AtCoder/modint.hpp
   - name: library/DataStructure
     pages:
     - icon: ':warning:'

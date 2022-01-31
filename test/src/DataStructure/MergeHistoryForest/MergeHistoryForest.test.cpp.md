@@ -8,13 +8,12 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_h
     links:
     - https://atcoder.jp/contests/abc235/submissions/28582201
     - https://atcoder.jp/contests/abc235/tasks/abc235_h
   bundledCode: "#line 1 \"test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
-    \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n//\
-    \ verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
+    \n// #define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n\
+    // verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
     #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
     #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
     \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
@@ -90,9 +89,9 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
-  code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\n\
-    // verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
-    #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
+  code: "// #define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n\
+    \n// verified by \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\
+    \n#include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
     #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
     \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
     using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
@@ -171,7 +170,7 @@ data:
   isVerificationFile: true
   path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
-  timestamp: '2022-01-31 06:22:51+09:00'
+  timestamp: '2022-01-31 17:11:08+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
