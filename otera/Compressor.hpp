@@ -59,13 +59,13 @@ namespace otera {
             }
             // Return the maximum registered value less than `e`. if not exists, return `default_value`
             T max_lt(const T &e, const T &default_value) const {
-                auto it = std::upper_bound(_xs.rbegin(), _xs.rend(), e);
-                return it == _xs.rend() ? default_value : *it;
+                auto it = std::lower_bound(_xs.begin(), _xs.end(), e);
+                return it == _xs.begin() ? default_value : *std::prev(it);
             }
             // Return the maximum registered value less than or equal to `e`. if not exists, return `default_value`
             T max_leq(const T &e, const T &default_value) const {
-                auto it = std::lower_bound(_xs.rbegin(), _xs.rend(), e);
-                return it == _xs.rend() ? default_value : *it;
+                auto it = std::upper_bound(_xs.begin(), _xs.end(), e);
+                return it == _xs.begin() ? default_value : *std::prev(it);
             }
             // Return the compressed index of the minimum registered value greater than `e`. if not exists, return `Compressor.size()`.
             int min_gt_index(const T &e) const {
@@ -77,11 +77,11 @@ namespace otera {
             }
             // Return the compressed index of the maximum registered value less than `e`. if not exists, return -1.
             int max_lt_index(const T &e) const {
-                return int(_xs.rend() - std::upper_bound(_xs.rbegin(), _xs.rend(), e)) - 1;
+                return int(std::lower_bound(_xs.begin(), _xs.end(), e)) - 1;
             }
             // Return the compressed index of the maximum registered value less than or equal to `e`. if not exists, return -1.
             int max_leq_index(const T &e) const {
-                return int(_xs.rend() - std::lower_bound(_xs.rbegin(), _xs.rend(), e)) - 1;
+                return int(std::lower_bound(_xs.begin(), _xs.end(), e)) - 1;
             }
         private:
             std::vector<T> _xs;
