@@ -9,7 +9,7 @@ namespace otera {
             }
 
             void add(const std::vector<T> &vs) {
-                copy(vs.begin(), vs.end(), std::back_inserter(_xs));
+                std::copy(vs.begin(), vs.end(), std::back_inserter(_xs));
             }
 
             void add(const T &e) {
