@@ -24,8 +24,8 @@ data:
   - name: test/src/Util
     pages:
     - icon: ':warning:'
-      path: test/src/Util/Compressor_test1_ABC036C.cpp
-      title: test/src/Util/Compressor_test1_ABC036C.cpp
+      path: test/src/Util/Compressor_test_ABC036.cpp
+      title: test/src/Util/Compressor_test_ABC036.cpp
     - icon: ':warning:'
       path: test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp
       title: test/src/Util/Compressor_test_Educational_Codeforces_R121D.cpp
