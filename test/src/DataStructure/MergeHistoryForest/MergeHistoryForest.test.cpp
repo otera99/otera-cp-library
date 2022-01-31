@@ -1,4 +1,4 @@
-// #define PROBLEM "https://atcoder.jp/contests/abc235/tasks/abc235_h"
+// PROBLEM "https://atcoder.jp/contests/abc235/tasks/abc235_h"
 
 // verified by "https://atcoder.jp/contests/abc235/submissions/28582201"
 

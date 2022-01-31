@@ -1,4 +1,4 @@
-// #define PROBLEM "https://atcoder.jp/contests/abc036/tasks/abc036_c"
+// PROBLEM "https://atcoder.jp/contests/abc036/tasks/abc036_c"
 
 #include<bits/stdc++.h>
 
