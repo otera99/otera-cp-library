@@ -39,12 +39,12 @@ data:
     \ _xs.end(), e);\n                return it == _xs.end() ? default_value : *it;\n\
     \            }\n            // Return the maximum registered value less than `e`.\
     \ if not exists, return `default_value`\n            T max_lt(const T &e, const\
-    \ T &default_value) const {\n                auto it = std::upper_bound(_xs.rbegin(),\
-    \ _xs.rend(), e);\n                return it == _xs.rend() ? default_value : *it;\n\
+    \ T &default_value) const {\n                auto it = std::lower_bound(_xs.begin(),\
+    \ _xs.end(), e);\n                return it == _xs.begin() ? default_value : *std::prev(it);\n\
     \            }\n            // Return the maximum registered value less than or\
     \ equal to `e`. if not exists, return `default_value`\n            T max_leq(const\
-    \ T &e, const T &default_value) const {\n                auto it = std::lower_bound(_xs.rbegin(),\
-    \ _xs.rend(), e);\n                return it == _xs.rend() ? default_value : *it;\n\
+    \ T &e, const T &default_value) const {\n                auto it = std::upper_bound(_xs.begin(),\
+    \ _xs.end(), e);\n                return it == _xs.begin() ? default_value : *std::prev(it);\n\
     \            }\n            // Return the compressed index of the minimum registered\
     \ value greater than `e`. if not exists, return `Compressor.size()`.\n       \
     \     int min_gt_index(const T &e) const {\n                return std::upper_bound(_xs.begin(),\
@@ -54,13 +54,12 @@ data:
     \ {\n                return std::lower_bound(_xs.begin(), _xs.end(), e) - _xs.begin();\n\
     \            }\n            // Return the compressed index of the maximum registered\
     \ value less than `e`. if not exists, return -1.\n            int max_lt_index(const\
-    \ T &e) const {\n                return int(_xs.rend() - std::upper_bound(_xs.rbegin(),\
-    \ _xs.rend(), e)) - 1;\n            }\n            // Return the compressed index\
-    \ of the maximum registered value less than or equal to `e`. if not exists, return\
-    \ -1.\n            int max_leq_index(const T &e) const {\n                return\
-    \ int(_xs.rend() - std::lower_bound(_xs.rbegin(), _xs.rend(), e)) - 1;\n     \
-    \       }\n        private:\n            std::vector<T> _xs;\n    };\n} // namespace\
-    \ otera\n"
+    \ T &e) const {\n                return int(std::lower_bound(_xs.begin(), _xs.end(),\
+    \ e)) - 1;\n            }\n            // Return the compressed index of the maximum\
+    \ registered value less than or equal to `e`. if not exists, return -1.\n    \
+    \        int max_leq_index(const T &e) const {\n                return int(std::lower_bound(_xs.begin(),\
+    \ _xs.end(), e)) - 1;\n            }\n        private:\n            std::vector<T>\
+    \ _xs;\n    };\n} // namespace otera\n"
   code: "namespace otera {\n    template <typename T>\n    struct Compressor {\n \
     \       public:\n            static constexpr int absent = -1;\n\n           \
     \ Compressor(const std::vector<T> &vs) {\n                add(vs);\n         \
@@ -91,12 +90,12 @@ data:
     \ _xs.end(), e);\n                return it == _xs.end() ? default_value : *it;\n\
     \            }\n            // Return the maximum registered value less than `e`.\
     \ if not exists, return `default_value`\n            T max_lt(const T &e, const\
-    \ T &default_value) const {\n                auto it = std::upper_bound(_xs.rbegin(),\
-    \ _xs.rend(), e);\n                return it == _xs.rend() ? default_value : *it;\n\
+    \ T &default_value) const {\n                auto it = std::lower_bound(_xs.begin(),\
+    \ _xs.end(), e);\n                return it == _xs.begin() ? default_value : *std::prev(it);\n\
     \            }\n            // Return the maximum registered value less than or\
     \ equal to `e`. if not exists, return `default_value`\n            T max_leq(const\
-    \ T &e, const T &default_value) const {\n                auto it = std::lower_bound(_xs.rbegin(),\
-    \ _xs.rend(), e);\n                return it == _xs.rend() ? default_value : *it;\n\
+    \ T &e, const T &default_value) const {\n                auto it = std::upper_bound(_xs.begin(),\
+    \ _xs.end(), e);\n                return it == _xs.begin() ? default_value : *std::prev(it);\n\
     \            }\n            // Return the compressed index of the minimum registered\
     \ value greater than `e`. if not exists, return `Compressor.size()`.\n       \
     \     int min_gt_index(const T &e) const {\n                return std::upper_bound(_xs.begin(),\
@@ -106,18 +105,17 @@ data:
     \ {\n                return std::lower_bound(_xs.begin(), _xs.end(), e) - _xs.begin();\n\
     \            }\n            // Return the compressed index of the maximum registered\
     \ value less than `e`. if not exists, return -1.\n            int max_lt_index(const\
-    \ T &e) const {\n                return int(_xs.rend() - std::upper_bound(_xs.rbegin(),\
-    \ _xs.rend(), e)) - 1;\n            }\n            // Return the compressed index\
-    \ of the maximum registered value less than or equal to `e`. if not exists, return\
-    \ -1.\n            int max_leq_index(const T &e) const {\n                return\
-    \ int(_xs.rend() - std::lower_bound(_xs.rbegin(), _xs.rend(), e)) - 1;\n     \
-    \       }\n        private:\n            std::vector<T> _xs;\n    };\n} // namespace\
-    \ otera"
+    \ T &e) const {\n                return int(std::lower_bound(_xs.begin(), _xs.end(),\
+    \ e)) - 1;\n            }\n            // Return the compressed index of the maximum\
+    \ registered value less than or equal to `e`. if not exists, return -1.\n    \
+    \        int max_leq_index(const T &e) const {\n                return int(std::lower_bound(_xs.begin(),\
+    \ _xs.end(), e)) - 1;\n            }\n        private:\n            std::vector<T>\
+    \ _xs;\n    };\n} // namespace otera"
   dependsOn: []
   isVerificationFile: false
   path: library/Util/Compressor.hpp
   requiredBy: []
-  timestamp: '2022-01-31 17:11:08+09:00'
+  timestamp: '2022-02-01 02:57:53+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/Compressor.hpp
