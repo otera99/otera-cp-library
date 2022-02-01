@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':x:'
+    path: library/Util/Compressor.hpp
+    title: library/Util/Compressor.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -14,10 +17,10 @@ data:
     - https://atcoder.jp/contests/abc036/submissions/28965263
   bundledCode: "#line 1 \"test/src/Util/Compressor.ABC036.test.cpp\"\n#define PROBLEM\
     \ \"https://atcoder.jp/contests/abc036/submissions/28965263\"\n#define IGNORE\
-    \ ignore\n\n#include<bits/stdc++.h>\n\n#include<otera/Compressor.hpp>\n\nusing\
-    \ namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing ull\
-    \ = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int i\
-    \ = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
+    \ ignore\n\n#include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n\n\
+    using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
+    \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
+    \ i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
     \ repc(i, a, b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d,\
     \ e, ...) e\n#define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n\
     #define rep1a(i, n) for(int i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int\
@@ -73,7 +76,7 @@ data:
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc036/submissions/28965263\"\
-    \n#define IGNORE ignore\n\n#include<bits/stdc++.h>\n\n#include<otera/Compressor.hpp>\n\
+    \n#define IGNORE ignore\n\n#include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n\
     \nusing namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
     \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
     \ i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
@@ -131,11 +134,12 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}"
-  dependsOn: []
+  dependsOn:
+  - library/Util/Compressor.hpp
   isVerificationFile: true
   path: test/src/Util/Compressor.ABC036.test.cpp
   requiredBy: []
-  timestamp: '2022-02-02 06:16:29+09:00'
+  timestamp: '2022-02-02 06:21:12+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Util/Compressor.ABC036.test.cpp

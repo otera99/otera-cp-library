@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+    title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/DataStructure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
@@ -92,8 +95,9 @@ data:
   path: library/DataStructure/MergeHistoryForest.hpp
   requiredBy: []
   timestamp: '2022-01-17 21:01:44+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
 documentation_of: library/DataStructure/MergeHistoryForest.hpp
 layout: document
 redirect_from:

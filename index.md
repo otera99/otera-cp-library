@@ -8,12 +8,12 @@ data:
       title: library/AtCoder/modint.hpp
   - name: library/DataStructure
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/DataStructure/MergeHistoryForest.hpp
       title: library/DataStructure/MergeHistoryForest.hpp
   - name: library/Number
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/Number/Rational.hpp
       title: library/Number/Rational.hpp
   - name: library/Tree
@@ -23,7 +23,7 @@ data:
       title: library/Tree/LCA.hpp
   - name: library/Util
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
   verificationCategories:
@@ -39,7 +39,7 @@ data:
       title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
   - name: test/src/Tree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/src/Tree/LCA.test.cpp
       title: test/src/Tree/LCA.test.cpp
   - name: test/src/Util

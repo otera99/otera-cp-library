@@ -3,17 +3,13 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
-  attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/lca
-    links:
-    - https://judge.yosupo.jp/problem/lca
+  _verificationStatusIcon: ':x:'
+  attributes: {}
   bundledCode: "#line 1 \"test/src/Tree/LCA.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\
-    \n\n#include<otera/LCA>\n\n#include<bits/stdc++.h>\nusing namespace std;\n\nusing\
-    \ ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
+    \n\n#include<library/Tree/LCA>\n\n#include<bits/stdc++.h>\nusing namespace std;\n\
+    \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
     using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
     \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
     \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
@@ -70,7 +66,7 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include<otera/LCA>\n\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include<library/Tree/LCA>\n\
     \n#include<bits/stdc++.h>\nusing namespace std;\n\nusing ll = long long;\nusing\
     \ ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
     #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
@@ -133,8 +129,8 @@ data:
   isVerificationFile: true
   path: test/src/Tree/LCA.test.cpp
   requiredBy: []
-  timestamp: '2022-01-31 06:22:51+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-02-02 06:21:12+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Tree/LCA.test.cpp
 layout: document
