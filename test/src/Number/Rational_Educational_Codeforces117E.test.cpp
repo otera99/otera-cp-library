@@ -1,6 +1,7 @@
-// https://codeforces.com/contest/1626/submission/144768069
+#define PROBLEM "https://codeforces.com/contest/1612/problem/E"
+#define IGNORE ignore
 #include<bits/stdc++.h>
-#include<otera/Compressor>
+#include<otera/Rational>
 using namespace std;
 
 using ll = long long;
@@ -81,50 +82,60 @@ template<class Head, class... Tail> int out(const Head& head, const Tail&... tai
 #define dump(...)
 #endif
 
-const int inf = 1'000'000'007;
+const int N = 200'200;
+int cnt[N];
 
 void solve() {
+    rep(i, N) cnt[i] = 0;
     INT(n);
-    VEC(int, a, n);
-    rep(i, n) -- a[i];
-    vc<int> cnt(n + 1);
-    rep(i, n) cnt[a[i]] ++;
-    vc<int> sum(n + 2);
-    rep(i, n + 1) sum[i + 1] = sum[i] + cnt[i];
-    dump(sum);
-    otera::Compressor<int> compsum(sum);
-    // compsum.build();
-    dump(compsum.size());
-    int ans = inf;
-    int light = 0;
-    int pw = 1;
-    auto f = [&](int x) -> int {
-        int pw = 1;
-        while(pw < x) pw <<= 1;
-        return pw - x;
-    };
-    rep(x, n + 1) {
-        while(pw < light) pw <<= 1;
-        int res = pw - light;
-        debug(x, light);
-        for(int mid = 1; mid <= n - light; mid <<= 1) {
-            int val = compsum.max_leq(light + mid, 0);
-            debug(light + mid, val);
-            int needm = light + mid - val;
-            int needr = f(n - val);
-            chmin(ans, res + needm + needr);
-        }
-        light += cnt[x];
+    vc<int> m(n), k(n);
+    int ma = 0;
+    rep(i, n) {
+        in(m[i], k[i]);
+        chmax(ma, k[i]);
     }
-    out(ans);
+    otera::Rational<ll> ans(0);
+    vc<int> c;
+    rep1(i, 1, ma) {
+        rep(j, n) {
+            if(i <= k[j]) {
+                cnt[m[j]] ++;
+            }
+        }
+        ll sum = 0;
+        pqg<P> now;
+        debug(i);
+        rep(j, N) {
+            if(cnt[j] == 0) continue;
+            now.push(P{cnt[j], j});
+            sum += cnt[j];
+            debug(j, cnt[j]);
+            while(now.size() > i) {
+                sum -= now.top().fr;
+                now.pop();
+            }
+        }
+        otera::Rational<ll> res(sum, i);
+        debug(i, res);
+        if(chmax(ans, res)) {
+            ans = res;
+            c.clear();
+            while(now.size()) {
+                c.eb(now.top().sc); now.pop();
+            }
+            dump(c);
+        }
+    }
+    int t = si(c);
+    out(t);
+    out(c);
 }
 
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     // cout << fixed << setprecision(20);
-    INT(t); 
-    rep(i, t)solve();
-    // solve();
+    // INT(t); rep(i, t)solve();
+    solve();
     return 0;
 }

@@ -77,11 +77,11 @@ namespace otera {
             }
             // Return the compressed index of the maximum registered value less than `e`. if not exists, return -1.
             int max_lt_index(const T &e) const {
-                return int(std::lower_bound(_xs.begin(), _xs.end(), e)) - 1;
+                return int(std::lower_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;
             }
             // Return the compressed index of the maximum registered value less than or equal to `e`. if not exists, return -1.
             int max_leq_index(const T &e) const {
-                return int(std::lower_bound(_xs.begin(), _xs.end(), e)) - 1;
+                return int(std::lower_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;
             }
         private:
             std::vector<T> _xs;
