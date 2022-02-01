@@ -1,4 +1,6 @@
-// https://codeforces.com/contest/1626/submission/144768069
+#define PROBLEM "https://codeforces.com/contest/1626/problem/D"
+#define IGNORE ignore
+// verify: https://codeforces.com/contest/1626/submission/144768069
 #include<bits/stdc++.h>
 #include<otera/Compressor>
 using namespace std;

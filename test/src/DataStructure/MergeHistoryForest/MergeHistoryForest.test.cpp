@@ -1,5 +1,5 @@
 #define PROBLEM "https://atcoder.jp/contests/abc235/tasks/abc235_h"
-
+#define IGNORE ignore
 // verified by "https://atcoder.jp/contests/abc235/submissions/28582201"
 
 #include<otera/MergeHistoryForest>

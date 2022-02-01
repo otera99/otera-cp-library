@@ -1,5 +1,6 @@
 #define PROBLEM "https://codeforces.com/contest/1612/problem/E"
 #define IGNORE ignore
+// verify: https://codeforces.com/contest/1612/submission/144885299
 #include<bits/stdc++.h>
 #include<otera/Rational>
 using namespace std;
