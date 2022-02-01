@@ -11,13 +11,13 @@ data:
     IGNORE: ''
     IGNORE_IF_GCC: ''
     links:
-    - https://codeforces.com/contest/1626/problem/D
-    - https://codeforces.com/contest/1626/submission/144768069
-  bundledCode: "#line 1 \"test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp\"\
-    \n#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\n#define IGNORE\
-    \ ignore\n// verify: https://codeforces.com/contest/1626/submission/144768069\n\
-    #include<bits/stdc++.h>\n#include<otera/Compressor>\nusing namespace std;\n\n\
-    using ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
+    - https://codeforces.com/contest/1612/problem/E
+    - https://codeforces.com/contest/1612/submission/144885299
+  bundledCode: "#line 1 \"test/src/Number/Rational.Educational_Codeforces117E.test.cpp\"\
+    \n#define PROBLEM \"https://codeforces.com/contest/1612/problem/E\"\n#define IGNORE\
+    \ ignore\n// verify: https://codeforces.com/contest/1612/submission/144885299\n\
+    #include<bits/stdc++.h>\n#include<otera/Rational>\nusing namespace std;\n\nusing\
+    \ ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
     using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
     \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
     \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
@@ -67,26 +67,27 @@ data:
     , \"#x2<<\": \"<<x2<<\", \"#x3<<\": \"<<x3<<\", \"#x4<<\": \"<<x4<<\", \"#x5<<\"\
     : \"<<x5<<endl\n#ifdef DEBUG\n#define debug(...) CHOOSE((__VA_ARGS__,debug_5,debug_4,debug_3,debug_2,debug_1,~))(__VA_ARGS__)\n\
     #define dump(...) { print(#__VA_ARGS__); print(\":\"); out(__VA_ARGS__); }\n#else\n\
-    #define debug(...)\n#define dump(...)\n#endif\n\nconst int inf = 1'000'000'007;\n\
-    \nvoid solve() {\n    INT(n);\n    VEC(int, a, n);\n    rep(i, n) -- a[i];\n \
-    \   vc<int> cnt(n + 1);\n    rep(i, n) cnt[a[i]] ++;\n    vc<int> sum(n + 2);\n\
-    \    rep(i, n + 1) sum[i + 1] = sum[i] + cnt[i];\n    dump(sum);\n    otera::Compressor<int>\
-    \ compsum(sum);\n    // compsum.build();\n    dump(compsum.size());\n    int ans\
-    \ = inf;\n    int light = 0;\n    int pw = 1;\n    auto f = [&](int x) -> int\
-    \ {\n        int pw = 1;\n        while(pw < x) pw <<= 1;\n        return pw -\
-    \ x;\n    };\n    rep(x, n + 1) {\n        while(pw < light) pw <<= 1;\n     \
-    \   int res = pw - light;\n        debug(x, light);\n        for(int mid = 1;\
-    \ mid <= n - light; mid <<= 1) {\n            int val = compsum.max_leq(light\
-    \ + mid, 0);\n            debug(light + mid, val);\n            int needm = light\
-    \ + mid - val;\n            int needr = f(n - val);\n            chmin(ans, res\
-    \ + needm + needr);\n        }\n        light += cnt[x];\n    }\n    out(ans);\n\
+    #define debug(...)\n#define dump(...)\n#endif\n\nconst int N = 200'200;\nint cnt[N];\n\
+    \nvoid solve() {\n    rep(i, N) cnt[i] = 0;\n    INT(n);\n    vc<int> m(n), k(n);\n\
+    \    int ma = 0;\n    rep(i, n) {\n        in(m[i], k[i]);\n        chmax(ma,\
+    \ k[i]);\n    }\n    otera::Rational<ll> ans(0);\n    vc<int> c;\n    rep1(i,\
+    \ 1, ma) {\n        rep(j, n) {\n            if(i <= k[j]) {\n               \
+    \ cnt[m[j]] ++;\n            }\n        }\n        ll sum = 0;\n        pqg<P>\
+    \ now;\n        debug(i);\n        rep(j, N) {\n            if(cnt[j] == 0) continue;\n\
+    \            now.push(P{cnt[j], j});\n            sum += cnt[j];\n           \
+    \ debug(j, cnt[j]);\n            while(now.size() > i) {\n                sum\
+    \ -= now.top().fr;\n                now.pop();\n            }\n        }\n   \
+    \     otera::Rational<ll> res(sum, i);\n        debug(i, res);\n        if(chmax(ans,\
+    \ res)) {\n            ans = res;\n            c.clear();\n            while(now.size())\
+    \ {\n                c.eb(now.top().sc); now.pop();\n            }\n         \
+    \   dump(c);\n        }\n    }\n    int t = si(c);\n    out(t);\n    out(c);\n\
     }\n\nsigned main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    //\
-    \ cout << fixed << setprecision(20);\n    INT(t); \n    rep(i, t)solve();\n  \
-    \  // solve();\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\n#define\
-    \ IGNORE ignore\n// verify: https://codeforces.com/contest/1626/submission/144768069\n\
-    #include<bits/stdc++.h>\n#include<otera/Compressor>\nusing namespace std;\n\n\
-    using ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
+    \ cout << fixed << setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n\
+    \    return 0;\n}\n"
+  code: "#define PROBLEM \"https://codeforces.com/contest/1612/problem/E\"\n#define\
+    \ IGNORE ignore\n// verify: https://codeforces.com/contest/1612/submission/144885299\n\
+    #include<bits/stdc++.h>\n#include<otera/Rational>\nusing namespace std;\n\nusing\
+    \ ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
     using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
     \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
     \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
@@ -136,33 +137,34 @@ data:
     , \"#x2<<\": \"<<x2<<\", \"#x3<<\": \"<<x3<<\", \"#x4<<\": \"<<x4<<\", \"#x5<<\"\
     : \"<<x5<<endl\n#ifdef DEBUG\n#define debug(...) CHOOSE((__VA_ARGS__,debug_5,debug_4,debug_3,debug_2,debug_1,~))(__VA_ARGS__)\n\
     #define dump(...) { print(#__VA_ARGS__); print(\":\"); out(__VA_ARGS__); }\n#else\n\
-    #define debug(...)\n#define dump(...)\n#endif\n\nconst int inf = 1'000'000'007;\n\
-    \nvoid solve() {\n    INT(n);\n    VEC(int, a, n);\n    rep(i, n) -- a[i];\n \
-    \   vc<int> cnt(n + 1);\n    rep(i, n) cnt[a[i]] ++;\n    vc<int> sum(n + 2);\n\
-    \    rep(i, n + 1) sum[i + 1] = sum[i] + cnt[i];\n    dump(sum);\n    otera::Compressor<int>\
-    \ compsum(sum);\n    // compsum.build();\n    dump(compsum.size());\n    int ans\
-    \ = inf;\n    int light = 0;\n    int pw = 1;\n    auto f = [&](int x) -> int\
-    \ {\n        int pw = 1;\n        while(pw < x) pw <<= 1;\n        return pw -\
-    \ x;\n    };\n    rep(x, n + 1) {\n        while(pw < light) pw <<= 1;\n     \
-    \   int res = pw - light;\n        debug(x, light);\n        for(int mid = 1;\
-    \ mid <= n - light; mid <<= 1) {\n            int val = compsum.max_leq(light\
-    \ + mid, 0);\n            debug(light + mid, val);\n            int needm = light\
-    \ + mid - val;\n            int needr = f(n - val);\n            chmin(ans, res\
-    \ + needm + needr);\n        }\n        light += cnt[x];\n    }\n    out(ans);\n\
+    #define debug(...)\n#define dump(...)\n#endif\n\nconst int N = 200'200;\nint cnt[N];\n\
+    \nvoid solve() {\n    rep(i, N) cnt[i] = 0;\n    INT(n);\n    vc<int> m(n), k(n);\n\
+    \    int ma = 0;\n    rep(i, n) {\n        in(m[i], k[i]);\n        chmax(ma,\
+    \ k[i]);\n    }\n    otera::Rational<ll> ans(0);\n    vc<int> c;\n    rep1(i,\
+    \ 1, ma) {\n        rep(j, n) {\n            if(i <= k[j]) {\n               \
+    \ cnt[m[j]] ++;\n            }\n        }\n        ll sum = 0;\n        pqg<P>\
+    \ now;\n        debug(i);\n        rep(j, N) {\n            if(cnt[j] == 0) continue;\n\
+    \            now.push(P{cnt[j], j});\n            sum += cnt[j];\n           \
+    \ debug(j, cnt[j]);\n            while(now.size() > i) {\n                sum\
+    \ -= now.top().fr;\n                now.pop();\n            }\n        }\n   \
+    \     otera::Rational<ll> res(sum, i);\n        debug(i, res);\n        if(chmax(ans,\
+    \ res)) {\n            ans = res;\n            c.clear();\n            while(now.size())\
+    \ {\n                c.eb(now.top().sc); now.pop();\n            }\n         \
+    \   dump(c);\n        }\n    }\n    int t = si(c);\n    out(t);\n    out(c);\n\
     }\n\nsigned main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    //\
-    \ cout << fixed << setprecision(20);\n    INT(t); \n    rep(i, t)solve();\n  \
-    \  // solve();\n    return 0;\n}"
+    \ cout << fixed << setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n\
+    \    return 0;\n}"
   dependsOn: []
   isVerificationFile: true
-  path: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
+  path: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
   requiredBy: []
-  timestamp: '2022-02-02 06:06:03+09:00'
+  timestamp: '2022-02-02 06:16:29+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
+documentation_of: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
 layout: document
 redirect_from:
-- /verify/test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
-- /verify/test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp.html
-title: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
+- /verify/test/src/Number/Rational.Educational_Codeforces117E.test.cpp
+- /verify/test/src/Number/Rational.Educational_Codeforces117E.test.cpp.html
+title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
 ---

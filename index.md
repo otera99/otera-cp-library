@@ -35,8 +35,8 @@ data:
   - name: test/src/Number
     pages:
     - icon: ':x:'
-      path: test/src/Number/Rational_Educational_Codeforces117E.test.cpp
-      title: test/src/Number/Rational_Educational_Codeforces117E.test.cpp
+      path: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
+      title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
   - name: test/src/Tree
     pages:
     - icon: ':heavy_check_mark:'
@@ -45,10 +45,10 @@ data:
   - name: test/src/Util
     pages:
     - icon: ':x:'
-      path: test/src/Util/Compressor_ABC036.test.cpp
-      title: test/src/Util/Compressor_ABC036.test.cpp
+      path: test/src/Util/Compressor.ABC036.test.cpp
+      title: test/src/Util/Compressor.ABC036.test.cpp
     - icon: ':x:'
-      path: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
-      title: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
+      path: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
+      title: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
 layout: toppage
 ---

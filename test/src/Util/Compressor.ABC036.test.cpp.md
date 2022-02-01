@@ -12,7 +12,7 @@ data:
     IGNORE_IF_GCC: ''
     links:
     - https://atcoder.jp/contests/abc036/submissions/28965263
-  bundledCode: "#line 1 \"test/src/Util/Compressor_ABC036.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"test/src/Util/Compressor.ABC036.test.cpp\"\n#define PROBLEM\
     \ \"https://atcoder.jp/contests/abc036/submissions/28965263\"\n#define IGNORE\
     \ ignore\n\n#include<bits/stdc++.h>\n\n#include<otera/Compressor.hpp>\n\nusing\
     \ namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing ull\
@@ -133,15 +133,15 @@ data:
     \ 0;\n}"
   dependsOn: []
   isVerificationFile: true
-  path: test/src/Util/Compressor_ABC036.test.cpp
+  path: test/src/Util/Compressor.ABC036.test.cpp
   requiredBy: []
-  timestamp: '2022-02-02 06:06:03+09:00'
+  timestamp: '2022-02-02 06:16:29+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/src/Util/Compressor_ABC036.test.cpp
+documentation_of: test/src/Util/Compressor.ABC036.test.cpp
 layout: document
 redirect_from:
-- /verify/test/src/Util/Compressor_ABC036.test.cpp
-- /verify/test/src/Util/Compressor_ABC036.test.cpp.html
-title: test/src/Util/Compressor_ABC036.test.cpp
+- /verify/test/src/Util/Compressor.ABC036.test.cpp
+- /verify/test/src/Util/Compressor.ABC036.test.cpp.html
+title: test/src/Util/Compressor.ABC036.test.cpp
 ---
