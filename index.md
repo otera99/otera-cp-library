@@ -11,6 +11,11 @@ data:
     - icon: ':warning:'
       path: library/DataStructure/MergeHistoryForest.hpp
       title: library/DataStructure/MergeHistoryForest.hpp
+  - name: library/Number
+    pages:
+    - icon: ':warning:'
+      path: library/Number/Rational.hpp
+      title: library/Number/Rational.hpp
   - name: library/Tree
     pages:
     - icon: ':warning:'
@@ -27,6 +32,11 @@ data:
     - icon: ':x:'
       path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
       title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+  - name: test/src/Number
+    pages:
+    - icon: ':x:'
+      path: test/src/Number/Rational_Educational_Codeforces117E.test.cpp
+      title: test/src/Number/Rational_Educational_Codeforces117E.test.cpp
   - name: test/src/Tree
     pages:
     - icon: ':heavy_check_mark:'

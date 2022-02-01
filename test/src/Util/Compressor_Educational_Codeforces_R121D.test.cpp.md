@@ -73,12 +73,12 @@ data:
     \ x;\n    };\n    rep(x, n + 1) {\n        while(pw < light) pw <<= 1;\n     \
     \   int res = pw - light;\n        debug(x, light);\n        for(int mid = 1;\
     \ mid <= n - light; mid <<= 1) {\n            int val = compsum.max_leq(light\
-    \ + mid, 0);\n            debug(light + mid, val);\n            // assert(val\
-    \ != inf);\n            int needm = light + mid - val;\n            int needr\
-    \ = f(n - val);\n            chmin(ans, res + needm + needr);\n        }\n   \
-    \     light += cnt[x];\n    }\n    out(ans);\n}\n\nsigned main() {\n    ios::sync_with_stdio(false);\n\
-    \    cin.tie(0);\n    // cout << fixed << setprecision(20);\n    INT(t); \n  \
-    \  rep(i, t)solve();\n    // solve();\n    return 0;\n}\n"
+    \ + mid, 0);\n            debug(light + mid, val);\n            int needm = light\
+    \ + mid - val;\n            int needr = f(n - val);\n            chmin(ans, res\
+    \ + needm + needr);\n        }\n        light += cnt[x];\n    }\n    out(ans);\n\
+    }\n\nsigned main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    //\
+    \ cout << fixed << setprecision(20);\n    INT(t); \n    rep(i, t)solve();\n  \
+    \  // solve();\n    return 0;\n}\n"
   code: "// https://codeforces.com/contest/1626/submission/144768069\n#include<bits/stdc++.h>\n\
     #include<otera/Compressor>\nusing namespace std;\n\nusing ll = long long;\nusing\
     \ ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
@@ -141,17 +141,17 @@ data:
     \ x;\n    };\n    rep(x, n + 1) {\n        while(pw < light) pw <<= 1;\n     \
     \   int res = pw - light;\n        debug(x, light);\n        for(int mid = 1;\
     \ mid <= n - light; mid <<= 1) {\n            int val = compsum.max_leq(light\
-    \ + mid, 0);\n            debug(light + mid, val);\n            // assert(val\
-    \ != inf);\n            int needm = light + mid - val;\n            int needr\
-    \ = f(n - val);\n            chmin(ans, res + needm + needr);\n        }\n   \
-    \     light += cnt[x];\n    }\n    out(ans);\n}\n\nsigned main() {\n    ios::sync_with_stdio(false);\n\
-    \    cin.tie(0);\n    // cout << fixed << setprecision(20);\n    INT(t); \n  \
-    \  rep(i, t)solve();\n    // solve();\n    return 0;\n}"
+    \ + mid, 0);\n            debug(light + mid, val);\n            int needm = light\
+    \ + mid - val;\n            int needr = f(n - val);\n            chmin(ans, res\
+    \ + needm + needr);\n        }\n        light += cnt[x];\n    }\n    out(ans);\n\
+    }\n\nsigned main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    //\
+    \ cout << fixed << setprecision(20);\n    INT(t); \n    rep(i, t)solve();\n  \
+    \  // solve();\n    return 0;\n}"
   dependsOn: []
   isVerificationFile: true
   path: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
   requiredBy: []
-  timestamp: '2022-02-01 03:13:33+09:00'
+  timestamp: '2022-02-02 06:00:42+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp

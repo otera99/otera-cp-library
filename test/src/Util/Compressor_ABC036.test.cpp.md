@@ -131,7 +131,7 @@ data:
   isVerificationFile: true
   path: test/src/Util/Compressor_ABC036.test.cpp
   requiredBy: []
-  timestamp: '2022-02-01 03:13:33+09:00'
+  timestamp: '2022-02-02 06:00:42+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Util/Compressor_ABC036.test.cpp

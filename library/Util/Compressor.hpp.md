@@ -54,11 +54,12 @@ data:
     \            }\n            // Return the compressed index of the maximum registered\
     \ value less than `e`. if not exists, return -1.\n            int max_lt_index(const\
     \ T &e) const {\n                return int(std::lower_bound(_xs.begin(), _xs.end(),\
-    \ e)) - 1;\n            }\n            // Return the compressed index of the maximum\
-    \ registered value less than or equal to `e`. if not exists, return -1.\n    \
-    \        int max_leq_index(const T &e) const {\n                return int(std::lower_bound(_xs.begin(),\
-    \ _xs.end(), e)) - 1;\n            }\n        private:\n            std::vector<T>\
-    \ _xs;\n    };\n} // namespace otera\n"
+    \ e)- _xs.begin()) - 1;\n            }\n            // Return the compressed index\
+    \ of the maximum registered value less than or equal to `e`. if not exists, return\
+    \ -1.\n            int max_leq_index(const T &e) const {\n                return\
+    \ int(std::lower_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;\n       \
+    \     }\n        private:\n            std::vector<T> _xs;\n    };\n} // namespace\
+    \ otera\n"
   code: "namespace otera {\n    template <typename T>\n    struct Compressor {\n \
     \       public:\n            static constexpr int absent = -1;\n\n           \
     \ Compressor(const std::vector<T> &vs) {\n                add(vs);\n         \
@@ -104,16 +105,17 @@ data:
     \            }\n            // Return the compressed index of the maximum registered\
     \ value less than `e`. if not exists, return -1.\n            int max_lt_index(const\
     \ T &e) const {\n                return int(std::lower_bound(_xs.begin(), _xs.end(),\
-    \ e)) - 1;\n            }\n            // Return the compressed index of the maximum\
-    \ registered value less than or equal to `e`. if not exists, return -1.\n    \
-    \        int max_leq_index(const T &e) const {\n                return int(std::lower_bound(_xs.begin(),\
-    \ _xs.end(), e)) - 1;\n            }\n        private:\n            std::vector<T>\
-    \ _xs;\n    };\n} // namespace otera"
+    \ e)- _xs.begin()) - 1;\n            }\n            // Return the compressed index\
+    \ of the maximum registered value less than or equal to `e`. if not exists, return\
+    \ -1.\n            int max_leq_index(const T &e) const {\n                return\
+    \ int(std::lower_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;\n       \
+    \     }\n        private:\n            std::vector<T> _xs;\n    };\n} // namespace\
+    \ otera"
   dependsOn: []
   isVerificationFile: false
   path: library/Util/Compressor.hpp
   requiredBy: []
-  timestamp: '2022-02-01 03:04:53+09:00'
+  timestamp: '2022-02-02 06:00:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/Compressor.hpp
