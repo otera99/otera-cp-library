@@ -8,18 +8,22 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    IGNORE: ''
+    IGNORE_IF_GCC: ''
     links:
+    - https://codeforces.com/contest/1626/problem/D
     - https://codeforces.com/contest/1626/submission/144768069
   bundledCode: "#line 1 \"test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp\"\
-    \n// https://codeforces.com/contest/1626/submission/144768069\n#include<bits/stdc++.h>\n\
-    #include<otera/Compressor>\nusing namespace std;\n\nusing ll = long long;\nusing\
-    \ ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
-    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
-    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
-    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
-    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
-    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+    \n#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\n#define IGNORE\
+    \ ignore\n// verify: https://codeforces.com/contest/1626/submission/144768069\n\
+    #include<bits/stdc++.h>\n#include<otera/Compressor>\nusing namespace std;\n\n\
+    using ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
+    using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
+    \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
+    \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
+    \ overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int\
+    \ i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n\
+    #define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
     \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
     #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
     \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
@@ -79,15 +83,16 @@ data:
     }\n\nsigned main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    //\
     \ cout << fixed << setprecision(20);\n    INT(t); \n    rep(i, t)solve();\n  \
     \  // solve();\n    return 0;\n}\n"
-  code: "// https://codeforces.com/contest/1626/submission/144768069\n#include<bits/stdc++.h>\n\
-    #include<otera/Compressor>\nusing namespace std;\n\nusing ll = long long;\nusing\
-    \ ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
-    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
-    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
-    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
-    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
-    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+  code: "#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\n#define\
+    \ IGNORE ignore\n// verify: https://codeforces.com/contest/1626/submission/144768069\n\
+    #include<bits/stdc++.h>\n#include<otera/Compressor>\nusing namespace std;\n\n\
+    using ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
+    using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
+    \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
+    \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
+    \ overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int\
+    \ i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n\
+    #define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
     \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
     #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
     \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
@@ -151,7 +156,7 @@ data:
   isVerificationFile: true
   path: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
   requiredBy: []
-  timestamp: '2022-02-02 06:00:42+09:00'
+  timestamp: '2022-02-02 06:06:03+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Util/Compressor_Educational_Codeforces_R121D.test.cpp
