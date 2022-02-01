@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/lca"
 
-#include<otera/LCA>
+#include<library/Tree/LCA>
 
 #include<bits/stdc++.h>
 using namespace std;

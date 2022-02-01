@@ -2,7 +2,7 @@
 #define IGNORE ignore
 // verified by "https://atcoder.jp/contests/abc235/submissions/28582201"
 
-#include<otera/MergeHistoryForest>
+#include<library/DataStructure/MergeHistoryForest.hpp>
 using namespace otera;
 
 #include<bits/stdc++.h>

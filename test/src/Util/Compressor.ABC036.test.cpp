@@ -2,8 +2,7 @@
 #define IGNORE ignore
 
 #include<bits/stdc++.h>
-
-#include<otera/Compressor.hpp>
+#include<library/Util/Compressor.hpp>
 
 using namespace std;
 

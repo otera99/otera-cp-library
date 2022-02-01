@@ -2,7 +2,7 @@
 #define IGNORE ignore
 // verify: https://codeforces.com/contest/1612/submission/144885299
 #include<bits/stdc++.h>
-#include<otera/Rational>
+#include<library/Number/Rational.hpp>
 using namespace std;
 
 using ll = long long;
