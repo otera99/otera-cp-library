@@ -8,12 +8,12 @@ data:
       title: library/AtCoder/modint.hpp
   - name: library/DataStructure
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: library/DataStructure/MergeHistoryForest.hpp
       title: library/DataStructure/MergeHistoryForest.hpp
   - name: library/Number
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: library/Number/Rational.hpp
       title: library/Number/Rational.hpp
   - name: library/Tree
@@ -23,7 +23,7 @@ data:
       title: library/Tree/LCA.hpp
   - name: library/Util
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
   verificationCategories:

@@ -15,16 +15,16 @@ data:
     links:
     - https://judge.yosupo.jp/problem/lca
   bundledCode: "#line 1 \"test/src/Tree/LCA.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\
-    \n\n#include<library/Tree/LCA.hpp>\n\n#include<bits/stdc++.h>\nusing namespace\
-    \ std;\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
-    \ long long;\nusing uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n;\
-    \ ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a,\
-    \ b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n\
-    #define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define\
-    \ rep1a(i, n) for(int i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i =\
-    \ a; i <= b; ++ i)\n#define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n\
-    #define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define\
-    \ per(i,n) for(int i=n-1;i>=0;i--)\n#define per1(i,n) for(int i=n;i>=1;i--)\n\
+    \n\n#include<library/Tree/LCA.hpp>\n// #include<otera/LCA>\n#include<bits/stdc++.h>\n\
+    using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
+    \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
+    \ i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
+    \ repc(i, a, b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d,\
+    \ e, ...) e\n#define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n\
+    #define rep1a(i, n) for(int i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int\
+    \ i = a; i <= b; ++ i)\n#define rep1c(i, a, b, c) for(int i = a; i <= b; i +=\
+    \ c)\n#define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)\n\
+    #define per(i,n) for(int i=n-1;i>=0;i--)\n#define per1(i,n) for(int i=n;i>=1;i--)\n\
     typedef pair<int, int> P;\ntypedef pair<ll, ll> LP;\n#define pb push_back\n#define\
     \ eb emplace_back\n#define fr first\n#define sc second\n#define all(c) c.begin(),c.end()\n\
     #define lb(c, x) distance((c).begin(), lower_bound(all(c), (x)))\n#define ub(c,\
@@ -75,14 +75,14 @@ data:
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include<library/Tree/LCA.hpp>\n\
-    \n#include<bits/stdc++.h>\nusing namespace std;\n\nusing ll = long long;\nusing\
-    \ ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
-    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
-    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
-    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
-    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
-    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+    // #include<otera/LCA>\n#include<bits/stdc++.h>\nusing namespace std;\n\nusing\
+    \ ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
+    using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
+    \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
+    \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
+    \ overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int\
+    \ i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n\
+    #define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
     \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
     #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
     \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
@@ -138,7 +138,7 @@ data:
   isVerificationFile: true
   path: test/src/Tree/LCA.test.cpp
   requiredBy: []
-  timestamp: '2022-02-02 06:24:09+09:00'
+  timestamp: '2022-02-02 06:31:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/src/Tree/LCA.test.cpp
