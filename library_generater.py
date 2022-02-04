@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from logging import Logger, basicConfig, getLogger
 from os import getenv, path, listdir
 from shutil import copy

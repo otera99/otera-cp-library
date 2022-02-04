@@ -1,4 +1,3 @@
-# this code is mainly writed by AtCoder Library (https://github.com/atcoder/ac-library).
 #!/usr/bin/env python3
 
 import re
@@ -92,6 +91,8 @@ if __name__ == "__main__":
     parser.add_argument('-ac', '--atcoder', action='store_true', help='Expand ac-library')
     opts = parser.parse_args()
 
+    print("[INFO] expand otera-cp-library")
+
     lib_paths = []
     if opts.lib:
         lib_paths.append(Path(opts.lib))
@@ -110,5 +111,6 @@ if __name__ == "__main__":
             f.write(output)
 
     if opts.atcoder:
+        print("[INFO] expand ac-library")
         expand_ac_command = ["python3", fspath(PurePath(opts.lib)) + "/ac-library/expander.py", "--lib", fspath(PurePath(opts.lib)) + "/ac-library", "combined_otera.cpp"]
         call(expand_ac_command)

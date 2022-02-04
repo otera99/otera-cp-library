@@ -1,4 +1,5 @@
-#define PROBLEM "https://atcoder.jp/contests/abc036/submissions/28965263"
+#define PROBLEM "https://atcoder.jp/contests/abc036/tasks/abc036_c"
+#define VERIFY "https://atcoder.jp/contests/abc036/submissions/28965263"
 #define IGNORE ignore
 
 #include<bits/stdc++.h>
