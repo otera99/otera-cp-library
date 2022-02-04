@@ -16,6 +16,11 @@ data:
     - icon: ':warning:'
       path: library/Number/Rational.hpp
       title: library/Number/Rational.hpp
+  - name: library/Other
+    pages:
+    - icon: ':warning:'
+      path: library/Other/RandomGenerator.hpp
+      title: library/Other/RandomGenerator.hpp
   - name: library/Tree
     pages:
     - icon: ':heavy_check_mark:'
@@ -26,6 +31,9 @@ data:
     - icon: ':warning:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
+    - icon: ':warning:'
+      path: library/Util/RunLength.hpp
+      title: library/Util/RunLength.hpp
   verificationCategories:
   - name: test/src/DataStructure/MergeHistoryForest
     pages:
