@@ -4,6 +4,8 @@ namespace otera {
         public:
             static constexpr int absent = -1;
 
+            Compressor() : _xs(std::vector<T>{}) {}
+
             Compressor(const std::vector<T> &vs) {
                 add(vs);
                 build();
@@ -81,7 +83,7 @@ namespace otera {
             }
             // Return the compressed index of the maximum registered value less than or equal to `e`. if not exists, return -1.
             int max_leq_index(const T &e) const {
-                return int(std::lower_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;
+                return int(std::upper_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;
             }
         private:
             std::vector<T> _xs;
