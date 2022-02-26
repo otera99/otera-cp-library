@@ -1,5 +1,3 @@
-#include<vector>
-
 namespace otera {
     class LCA {
         public:
