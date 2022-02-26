@@ -160,7 +160,7 @@ data:
   isVerificationFile: true
   path: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
   requiredBy: []
-  timestamp: '2022-02-04 19:50:23+09:00'
+  timestamp: '2022-02-27 07:53:20+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Number/Rational.Educational_Codeforces117E.test.cpp

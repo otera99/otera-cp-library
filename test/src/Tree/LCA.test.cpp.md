@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/Tree/LCA.hpp
     title: library/Tree/LCA.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
@@ -138,8 +138,8 @@ data:
   isVerificationFile: true
   path: test/src/Tree/LCA.test.cpp
   requiredBy: []
-  timestamp: '2022-02-02 06:31:22+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-02-27 07:53:20+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Tree/LCA.test.cpp
 layout: document

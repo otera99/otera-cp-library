@@ -21,8 +21,10 @@ data:
     \   }\n            auto end()     const noexcept { return _compressed.end(); \
     \    }\n            auto rbegin()  const noexcept { return _compressed.rbegin();\
     \  }\n            auto rend()    const noexcept { return _compressed.rend(); \
-    \   }\n\n            void push_back(const content_type &val, const long long cnt\
-    \ = 1) {\n                if (_compressed.size() and _compressed.back().first\
+    \   }\n            auto back()    const noexcept { return _compressed.back();\
+    \    }\n            auto front()    const noexcept { return _compressed.front();\
+    \    }\n\n            void push_back(const content_type &val, const long long\
+    \ cnt = 1) {\n                if (_compressed.size() and _compressed.back().first\
     \ == val) {\n                    _compressed.back().second += cnt;\n         \
     \       } else {\n                    _compressed.emplace_back(val, cnt);\n  \
     \              }\n            }\n\n            void pop_back(long long cnt = 1)\
@@ -50,8 +52,10 @@ data:
     \   }\n            auto end()     const noexcept { return _compressed.end(); \
     \    }\n            auto rbegin()  const noexcept { return _compressed.rbegin();\
     \  }\n            auto rend()    const noexcept { return _compressed.rend(); \
-    \   }\n\n            void push_back(const content_type &val, const long long cnt\
-    \ = 1) {\n                if (_compressed.size() and _compressed.back().first\
+    \   }\n            auto back()    const noexcept { return _compressed.back();\
+    \    }\n            auto front()    const noexcept { return _compressed.front();\
+    \    }\n\n            void push_back(const content_type &val, const long long\
+    \ cnt = 1) {\n                if (_compressed.size() and _compressed.back().first\
     \ == val) {\n                    _compressed.back().second += cnt;\n         \
     \       } else {\n                    _compressed.emplace_back(val, cnt);\n  \
     \              }\n            }\n\n            void pop_back(long long cnt = 1)\
@@ -71,7 +75,7 @@ data:
   isVerificationFile: false
   path: library/Util/RunLength.hpp
   requiredBy: []
-  timestamp: '2022-02-04 19:50:23+09:00'
+  timestamp: '2022-02-21 09:22:44+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/RunLength.hpp

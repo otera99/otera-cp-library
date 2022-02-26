@@ -3,18 +3,18 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/src/Tree/LCA.test.cpp
     title: test/src/Tree/LCA.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Tree/LCA.hpp\"\n#include<vector>\n\nnamespace otera\
-    \ {\n    class LCA {\n        public:\n            LCA(const std::vector<std::vector<int>>\
-    \ &g, int root = 0) {\n                int _n = (int)g.size();\n             \
-    \   int _N = 1;\n                while((1<<_N) < _n) ++ _N;\n                parent.assign(_N,\
+  bundledCode: "#line 1 \"library/Tree/LCA.hpp\"\nnamespace otera {\n    class LCA\
+    \ {\n        public:\n            LCA(const std::vector<std::vector<int>> &g,\
+    \ int root = 0) {\n                int _n = (int)g.size();\n                int\
+    \ _N = 1;\n                while((1<<_N) < _n) ++ _N;\n                parent.assign(_N,\
     \ std::vector<int>(_n, -1));\n                dep.assign(_n, -1);\n          \
     \      dfs(g, root);\n                for(int i = 0; i + 1 < (int)parent.size();\
     \ ++ i) {\n                    for(int v = 0; v < _n; ++ v) {\n              \
@@ -40,14 +40,14 @@ data:
     \     self(self, nv, v, d + 1);\n                    }\n                };\n \
     \               rec(rec, root, -1, 0);\n            }\n    };\n} // namespace\
     \ otera\n"
-  code: "#include<vector>\n\nnamespace otera {\n    class LCA {\n        public:\n\
-    \            LCA(const std::vector<std::vector<int>> &g, int root = 0) {\n   \
-    \             int _n = (int)g.size();\n                int _N = 1;\n         \
-    \       while((1<<_N) < _n) ++ _N;\n                parent.assign(_N, std::vector<int>(_n,\
-    \ -1));\n                dep.assign(_n, -1);\n                dfs(g, root);\n\
-    \                for(int i = 0; i + 1 < (int)parent.size(); ++ i) {\n        \
-    \            for(int v = 0; v < _n; ++ v) {\n                        if(parent[i][v]\
-    \ != -1) {\n                            parent[i + 1][v] = parent[i][parent[i][v]];\n\
+  code: "namespace otera {\n    class LCA {\n        public:\n            LCA(const\
+    \ std::vector<std::vector<int>> &g, int root = 0) {\n                int _n =\
+    \ (int)g.size();\n                int _N = 1;\n                while((1<<_N) <\
+    \ _n) ++ _N;\n                parent.assign(_N, std::vector<int>(_n, -1));\n \
+    \               dep.assign(_n, -1);\n                dfs(g, root);\n         \
+    \       for(int i = 0; i + 1 < (int)parent.size(); ++ i) {\n                 \
+    \   for(int v = 0; v < _n; ++ v) {\n                        if(parent[i][v] !=\
+    \ -1) {\n                            parent[i + 1][v] = parent[i][parent[i][v]];\n\
     \                        }\n                    }\n                }\n       \
     \     }\n            \n            int lca(int u, int v) const {\n           \
     \     if(dep[u] > dep[v]) std::swap(u, v);\n                for(int i = 0; i <\
@@ -73,8 +73,8 @@ data:
   isVerificationFile: false
   path: library/Tree/LCA.hpp
   requiredBy: []
-  timestamp: '2022-01-30 20:29:51+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-02-27 07:53:20+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/src/Tree/LCA.test.cpp
 documentation_of: library/Tree/LCA.hpp

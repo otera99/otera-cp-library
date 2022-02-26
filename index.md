@@ -11,6 +11,14 @@ data:
     - icon: ':warning:'
       path: library/DataStructure/MergeHistoryForest.hpp
       title: library/DataStructure/MergeHistoryForest.hpp
+  - name: library/Math
+    pages:
+    - icon: ':warning:'
+      path: library/Math/BostanMori.hpp
+      title: library/Math/BostanMori.hpp
+    - icon: ':warning:'
+      path: library/Math/FPS.hpp
+      title: library/Math/FPS.hpp
   - name: library/Number
     pages:
     - icon: ':warning:'
@@ -21,9 +29,12 @@ data:
     - icon: ':warning:'
       path: library/Other/RandomGenerator.hpp
       title: library/Other/RandomGenerator.hpp
+    - icon: ':warning:'
+      path: library/Other/Timer.hpp
+      title: library/Other/Timer.hpp
   - name: library/Tree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/Tree/LCA.hpp
       title: library/Tree/LCA.hpp
   - name: library/Util
@@ -47,7 +58,7 @@ data:
       title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
   - name: test/src/Tree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/src/Tree/LCA.test.cpp
       title: test/src/Tree/LCA.test.cpp
   - name: test/src/Util
