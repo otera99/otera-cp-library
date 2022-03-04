@@ -1,3 +1,6 @@
+#ifndef OTERA_MERGE_HISTORICAL_FOREST
+#define OTERA_MERGE_HISTORICAL_FOREST 1
+
 #include<atcoder/dsu>
 
 namespace otera {
@@ -90,3 +93,5 @@ namespace otera {
         std::vector<int> time;
     };
 } // namespace otera
+
+#endif // OTERA_MERGE_HISTORICAL_FOREST

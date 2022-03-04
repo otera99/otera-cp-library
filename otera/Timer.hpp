@@ -12,5 +12,5 @@ namespace otera {
         }
         private:
         int time;
-    }
+    };
 } // namespace otera

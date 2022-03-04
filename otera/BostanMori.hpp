@@ -1,3 +1,6 @@
+#ifndef OTERA_BOSTAN_MORI
+#define OTERA_BOSTAN_MORI 1
+
 #include<otera/FPS>
 
 namespace otera {
@@ -31,3 +34,5 @@ namespace otera {
         return P[0];
     }
 } // namesapce otera
+
+#endif // OTERA_BOSTAN_MORI

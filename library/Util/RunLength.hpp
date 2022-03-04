@@ -1,3 +1,6 @@
+#ifndef OTERA_RUNLENGTH
+#define OTERA_RUNLENGTH 1
+
 namespace otera{
     template <typename Container>
     class RunLength {
@@ -58,3 +61,5 @@ namespace otera{
             std::vector<value_type> _compressed;
     };
 } // namespace otera
+
+#endif // OTERA_RUNLENGTH

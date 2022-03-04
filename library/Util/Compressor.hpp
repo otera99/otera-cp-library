@@ -1,3 +1,6 @@
+#ifndef OTERA_COMPRESSOR
+#define OTERA_COMPRESSOR 1
+
 namespace otera {
     template <typename T>
     struct Compressor {
@@ -49,39 +52,39 @@ namespace otera {
                 return _xs[compressed_index];
             }
 
-            // Return the minimum registered value greater than `e`. if not exists, return `default_value`.
+            // minimum value greater than `e`
             T min_gt(const T &e, const T &default_value) const {
                 auto it = std::upper_bound(_xs.begin(), _xs.end(), e);
                 return it == _xs.end() ? default_value : *it;
             }
-            // Return the minimum registered value greater than or equal to `e`. if not exists, return `default_value`.
+            // minimum value greater than or equal to `e`
             T min_geq(const T &e, const T &default_value) const {
                 auto it = std::lower_bound(_xs.begin(), _xs.end(), e);
                 return it == _xs.end() ? default_value : *it;
             }
-            // Return the maximum registered value less than `e`. if not exists, return `default_value`
+            // maximum value less than `e`
             T max_lt(const T &e, const T &default_value) const {
                 auto it = std::lower_bound(_xs.begin(), _xs.end(), e);
                 return it == _xs.begin() ? default_value : *std::prev(it);
             }
-            // Return the maximum registered value less than or equal to `e`. if not exists, return `default_value`
+            // maximum value less than or equal to `e`
             T max_leq(const T &e, const T &default_value) const {
                 auto it = std::upper_bound(_xs.begin(), _xs.end(), e);
                 return it == _xs.begin() ? default_value : *std::prev(it);
             }
-            // Return the compressed index of the minimum registered value greater than `e`. if not exists, return `Compressor.size()`.
+            // index of minimum value greater than or equal to `e`
             int min_gt_index(const T &e) const {
                 return std::upper_bound(_xs.begin(), _xs.end(), e) - _xs.begin();
             }
-            // Return the compressed index of the minimum registered value greater than or equal to `e`. if not exists, return `Compressor.size()`.
+            // index of minimum value greater than or equal to `e`
             int min_geq_index(const T &e) const {
                 return std::lower_bound(_xs.begin(), _xs.end(), e) - _xs.begin();
             }
-            // Return the compressed index of the maximum registered value less than `e`. if not exists, return -1.
+            // index of maximum value less than `e`
             int max_lt_index(const T &e) const {
                 return int(std::lower_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;
             }
-            // Return the compressed index of the maximum registered value less than or equal to `e`. if not exists, return -1.
+            // index of maximum value less than or equal to `e`
             int max_leq_index(const T &e) const {
                 return int(std::upper_bound(_xs.begin(), _xs.end(), e)- _xs.begin()) - 1;
             }
@@ -89,3 +92,5 @@ namespace otera {
             std::vector<T> _xs;
     };
 } // namespace otera
+
+#endif // OTERA_COMPRESSOR
