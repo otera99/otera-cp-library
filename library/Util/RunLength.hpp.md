@@ -22,7 +22,7 @@ data:
     \    }\n            auto rbegin()  const noexcept { return _compressed.rbegin();\
     \  }\n            auto rend()    const noexcept { return _compressed.rend(); \
     \   }\n            auto back()    const noexcept { return _compressed.back();\
-    \    }\n            auto front()    const noexcept { return _compressed.front();\
+    \    }\n            auto front()   const noexcept { return _compressed.front();\
     \    }\n\n            void push_back(const content_type &val, const long long\
     \ cnt = 1) {\n                if (_compressed.size() and _compressed.back().first\
     \ == val) {\n                    _compressed.back().second += cnt;\n         \
@@ -54,7 +54,7 @@ data:
     \    }\n            auto rbegin()  const noexcept { return _compressed.rbegin();\
     \  }\n            auto rend()    const noexcept { return _compressed.rend(); \
     \   }\n            auto back()    const noexcept { return _compressed.back();\
-    \    }\n            auto front()    const noexcept { return _compressed.front();\
+    \    }\n            auto front()   const noexcept { return _compressed.front();\
     \    }\n\n            void push_back(const content_type &val, const long long\
     \ cnt = 1) {\n                if (_compressed.size() and _compressed.back().first\
     \ == val) {\n                    _compressed.back().second += cnt;\n         \
@@ -77,7 +77,7 @@ data:
   isVerificationFile: false
   path: library/Util/RunLength.hpp
   requiredBy: []
-  timestamp: '2022-03-05 02:11:56+09:00'
+  timestamp: '2022-03-05 02:33:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/RunLength.hpp
