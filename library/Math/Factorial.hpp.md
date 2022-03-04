@@ -32,7 +32,7 @@ data:
     \    };\n    template<typename T> std::vector<T> factorial<T>::fact_ {1, 1};\n\
     \    template<typename T> std::vector<T> factorial<T>::inv_ {1, 1};\n    template<typename\
     \ T> std::vector<T> factorial<T>::finv_ {1, 1};\n} // namespace otera\n\n\n"
-  code: "#ifndef OTERA_FACTORIAL\n#define OTERA_FACTORIAL 1\n\n#include<library/AtCoder/modint.hpp>\n\
+  code: "#ifndef OTERA_FACTORIAL_HPP\n#define OTERA_FACTORIAL_HPP 1\n\n#include<library/AtCoder/modint.hpp>\n\
     \nnamespace otera{\n    template<typename T>\n    class factorial {\n        public:\n\
     \        factorial() {}\n        factorial(int n) {\n            ensure(n);\n\
     \        }\n        T com(const int n, const int k) {\n            if(n == k)\
@@ -53,13 +53,13 @@ data:
     \    };\n    template<typename T> std::vector<T> factorial<T>::fact_ {1, 1};\n\
     \    template<typename T> std::vector<T> factorial<T>::inv_ {1, 1};\n    template<typename\
     \ T> std::vector<T> factorial<T>::finv_ {1, 1};\n} // namespace otera\n\n#endif\
-    \ // OTERA_FACTORAIL"
+    \ // OTERA_FACTORAIL_HPP"
   dependsOn:
   - library/AtCoder/modint.hpp
   isVerificationFile: false
   path: library/Math/Factorial.hpp
   requiredBy: []
-  timestamp: '2022-03-05 02:11:56+09:00'
+  timestamp: '2022-03-05 02:48:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Math/Factorial.hpp

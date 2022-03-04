@@ -25,7 +25,7 @@ data:
     \ P = even(P * mQ);\n            else P = odd(P * mQ);\n            Q = even(Q\
     \ * mQ);\n            n >>= 1;\n        }\n        return P[0];\n    }\n} // namesapce\
     \ otera\n\n\n"
-  code: "#ifndef OTERA_BOSTAN_MORI\n#define OTERA_BOSTAN_MORI 1\n\n#include<library/Math/FPS.hpp>\n\
+  code: "#ifndef OTERA_BOSTAN_MORI_HPP\n#define OTERA_BOSTAN_MORI_HPP 1\n\n#include<library/Math/FPS.hpp>\n\
     \nnamespace otera {\n    template<typename mint>\n    // `[x^n]\\frac{P(x)}{Q(x)}`\n\
     \    mint bostan_mori(FPS<mint> P, FPS<mint> Q, ll n) {\n        auto even = [&](FPS<mint>\
     \ x) -> FPS<mint> {\n            FPS<mint> ret;\n            for(int i = 0; i\
@@ -38,13 +38,13 @@ data:
     \ {\n                mQ[i] = -mQ[i];\n            }\n            if(n % 2 == 0)\
     \ P = even(P * mQ);\n            else P = odd(P * mQ);\n            Q = even(Q\
     \ * mQ);\n            n >>= 1;\n        }\n        return P[0];\n    }\n} // namesapce\
-    \ otera\n\n#endif // OTERA_BOSTAN_MORI\n"
+    \ otera\n\n#endif // OTERA_BOSTAN_MORI_HPP\n"
   dependsOn:
   - library/Math/FPS.hpp
   isVerificationFile: false
   path: library/Math/BostanMori.hpp
   requiredBy: []
-  timestamp: '2022-03-05 02:11:56+09:00'
+  timestamp: '2022-03-05 02:48:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Math/BostanMori.hpp

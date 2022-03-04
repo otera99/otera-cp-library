@@ -54,9 +54,9 @@ data:
     \         int max_leq_index(const T &e) const {\n                return int(std::upper_bound(_xs.begin(),\
     \ _xs.end(), e)- _xs.begin()) - 1;\n            }\n        private:\n        \
     \    std::vector<T> _xs;\n    };\n} // namespace otera\n\n\n"
-  code: "#ifndef OTERA_COMPRESSOR\n#define OTERA_COMPRESSOR 1\n\nnamespace otera {\n\
-    \    template <typename T>\n    struct Compressor {\n        public:\n       \
-    \     static constexpr int absent = -1;\n\n            Compressor() : _xs(std::vector<T>{})\
+  code: "#ifndef OTERA_COMPRESSOR_HPP\n#define OTERA_COMPRESSOR_HPP 1\n\nnamespace\
+    \ otera {\n    template <typename T>\n    struct Compressor {\n        public:\n\
+    \            static constexpr int absent = -1;\n\n            Compressor() : _xs(std::vector<T>{})\
     \ {}\n\n            Compressor(const std::vector<T> &vs) {\n                add(vs);\n\
     \                build();\n            }\n\n            void add(const std::vector<T>\
     \ &vs) {\n                std::copy(vs.begin(), vs.end(), std::back_inserter(_xs));\n\
@@ -99,12 +99,12 @@ data:
     \     }\n            // index of maximum value less than or equal to `e`\n   \
     \         int max_leq_index(const T &e) const {\n                return int(std::upper_bound(_xs.begin(),\
     \ _xs.end(), e)- _xs.begin()) - 1;\n            }\n        private:\n        \
-    \    std::vector<T> _xs;\n    };\n} // namespace otera\n\n#endif // OTERA_COMPRESSOR"
+    \    std::vector<T> _xs;\n    };\n} // namespace otera\n\n#endif // OTERA_COMPRESSOR_HPP"
   dependsOn: []
   isVerificationFile: false
   path: library/Util/Compressor.hpp
   requiredBy: []
-  timestamp: '2022-03-05 02:11:56+09:00'
+  timestamp: '2022-03-05 02:48:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/Compressor.hpp

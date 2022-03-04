@@ -40,7 +40,7 @@ data:
     \                   res.emplace_back(*ite_l, ite_r - ite_l);\n               \
     \ }\n                return res;\n            }\n        private:\n          \
     \  std::vector<value_type> _compressed;\n    };\n} // namespace otera\n\n\n"
-  code: "#ifndef OTERA_RUNLENGTH\n#define OTERA_RUNLENGTH 1\n\nnamespace otera{\n\
+  code: "#ifndef OTERA_RUNLENGTH_HPP\n#define OTERA_RUNLENGTH_HPP 1\n\nnamespace otera{\n\
     \    template <typename Container>\n    class RunLength {\n        public:\n \
     \           using content_type = typename Container::value_type;\n           \
     \ using value_type = std::pair<content_type, long long>;\n            RunLength(const\
@@ -72,12 +72,12 @@ data:
     \                   res.emplace_back(*ite_l, ite_r - ite_l);\n               \
     \ }\n                return res;\n            }\n        private:\n          \
     \  std::vector<value_type> _compressed;\n    };\n} // namespace otera\n\n#endif\
-    \ // OTERA_RUNLENGTH"
+    \ // OTERA_RUNLENGTH_HPP"
   dependsOn: []
   isVerificationFile: false
   path: library/Util/RunLength.hpp
   requiredBy: []
-  timestamp: '2022-03-05 02:33:17+09:00'
+  timestamp: '2022-03-05 02:48:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/RunLength.hpp
