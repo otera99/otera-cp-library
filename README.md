@@ -15,13 +15,11 @@
 
 なお、`-ac`オプションをつけて実行すると、[AtCoder Library (ACL)](https://github.com/atcoder/ac-library)のコードも全て展開され、`combined.cpp`も生成される(CodeforcesなどのACLに対応してないジャッジではこちらを提出する).
 
+なお、[cp-commands](https://github.com/otera99/cp-commands)を用いることで、AtCoder, Codeforces, yukicoderの提出用に合わせたコードに容易に展開することができる.
+
 ## ライブラリの追加方法
 
 `library`フォルダ下に`.hpp`ファイルのライブラリを追加してから`library_generater.py`というスクリプト(python3.5 or later)を走らせると、`otera`フォルダ下にライブラリが生成されます.
-
-## コメント
-
-Verify用のコードはコンテストサイトに提出したものをそのまま用いてるので綺麗なコードではないです.
 
 ## バグ報告など
 

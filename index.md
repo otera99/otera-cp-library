@@ -19,6 +19,9 @@ data:
     - icon: ':warning:'
       path: library/Math/FPS.hpp
       title: library/Math/FPS.hpp
+    - icon: ':warning:'
+      path: library/Math/Factorial.hpp
+      title: library/Math/Factorial.hpp
   - name: library/Number
     pages:
     - icon: ':warning:'
@@ -32,6 +35,11 @@ data:
     - icon: ':warning:'
       path: library/Other/Timer.hpp
       title: library/Other/Timer.hpp
+  - name: library/String
+    pages:
+    - icon: ':warning:'
+      path: library/String/PalindromicTree.hpp
+      title: library/String/PalindromicTree.hpp
   - name: library/Tree
     pages:
     - icon: ':x:'

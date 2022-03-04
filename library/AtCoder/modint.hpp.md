@@ -1,29 +1,34 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: library/Math/Factorial.hpp
+    title: library/Math/Factorial.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/AtCoder/modint.hpp\"\n#include<atcoder/modint>\n\
+  bundledCode: "#line 1 \"library/AtCoder/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
     \nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
     \ &e) {\n    out << e.val();\n    return out;\n}\n\nstd::ostream& operator<<(std::ostream&\
     \ out, const atcoder::modint998244353 &e) {\n    out << e.val();\n    return out;\n\
     }\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint &e) {\n\
-    \    out << e.val();\n    return out;\n}\n"
-  code: "#include<atcoder/modint>\n\nstd::ostream& operator<<(std::ostream& out, const\
-    \ atcoder::modint1000000007 &e) {\n    out << e.val();\n    return out;\n}\n\n\
-    std::ostream& operator<<(std::ostream& out, const atcoder::modint998244353 &e)\
-    \ {\n    out << e.val();\n    return out;\n}\n\nstd::ostream& operator<<(std::ostream&\
-    \ out, const atcoder::modint &e) {\n    out << e.val();\n    return out;\n}"
+    \    out << e.val();\n    return out;\n}\n\n\n"
+  code: "#ifndef OTERA_MODINT\n#define OTERA_MODINT 1\n\n#include<atcoder/modint>\n\
+    \nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
+    \ &e) {\n    out << e.val();\n    return out;\n}\n\nstd::ostream& operator<<(std::ostream&\
+    \ out, const atcoder::modint998244353 &e) {\n    out << e.val();\n    return out;\n\
+    }\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint &e) {\n\
+    \    out << e.val();\n    return out;\n}\n\n#endif // OTERA_MODINT"
   dependsOn: []
   isVerificationFile: false
   path: library/AtCoder/modint.hpp
-  requiredBy: []
-  timestamp: '2022-01-31 17:11:08+09:00'
+  requiredBy:
+  - library/Math/Factorial.hpp
+  timestamp: '2022-03-05 02:11:56+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/AtCoder/modint.hpp

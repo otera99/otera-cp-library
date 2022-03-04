@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/DataStructure/MergeHistoryForest.hpp\"\n#include<atcoder/dsu>\n\
+  bundledCode: "#line 1 \"library/DataStructure/MergeHistoryForest.hpp\"\n\n\n\n#include<atcoder/dsu>\n\
     \nnamespace otera {\n    struct MergeHistoryForest {\n        MergeHistoryForest()\
     \ : MergeHistoryForest(0) {}\n        MergeHistoryForest(int n) : _n(n), g(2 *\
     \ n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {\n        \
@@ -47,8 +47,9 @@ data:
     \  int _n;\n        mutable int ite;\n        mutable int count;\n        std::vector<std::vector<int>>\
     \ g;\n        mutable atcoder::dsu uf;\n        std::vector<int> ids;\n      \
     \  std::vector<bool> root;\n        std::vector<int> time;\n    };\n} // namespace\
-    \ otera\n"
-  code: "#include<atcoder/dsu>\n\nnamespace otera {\n    struct MergeHistoryForest\
+    \ otera\n\n\n"
+  code: "#ifndef OTERA_MERGE_HISTORICAL_FOREST\n#define OTERA_MERGE_HISTORICAL_FOREST\
+    \ 1\n\n#include<atcoder/dsu>\n\nnamespace otera {\n    struct MergeHistoryForest\
     \ {\n        MergeHistoryForest() : MergeHistoryForest(0) {}\n        MergeHistoryForest(int\
     \ n) : _n(n), g(2 * n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n\
     \ - 1) {\n            ite = n;\n            count = 1;\n            for(int i\
@@ -86,12 +87,12 @@ data:
     \  int _n;\n        mutable int ite;\n        mutable int count;\n        std::vector<std::vector<int>>\
     \ g;\n        mutable atcoder::dsu uf;\n        std::vector<int> ids;\n      \
     \  std::vector<bool> root;\n        std::vector<int> time;\n    };\n} // namespace\
-    \ otera"
+    \ otera\n\n#endif // OTERA_MERGE_HISTORICAL_FOREST"
   dependsOn: []
   isVerificationFile: false
   path: library/DataStructure/MergeHistoryForest.hpp
   requiredBy: []
-  timestamp: '2022-01-17 21:01:44+09:00'
+  timestamp: '2022-03-05 02:11:56+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/DataStructure/MergeHistoryForest.hpp

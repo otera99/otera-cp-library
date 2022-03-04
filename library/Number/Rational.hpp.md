@@ -8,28 +8,28 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Number/Rational.hpp\"\n// \u30AA\u30FC\u30D0\u30FC\
-    \u30D5\u30ED\u30FC\u3057\u305D\u3046\u306A\u6642\u306F\u4ED6\u306E\u4EBA\u306E\
-    \u30E9\u30A4\u30D6\u30E9\u30EA\u3092\u4F7F\u3046\u3079\u304D\n// \u6709\u7406\u6570\
-    \u306E\u6BD4\u8F03\u306F\u304B\u306A\u308A\u5371\u967A\u306A\u306E\u3067\nnamespace\
-    \ otera{\n    template<typename T>\n    struct Rational {\n        public:\n \
-    \           Rational() : Rational(0) {}\n            Rational(T n) : num(n), den(1)\
-    \ {}\n            Rational(T n, T d) {\n                assert(d != 0);\n    \
-    \            if(n == 0) num = 0, den = 1;\n                else {\n          \
-    \          T g = std::gcd(n, d);\n                    n /= g, d /= g;\n      \
-    \              if (d < 0) n = -n, d = -d;\n                    num = n, den =\
-    \ d;\n                }\n            }\n\n            T numerator() const { return\
-    \ num; }\n            T denominator() const { return den; }\n\n            //\
-    \ return (x > 0 ? 1 : x == 0 ? 0 : -1)\n            int sgn() const {\n      \
-    \          return -1 + (num >= 0) + (num > 0);\n            }\n            //\
-    \ return (l > r ? 1 : l == r ? 0 : -1)\n            static int compare(const Rational\
-    \ &l, const Rational &r) {\n                T g = std::abs(std::gcd(l.den, r.den));\n\
-    \                T val = r.den / g * l.num - l.den / g * r.num;\n            \
-    \    return -1 + (val >= 0) + (val > 0);\n            }\n\n            friend\
-    \ bool operator<(const Rational &l, const Rational &r) {\n                return\
-    \ compare(l, r) < 0;\n            }\n            friend bool operator>(const Rational\
-    \ &l, const Rational &r) {\n                return compare(l, r) > 0;\n      \
-    \      }\n            friend bool operator<=(const Rational &l, const Rational\
+  bundledCode: "#line 1 \"library/Number/Rational.hpp\"\n\n\n\n// \u30AA\u30FC\u30D0\
+    \u30FC\u30D5\u30ED\u30FC\u3057\u305D\u3046\u306A\u6642\u306F\u4ED6\u306E\u4EBA\
+    \u306E\u30E9\u30A4\u30D6\u30E9\u30EA\u3092\u4F7F\u3046\u3079\u304D\n// \u6709\u7406\
+    \u6570\u306E\u6BD4\u8F03\u306F\u304B\u306A\u308A\u5371\u967A\u306A\u306E\u3067\
+    \nnamespace otera{\n    template<typename T>\n    struct Rational {\n        public:\n\
+    \            Rational() : Rational(0) {}\n            Rational(T n) : num(n),\
+    \ den(1) {}\n            Rational(T n, T d) {\n                assert(d != 0);\n\
+    \                if(n == 0) num = 0, den = 1;\n                else {\n      \
+    \              T g = std::gcd(n, d);\n                    n /= g, d /= g;\n  \
+    \                  if (d < 0) n = -n, d = -d;\n                    num = n, den\
+    \ = d;\n                }\n            }\n\n            T numerator() const {\
+    \ return num; }\n            T denominator() const { return den; }\n\n       \
+    \     // return (x > 0 ? 1 : x == 0 ? 0 : -1)\n            int sgn() const {\n\
+    \                return -1 + (num >= 0) + (num > 0);\n            }\n        \
+    \    // return (l > r ? 1 : l == r ? 0 : -1)\n            static int compare(const\
+    \ Rational &l, const Rational &r) {\n                T g = std::abs(std::gcd(l.den,\
+    \ r.den));\n                T val = r.den / g * l.num - l.den / g * r.num;\n \
+    \               return -1 + (val >= 0) + (val > 0);\n            }\n\n       \
+    \     friend bool operator<(const Rational &l, const Rational &r) {\n        \
+    \        return compare(l, r) < 0;\n            }\n            friend bool operator>(const\
+    \ Rational &l, const Rational &r) {\n                return compare(l, r) > 0;\n\
+    \            }\n            friend bool operator<=(const Rational &l, const Rational\
     \ &r) {\n                return compare(l, r) <= 0;\n            }\n         \
     \   friend bool operator>=(const Rational &l, const Rational &r) {\n         \
     \       return compare(l, r) >= 0;\n            }\n            friend bool operator==(const\
@@ -78,41 +78,41 @@ data:
     otera::Rational<T> max(const otera::Rational<T> &l, const otera::Rational<T> &r)\
     \ {\n    return l > r ? l : r;\n}\ntemplate <typename T>\notera::Rational<T> min(const\
     \ otera::Rational<T> &l, const otera::Rational<T> &r) {\n    return l < r ? l\
-    \ : r;\n}\n"
-  code: "// \u30AA\u30FC\u30D0\u30FC\u30D5\u30ED\u30FC\u3057\u305D\u3046\u306A\u6642\
-    \u306F\u4ED6\u306E\u4EBA\u306E\u30E9\u30A4\u30D6\u30E9\u30EA\u3092\u4F7F\u3046\
-    \u3079\u304D\n// \u6709\u7406\u6570\u306E\u6BD4\u8F03\u306F\u304B\u306A\u308A\u5371\
-    \u967A\u306A\u306E\u3067\nnamespace otera{\n    template<typename T>\n    struct\
-    \ Rational {\n        public:\n            Rational() : Rational(0) {}\n     \
-    \       Rational(T n) : num(n), den(1) {}\n            Rational(T n, T d) {\n\
-    \                assert(d != 0);\n                if(n == 0) num = 0, den = 1;\n\
-    \                else {\n                    T g = std::gcd(n, d);\n         \
-    \           n /= g, d /= g;\n                    if (d < 0) n = -n, d = -d;\n\
-    \                    num = n, den = d;\n                }\n            }\n\n \
-    \           T numerator() const { return num; }\n            T denominator() const\
-    \ { return den; }\n\n            // return (x > 0 ? 1 : x == 0 ? 0 : -1)\n   \
-    \         int sgn() const {\n                return -1 + (num >= 0) + (num > 0);\n\
-    \            }\n            // return (l > r ? 1 : l == r ? 0 : -1)\n        \
-    \    static int compare(const Rational &l, const Rational &r) {\n            \
-    \    T g = std::abs(std::gcd(l.den, r.den));\n                T val = r.den /\
-    \ g * l.num - l.den / g * r.num;\n                return -1 + (val >= 0) + (val\
-    \ > 0);\n            }\n\n            friend bool operator<(const Rational &l,\
-    \ const Rational &r) {\n                return compare(l, r) < 0;\n          \
-    \  }\n            friend bool operator>(const Rational &l, const Rational &r)\
-    \ {\n                return compare(l, r) > 0;\n            }\n            friend\
-    \ bool operator<=(const Rational &l, const Rational &r) {\n                return\
-    \ compare(l, r) <= 0;\n            }\n            friend bool operator>=(const\
-    \ Rational &l, const Rational &r) {\n                return compare(l, r) >= 0;\n\
-    \            }\n            friend bool operator==(const Rational &l, const Rational\
-    \ &r) {\n                return compare(l, r) == 0;\n            }\n         \
-    \   friend bool operator!=(const Rational &l, const Rational &r) {\n         \
-    \       return compare(l, r) != 0;\n            }\n\n            Rational operator+()\
-    \ const {\n                return *this;\n            }\n            Rational\
-    \ operator-() const {\n                return Rational(-num, den);\n         \
-    \   }\n            friend Rational operator+(const Rational &l, const Rational\
-    \ &r) {\n                T lcm = l.den / std::gcd(l.den, r.den) * r.den;  \n \
-    \               lcm = std::abs(lcm);\n                return Rational(l.num *\
-    \ (lcm / l.den) + r.num * (lcm / r.den), lcm);\n            }\n            friend\
+    \ : r;\n}\n\n\n"
+  code: "#ifndef OTERA_RATIONAL\n#define OTERA_RATIONAL 1\n\n// \u30AA\u30FC\u30D0\
+    \u30FC\u30D5\u30ED\u30FC\u3057\u305D\u3046\u306A\u6642\u306F\u4ED6\u306E\u4EBA\
+    \u306E\u30E9\u30A4\u30D6\u30E9\u30EA\u3092\u4F7F\u3046\u3079\u304D\n// \u6709\u7406\
+    \u6570\u306E\u6BD4\u8F03\u306F\u304B\u306A\u308A\u5371\u967A\u306A\u306E\u3067\
+    \nnamespace otera{\n    template<typename T>\n    struct Rational {\n        public:\n\
+    \            Rational() : Rational(0) {}\n            Rational(T n) : num(n),\
+    \ den(1) {}\n            Rational(T n, T d) {\n                assert(d != 0);\n\
+    \                if(n == 0) num = 0, den = 1;\n                else {\n      \
+    \              T g = std::gcd(n, d);\n                    n /= g, d /= g;\n  \
+    \                  if (d < 0) n = -n, d = -d;\n                    num = n, den\
+    \ = d;\n                }\n            }\n\n            T numerator() const {\
+    \ return num; }\n            T denominator() const { return den; }\n\n       \
+    \     // return (x > 0 ? 1 : x == 0 ? 0 : -1)\n            int sgn() const {\n\
+    \                return -1 + (num >= 0) + (num > 0);\n            }\n        \
+    \    // return (l > r ? 1 : l == r ? 0 : -1)\n            static int compare(const\
+    \ Rational &l, const Rational &r) {\n                T g = std::abs(std::gcd(l.den,\
+    \ r.den));\n                T val = r.den / g * l.num - l.den / g * r.num;\n \
+    \               return -1 + (val >= 0) + (val > 0);\n            }\n\n       \
+    \     friend bool operator<(const Rational &l, const Rational &r) {\n        \
+    \        return compare(l, r) < 0;\n            }\n            friend bool operator>(const\
+    \ Rational &l, const Rational &r) {\n                return compare(l, r) > 0;\n\
+    \            }\n            friend bool operator<=(const Rational &l, const Rational\
+    \ &r) {\n                return compare(l, r) <= 0;\n            }\n         \
+    \   friend bool operator>=(const Rational &l, const Rational &r) {\n         \
+    \       return compare(l, r) >= 0;\n            }\n            friend bool operator==(const\
+    \ Rational &l, const Rational &r) {\n                return compare(l, r) == 0;\n\
+    \            }\n            friend bool operator!=(const Rational &l, const Rational\
+    \ &r) {\n                return compare(l, r) != 0;\n            }\n\n       \
+    \     Rational operator+() const {\n                return *this;\n          \
+    \  }\n            Rational operator-() const {\n                return Rational(-num,\
+    \ den);\n            }\n            friend Rational operator+(const Rational &l,\
+    \ const Rational &r) {\n                T lcm = l.den / std::gcd(l.den, r.den)\
+    \ * r.den;  \n                lcm = std::abs(lcm);\n                return Rational(l.num\
+    \ * (lcm / l.den) + r.num * (lcm / r.den), lcm);\n            }\n            friend\
     \ Rational operator-(const Rational &l, const Rational &r) {\n               \
     \ T lcm = l.den / std::gcd(l.den, r.den) * r.den;\n                lcm = std::abs(lcm);\n\
     \                return Rational(l.num * (lcm / l.den) - r.num * (lcm / r.den),\
@@ -149,12 +149,12 @@ data:
     otera::Rational<T> max(const otera::Rational<T> &l, const otera::Rational<T> &r)\
     \ {\n    return l > r ? l : r;\n}\ntemplate <typename T>\notera::Rational<T> min(const\
     \ otera::Rational<T> &l, const otera::Rational<T> &r) {\n    return l < r ? l\
-    \ : r;\n}"
+    \ : r;\n}\n\n#endif // OTERA_RATIONAL"
   dependsOn: []
   isVerificationFile: false
   path: library/Number/Rational.hpp
   requiredBy: []
-  timestamp: '2022-02-02 06:00:42+09:00'
+  timestamp: '2022-03-05 02:11:56+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Number/Rational.hpp

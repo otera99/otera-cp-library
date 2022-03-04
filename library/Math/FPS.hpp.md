@@ -11,17 +11,18 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Math/FPS.hpp\"\nnamespace otera {\n    template<typename\
+  bundledCode: "#line 1 \"library/Math/FPS.hpp\"\n\n\n\nnamespace otera {\n    template<typename\
     \ mint>\n    struct FPS : std::vector<mint> {\n        public:\n        private:\n\
-    \    }\n} // namespace otera\n"
-  code: "namespace otera {\n    template<typename mint>\n    struct FPS : std::vector<mint>\
-    \ {\n        public:\n        private:\n    }\n} // namespace otera"
+    \    }\n} // namespace otera\n\n\n"
+  code: "#ifndef OTERA_FPS\n#define OTERA_FPS 1\n\nnamespace otera {\n    template<typename\
+    \ mint>\n    struct FPS : std::vector<mint> {\n        public:\n        private:\n\
+    \    }\n} // namespace otera\n\n#endif // OTERA_FPS"
   dependsOn: []
   isVerificationFile: false
   path: library/Math/FPS.hpp
   requiredBy:
   - library/Math/BostanMori.hpp
-  timestamp: '2022-02-27 07:53:20+09:00'
+  timestamp: '2022-03-05 02:11:56+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Math/FPS.hpp
