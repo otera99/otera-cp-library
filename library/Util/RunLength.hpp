@@ -1,5 +1,5 @@
-#ifndef OTERA_RUNLENGTH
-#define OTERA_RUNLENGTH 1
+#ifndef OTERA_RUNLENGTH_HPP
+#define OTERA_RUNLENGTH_HPP 1
 
 namespace otera{
     template <typename Container>
@@ -62,4 +62,4 @@ namespace otera{
     };
 } // namespace otera
 
-#endif // OTERA_RUNLENGTH
+#endif // OTERA_RUNLENGTH_HPP

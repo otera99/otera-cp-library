@@ -1,5 +1,5 @@
-#ifndef OTERA_FPS
-#define OTERA_FPS 1
+#ifndef OTERA_FPS_HPP
+#define OTERA_FPS_HPP 1
 
 namespace otera {
     template<typename mint>
@@ -9,4 +9,4 @@ namespace otera {
     }
 } // namespace otera
 
-#endif // OTERA_FPS
+#endif // OTERA_FPS_HPP

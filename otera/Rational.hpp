@@ -1,5 +1,5 @@
-#ifndef OTERA_RATIONAL
-#define OTERA_RATIONAL 1
+#ifndef OTERA_RATIONAL_HPP
+#define OTERA_RATIONAL_HPP 1
 
 // オーバーフローしそうな時は他の人のライブラリを使うべき
 // 有理数の比較はかなり危険なので
@@ -146,4 +146,4 @@ otera::Rational<T> min(const otera::Rational<T> &l, const otera::Rational<T> &r)
     return l < r ? l : r;
 }
 
-#endif // OTERA_RATIONAL
+#endif // OTERA_RATIONAL_HPP

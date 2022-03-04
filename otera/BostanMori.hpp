@@ -1,5 +1,5 @@
-#ifndef OTERA_BOSTAN_MORI
-#define OTERA_BOSTAN_MORI 1
+#ifndef OTERA_BOSTAN_MORI_HPP
+#define OTERA_BOSTAN_MORI_HPP 1
 
 #include<otera/FPS>
 
@@ -35,4 +35,4 @@ namespace otera {
     }
 } // namesapce otera
 
-#endif // OTERA_BOSTAN_MORI
+#endif // OTERA_BOSTAN_MORI_HPP

@@ -1,5 +1,5 @@
-#ifndef OTERA_RUNLENGTH
-#define OTERA_RUNLENGTH 1
+#ifndef OTERA_RUNLENGTH_HPP
+#define OTERA_RUNLENGTH_HPP 1
 
 namespace otera{
     template <typename Container>
@@ -27,7 +27,7 @@ namespace otera{
             auto rbegin()  const noexcept { return _compressed.rbegin();  }
             auto rend()    const noexcept { return _compressed.rend();    }
             auto back()    const noexcept { return _compressed.back();    }
-            auto front()    const noexcept { return _compressed.front();    }
+            auto front()   const noexcept { return _compressed.front();    }
 
             void push_back(const content_type &val, const long long cnt = 1) {
                 if (_compressed.size() and _compressed.back().first == val) {
@@ -62,4 +62,4 @@ namespace otera{
     };
 } // namespace otera
 
-#endif // OTERA_RUNLENGTH
+#endif // OTERA_RUNLENGTH_HPP

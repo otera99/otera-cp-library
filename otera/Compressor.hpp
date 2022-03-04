@@ -1,5 +1,5 @@
-#ifndef OTERA_COMPRESSOR
-#define OTERA_COMPRESSOR 1
+#ifndef OTERA_COMPRESSOR_HPP
+#define OTERA_COMPRESSOR_HPP 1
 
 namespace otera {
     template <typename T>
@@ -93,4 +93,4 @@ namespace otera {
     };
 } // namespace otera
 
-#endif // OTERA_COMPRESSOR
+#endif // OTERA_COMPRESSOR_HPP

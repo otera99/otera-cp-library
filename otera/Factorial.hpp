@@ -1,5 +1,5 @@
-#ifndef OTERA_FACTORIAL
-#define OTERA_FACTORIAL 1
+#ifndef OTERA_FACTORIAL_HPP
+#define OTERA_FACTORIAL_HPP 1
 
 #include<otera/modint>
 
@@ -52,4 +52,4 @@ namespace otera{
     template<typename T> std::vector<T> factorial<T>::finv_ {1, 1};
 } // namespace otera
 
-#endif // OTERA_FACTORAIL
+#endif // OTERA_FACTORAIL_HPP
