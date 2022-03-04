@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# This code is based on [ac-lirary](https://github.com/atcoder/ac-library)'s expander.py.
+
 import re
 import sys
 import argparse

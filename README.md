@@ -11,7 +11,7 @@
 
 [AtCoder Library (ACL)](https://github.com/atcoder/ac-library)と同じように使いたいという考えにより、`otera`フォルダに`library`フォルダ下にあるライブラリを全て置いているので、`otera`フォルダのファイルをincludeすると使用できる.
 
-`expander.py`というスクリプト(python3.5 or later)で、`python3 path/to/ac-library/expander.py --lib path/to/otera-cp-library main.cpp`とすると、`combined_otera.cpp`が生成され、`otera`フォルダ下にライブラリが全て展開される(AtCoderなどのACLに対応しているジャッジではこちらを提出する).
+`expander.py`というスクリプト(python3.5 or later)で、`python3 path/to/otera-cp-library/expander.py --lib path/to/otera-cp-library main.cpp`とすると、`combined_otera.cpp`が生成され、`otera`フォルダ下にライブラリが全て展開される(AtCoderなどのACLに対応しているジャッジではこちらを提出する).
 
 なお、`-ac`オプションをつけて実行すると、[AtCoder Library (ACL)](https://github.com/atcoder/ac-library)のコードも全て展開され、`combined.cpp`も生成される(CodeforcesなどのACLに対応してないジャッジではこちらを提出する).
 
