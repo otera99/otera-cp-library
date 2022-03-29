@@ -10,3 +10,4 @@
 #include <otera/Rational.hpp>
 #include <otera/modint.hpp>
 #include <otera/PalindromicTree.hpp>
+#include <otera/BitwiseTransformation.hpp>
