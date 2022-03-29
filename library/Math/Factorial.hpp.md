@@ -59,7 +59,7 @@ data:
   isVerificationFile: false
   path: library/Math/Factorial.hpp
   requiredBy: []
-  timestamp: '2022-03-05 02:48:38+09:00'
+  timestamp: '2022-03-29 09:25:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Math/Factorial.hpp

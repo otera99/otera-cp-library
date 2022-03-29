@@ -6,6 +6,11 @@ data:
     - icon: ':warning:'
       path: library/AtCoder/modint.hpp
       title: library/AtCoder/modint.hpp
+  - name: library/Convolution
+    pages:
+    - icon: ':warning:'
+      path: library/Convolution/BitwiseTransformation.hpp
+      title: library/Convolution/BitwiseTransformation.hpp
   - name: library/DataStructure
     pages:
     - icon: ':warning:'

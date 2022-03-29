@@ -12,13 +12,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"library/AtCoder/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
-    \nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
+    \nnamespace otera {\n    using modint107 = atcoder::modint1000000007;\n    using\
+    \ modint998 = atcoder::modint998244353;\n    using modint = atcoder::modint;\n\
+    }; //namespace otera\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
     \ &e) {\n    out << e.val();\n    return out;\n}\n\nstd::ostream& operator<<(std::ostream&\
     \ out, const atcoder::modint998244353 &e) {\n    out << e.val();\n    return out;\n\
     }\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint &e) {\n\
     \    out << e.val();\n    return out;\n}\n\n\n"
   code: "#ifndef OTERA_MODINT\n#define OTERA_MODINT 1\n\n#include<atcoder/modint>\n\
-    \nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
+    \nnamespace otera {\n    using modint107 = atcoder::modint1000000007;\n    using\
+    \ modint998 = atcoder::modint998244353;\n    using modint = atcoder::modint;\n\
+    }; //namespace otera\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
     \ &e) {\n    out << e.val();\n    return out;\n}\n\nstd::ostream& operator<<(std::ostream&\
     \ out, const atcoder::modint998244353 &e) {\n    out << e.val();\n    return out;\n\
     }\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint &e) {\n\
@@ -28,7 +32,7 @@ data:
   path: library/AtCoder/modint.hpp
   requiredBy:
   - library/Math/Factorial.hpp
-  timestamp: '2022-03-05 02:11:56+09:00'
+  timestamp: '2022-03-29 09:25:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/AtCoder/modint.hpp
