@@ -59,6 +59,11 @@ data:
       path: library/Util/RunLength.hpp
       title: library/Util/RunLength.hpp
   verificationCategories:
+  - name: test/src/Convolution
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/src/Convolution/BitwiseTranformation.test.cpp
+      title: test/src/Convolution/BitwiseTranformation.test.cpp
   - name: test/src/DataStructure/MergeHistoryForest
     pages:
     - icon: ':x:'
