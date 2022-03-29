@@ -8,15 +8,13 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    IGNORE: ''
-    IGNORE_IF_GCC: ''
+    PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_h
     links:
     - https://atcoder.jp/contests/abc235/submissions/28582201
     - https://atcoder.jp/contests/abc235/tasks/abc235_h
   bundledCode: "#line 1 \"test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
     \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n#define\
-    \ VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n#define\
-    \ IGNORE ignore\n\n// #include<library/DataStructure/MergeHistoryForest.hpp>\n\
+    \ VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n// #include<library/DataStructure/MergeHistoryForest.hpp>\n\
     #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
     #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
     \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
@@ -93,8 +91,7 @@ data:
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n#define\
-    \ VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n#define\
-    \ IGNORE ignore\n\n// #include<library/DataStructure/MergeHistoryForest.hpp>\n\
+    \ VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n// #include<library/DataStructure/MergeHistoryForest.hpp>\n\
     #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
     #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
     \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
@@ -174,7 +171,7 @@ data:
   isVerificationFile: true
   path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
-  timestamp: '2022-03-05 02:11:56+09:00'
+  timestamp: '2022-03-29 23:55:22+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
