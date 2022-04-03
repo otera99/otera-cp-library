@@ -7,6 +7,7 @@
 #include <otera/FPS.hpp>
 #include <otera/Factorial.hpp>
 #include <otera/MergeHistoryForest.hpp>
+#include <otera/SieveOfEratosthenes.hpp>
 #include <otera/Rational.hpp>
 #include <otera/modint.hpp>
 #include <otera/PalindromicTree.hpp>
