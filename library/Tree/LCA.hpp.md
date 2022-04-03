@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/src/Tree/LCA.test.cpp
-    title: test/src/Tree/LCA.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Tree/LCA.hpp\"\nnamespace otera {\n    class LCA\
@@ -74,9 +71,8 @@ data:
   path: library/Tree/LCA.hpp
   requiredBy: []
   timestamp: '2022-02-27 07:53:20+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/src/Tree/LCA.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: library/Tree/LCA.hpp
 layout: document
 redirect_from:

@@ -32,6 +32,9 @@ data:
     - icon: ':warning:'
       path: library/Number/Rational.hpp
       title: library/Number/Rational.hpp
+    - icon: ':warning:'
+      path: library/Number/SieveOfEratosthenes.hpp
+      title: library/Number/SieveOfEratosthenes.hpp
   - name: library/Other
     pages:
     - icon: ':warning:'
@@ -47,7 +50,7 @@ data:
       title: library/String/PalindromicTree.hpp
   - name: library/Tree
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: library/Tree/LCA.hpp
       title: library/Tree/LCA.hpp
   - name: library/Util
