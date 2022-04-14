@@ -14,6 +14,9 @@ data:
   - name: library/DataStructure
     pages:
     - icon: ':warning:'
+      path: library/DataStructure/BinaryTrie.hpp
+      title: library/DataStructure/BinaryTrie.hpp
+    - icon: ':warning:'
       path: library/DataStructure/MergeHistoryForest.hpp
       title: library/DataStructure/MergeHistoryForest.hpp
   - name: library/Math
@@ -58,6 +61,9 @@ data:
     - icon: ':warning:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
+    - icon: ':warning:'
+      path: library/Util/Math.hpp
+      title: library/Util/Math.hpp
     - icon: ':warning:'
       path: library/Util/RunLength.hpp
       title: library/Util/RunLength.hpp
