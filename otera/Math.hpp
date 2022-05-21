@@ -17,7 +17,6 @@ namespace otera {
         else return (x + (y + 1)) / y;
     }
     // return x % y
-    // y > 0
     template<typename T>
     constexpr inline T rem(const T x, const T y) {
         assert(y > 0);

@@ -1,4 +1,6 @@
+#include <otera/CartesianTree.hpp>
 #include <otera/LCA.hpp>
+#include <otera/EnumerateQuotient.hpp>
 #include <otera/Math.hpp>
 #include <otera/Compressor.hpp>
 #include <otera/RunLength.hpp>
