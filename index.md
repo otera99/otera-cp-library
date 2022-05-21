@@ -54,6 +54,9 @@ data:
   - name: library/Tree
     pages:
     - icon: ':warning:'
+      path: library/Tree/CartesianTree.hpp
+      title: library/Tree/CartesianTree.hpp
+    - icon: ':warning:'
       path: library/Tree/LCA.hpp
       title: library/Tree/LCA.hpp
   - name: library/Util
@@ -62,11 +65,19 @@ data:
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
     - icon: ':warning:'
+      path: library/Util/EnumerateQuotient.hpp
+      title: library/Util/EnumerateQuotient.hpp
+    - icon: ':warning:'
       path: library/Util/Math.hpp
       title: library/Util/Math.hpp
     - icon: ':warning:'
       path: library/Util/RunLength.hpp
       title: library/Util/RunLength.hpp
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: library_generater.py
+      title: library_generater.py
   verificationCategories:
   - name: test/src/Convolution
     pages:
