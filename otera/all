@@ -9,6 +9,7 @@
 #include <otera/BostanMori.hpp>
 #include <otera/FPS.hpp>
 #include <otera/Factorial.hpp>
+#include <otera/PowTable.hpp>
 #include <otera/MergeHistoryForest.hpp>
 #include <otera/BinaryTrie.hpp>
 #include <otera/SieveOfEratosthenes.hpp>
