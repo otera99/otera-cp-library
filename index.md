@@ -30,6 +30,9 @@ data:
     - icon: ':warning:'
       path: library/Math/Factorial.hpp
       title: library/Math/Factorial.hpp
+    - icon: ':warning:'
+      path: library/Math/PowTable.hpp
+      title: library/Math/PowTable.hpp
   - name: library/Number
     pages:
     - icon: ':warning:'

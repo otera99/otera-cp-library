@@ -5,6 +5,9 @@ data:
   - icon: ':warning:'
     path: library/Math/Factorial.hpp
     title: library/Math/Factorial.hpp
+  - icon: ':warning:'
+    path: library/Math/PowTable.hpp
+    title: library/Math/PowTable.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -31,6 +34,7 @@ data:
   isVerificationFile: false
   path: library/AtCoder/modint.hpp
   requiredBy:
+  - library/Math/PowTable.hpp
   - library/Math/Factorial.hpp
   timestamp: '2022-03-29 09:25:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
