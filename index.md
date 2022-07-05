@@ -81,6 +81,12 @@ data:
     - icon: ':warning:'
       path: library_generater.py
       title: library_generater.py
+    - icon: ':warning:'
+      path: modify.py
+      title: modify.py
+    - icon: ':warning:'
+      path: modify_template.cpp
+      title: modify_template.cpp
   verificationCategories:
   - name: test/src/Convolution
     pages:

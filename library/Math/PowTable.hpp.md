@@ -16,9 +16,10 @@ data:
     \        powtable(long long x) : x_(T(x)), pw_(1, 1) {}\n        powtable(long\
     \ long x, int n) : x_(T(x)), pw_(1, 1) {\n            ensure(n);\n        }\n\
     \        T pow(const int n) {\n            assert(n >= 0);\n            ensure(n);\n\
-    \            return pw_[n];\n        }\n        private:\n        T x_;\n    \
-    \    std::vector<T> pw_;\n        void ensure(const int n) {\n            int\
-    \ sz = pw_.size();\n            if(n + 1 <= sz) return;\n            int next_sz\
+    \            return pw_[n];\n        }\n        T operator[](const int n) {\n\
+    \                return pow(n);\n        }\n        private:\n        T x_;\n\
+    \        std::vector<T> pw_;\n        void ensure(const int n) {\n           \
+    \ int sz = pw_.size();\n            if(n + 1 <= sz) return;\n            int next_sz\
     \ = std::max(n + 1, sz * 2);\n            pw_.resize(next_sz);\n            for(int\
     \ i = sz; i < next_sz; ++ i) {\n                pw_[i] = pw_[i - 1] * x_;\n  \
     \          }\n        }\n    };\n} // namespace otera\n\n\n"
@@ -27,9 +28,10 @@ data:
     \        powtable(long long x) : x_(T(x)), pw_(1, 1) {}\n        powtable(long\
     \ long x, int n) : x_(T(x)), pw_(1, 1) {\n            ensure(n);\n        }\n\
     \        T pow(const int n) {\n            assert(n >= 0);\n            ensure(n);\n\
-    \            return pw_[n];\n        }\n        private:\n        T x_;\n    \
-    \    std::vector<T> pw_;\n        void ensure(const int n) {\n            int\
-    \ sz = pw_.size();\n            if(n + 1 <= sz) return;\n            int next_sz\
+    \            return pw_[n];\n        }\n        T operator[](const int n) {\n\
+    \                return pow(n);\n        }\n        private:\n        T x_;\n\
+    \        std::vector<T> pw_;\n        void ensure(const int n) {\n           \
+    \ int sz = pw_.size();\n            if(n + 1 <= sz) return;\n            int next_sz\
     \ = std::max(n + 1, sz * 2);\n            pw_.resize(next_sz);\n            for(int\
     \ i = sz; i < next_sz; ++ i) {\n                pw_[i] = pw_[i - 1] * x_;\n  \
     \          }\n        }\n    };\n} // namespace otera\n\n#endif // OTERA_POW_TABLE_HPP"
@@ -38,7 +40,7 @@ data:
   isVerificationFile: false
   path: library/Math/PowTable.hpp
   requiredBy: []
-  timestamp: '2022-05-23 23:21:45+09:00'
+  timestamp: '2022-07-05 11:34:06+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Math/PowTable.hpp
