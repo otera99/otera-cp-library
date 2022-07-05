@@ -16,6 +16,9 @@ namespace otera{
             ensure(n);
             return pw_[n];
         }
+        T operator[](const int n) {
+                return pow(n);
+        }
         private:
         T x_;
         std::vector<T> pw_;
