@@ -45,7 +45,7 @@ data:
   isVerificationFile: false
   path: library/Math/BostanMori.hpp
   requiredBy: []
-  timestamp: '2022-04-15 03:33:12+09:00'
+  timestamp: '2022-09-02 19:58:27+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Math/BostanMori.hpp

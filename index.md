@@ -17,8 +17,14 @@ data:
       path: library/DataStructure/BinaryTrie.hpp
       title: library/DataStructure/BinaryTrie.hpp
     - icon: ':warning:'
+      path: library/DataStructure/Healthy2DSegtree.hpp
+      title: library/DataStructure/Healthy2DSegtree.hpp
+    - icon: ':warning:'
       path: library/DataStructure/MergeHistoryForest.hpp
       title: library/DataStructure/MergeHistoryForest.hpp
+    - icon: ':warning:'
+      path: library/DataStructure/XorSegtree.hpp
+      title: library/DataStructure/XorSegtree.hpp
   - name: library/Math
     pages:
     - icon: ':warning:'
