@@ -6,6 +6,14 @@ namespace otera {
     template<typename mint>
     struct FPS : std::vector<mint> {
         public:
+
+        FPS operator -() const {
+            FPS ret(*this);
+            for(auto &e: ret) e = -e;
+            return ret;
+        };
+        
+
         private:
     }
 } // namespace otera

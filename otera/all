@@ -10,8 +10,10 @@
 #include <otera/FPS.hpp>
 #include <otera/Factorial.hpp>
 #include <otera/PowTable.hpp>
+#include <otera/XorSegtree.hpp>
 #include <otera/MergeHistoryForest.hpp>
 #include <otera/BinaryTrie.hpp>
+#include <otera/Healthy2DSegtree.hpp>
 #include <otera/SieveOfEratosthenes.hpp>
 #include <otera/Rational.hpp>
 #include <otera/modint.hpp>
