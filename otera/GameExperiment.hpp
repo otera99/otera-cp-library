@@ -2,9 +2,16 @@
 #define OTERA_GAME_EXPERIMENT_HPP 1
 
 namespace otera {
+    const auto S_cmp{[](auto &&a, auto &&b) -> bool {
+        return true;
+    }};
+    template<class T, class S>
+    using S_map = std::map<T, S, decltype(S_cmp)>;
+
     template<class S>
-    struct Game : public std::map<S, bool> {
+    struct Game : public S_map<S, bool> {
         public:
+        Game() : S_map<S, bool>(S_cmp) {}
         bool win(S now) {
             bool res = dfs(now);
             return res;

@@ -22,7 +22,7 @@ cout << gm.win(s) << endl;
 
 遷移しうる状態の集合```vector<S>```を返すメンバー関数```next_game```と，状態の勝敗を返すメンバー関数```win```と，ゲームが終了したかどうかを判定するメンバー関数```end_game```を定義する必要がある．
 
-また，```std::map```を使う関係で```<```を定義しなければいけないことにも注意する
+~~また，```std::map```を使う関係で```<```を定義しなければいけないことにも注意する~~ (2022/9/25に書き換えたので不要になった)
 
 ## 例
 
@@ -33,10 +33,10 @@ struct S {
     vc<int> v;
     bool alice;
     int asum, bsum;
-    // mapを使う関係で < を定義しないといけない
-    friend bool operator<(const S &l, const S&r) {
-        return true;
-    }
+    //  mapを使う関係で < を定義しないといけない (2022/9/25に書き換えたので不要になった)
+    // friend bool operator<(const S &l, const S&r) {
+    //     return true;
+    // }
     // 常に!aliceに遷移する
     vc<S> next_game() {
         auto get = [&](int i) -> vc<int> {
