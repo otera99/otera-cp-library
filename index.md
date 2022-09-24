@@ -61,6 +61,11 @@ data:
     - icon: ':warning:'
       path: library/Other/Timer.hpp
       title: library/Other/Timer.hpp
+  - name: library/Solver
+    pages:
+    - icon: ':warning:'
+      path: library/Solver/InversionNumber.hpp
+      title: library/Solver/InversionNumber.hpp
   - name: library/String
     pages:
     - icon: ':warning:'

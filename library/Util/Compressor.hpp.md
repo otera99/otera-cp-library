@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: library/Solver/InversionNumber.hpp
+    title: library/Solver/InversionNumber.hpp
   _extendedVerifiedWith:
   - icon: ':x:'
     path: test/src/Util/Compressor.ABC036.test.cpp
@@ -109,7 +112,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/Util/Compressor.hpp
-  requiredBy: []
+  requiredBy:
+  - library/Solver/InversionNumber.hpp
   timestamp: '2022-03-05 02:48:38+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
