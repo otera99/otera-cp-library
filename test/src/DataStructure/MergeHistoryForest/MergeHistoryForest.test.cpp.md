@@ -1,21 +1,64 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: library/DataStructure/MergeHistoryForest.hpp
+    title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_h
+    PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_Ex
     links:
     - https://atcoder.jp/contests/abc235/submissions/28582201
-    - https://atcoder.jp/contests/abc235/tasks/abc235_h
+    - https://atcoder.jp/contests/abc235/tasks/abc235_Ex
   bundledCode: "#line 1 \"test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
-    \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n#define\
-    \ VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n// #include<library/DataStructure/MergeHistoryForest.hpp>\n\
-    #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
+    \n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_Ex\"\n#define\
+    \ VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n#line\
+    \ 1 \"library/DataStructure/MergeHistoryForest.hpp\"\n\n\n\n#include<atcoder/dsu>\n\
+    \nnamespace otera {\n    struct MergeHistoryForest {\n        MergeHistoryForest()\
+    \ : MergeHistoryForest(0) {}\n        MergeHistoryForest(int n) : _n(n), g(2 *\
+    \ n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {\n        \
+    \    ite = n;\n            count = 1;\n            for(int i = 0; i < n; ++ i)\
+    \ {\n                ids[i] = i;\n                root[i] = true;\n          \
+    \  }\n        }\n \n        int node_num() const {\n            return ite;\n\
+    \        }\n        const auto& get_dsu() const {\n            return uf;\n  \
+    \      }\n        const auto& get_forest() const {\n            return g;\n  \
+    \      }\n        auto get_roots() const {\n            std::vector<int> roots;\n\
+    \            for(int i = 0; i < 2 * _n - 1; ++ i) {\n                if(root[i])\
+    \ {\n                    roots.emplace_back(i);\n                }\n         \
+    \   }\n            return roots;\n        }\n \n        void merge(int a, int\
+    \ b) {\n            if(uf.same(a, b)) return;\n            int ida = ids[uf.leader(a)],\
+    \ idb = ids[uf.leader(b)];\n            root[ida] = root[idb] = false;\n     \
+    \       uf.merge(a, b);\n            ids[uf.leader(a)] = ite;\n            root[ite]\
+    \ = true;\n            g[ite].emplace_back(ida);\n            g[ite].emplace_back(idb);\n\
+    \            ++ ite;\n        }\n \n        void merge_simultaneously(std::vector<std::pair<int,\
+    \ int>> edges) {\n            for(auto &[a, b]: edges) {\n                if(!uf.same(a,\
+    \ b)) {\n                    int ida = ids[uf.leader(a)], idb = ids[uf.leader(b)];\n\
+    \                    if(count == time[ida]) {\n                        if(count\
+    \ == time[idb]) {\n                            if((int)g[ida].size() < (int)g[idb].size())\
+    \ {\n                                std::swap(a, b);\n                      \
+    \          std::swap(ida, idb);\n                            }\n             \
+    \               for(int nv: g[idb]) {\n                                g[ida].emplace_back(nv);\n\
+    \                            }\n                            root[idb] = false;\n\
+    \                            uf.merge(a, b);\n                            ids[uf.leader(a)]\
+    \ = ida;\n                        } else {\n                            g[ida].emplace_back(idb);\n\
+    \                            root[idb] = false;\n                            uf.merge(a,\
+    \ b);\n                            ids[uf.leader(a)] = ida;\n                \
+    \        }\n                    } else if(count == time[idb]) {\n            \
+    \            g[idb].emplace_back(ida);\n                        root[ida] = false;\n\
+    \                        uf.merge(a, b);\n                        ids[uf.leader(a)]\
+    \ = idb;\n                    } else {\n                        time[ite] = count;\n\
+    \                        merge(a, b);\n                    }\n               \
+    \ }\n            }\n            ++ count;\n        }\n \n    private:\n      \
+    \  int _n;\n        mutable int ite;\n        mutable int count;\n        std::vector<std::vector<int>>\
+    \ g;\n        mutable atcoder::dsu uf;\n        std::vector<int> ids;\n      \
+    \  std::vector<bool> root;\n        std::vector<int> time;\n    };\n} // namespace\
+    \ otera\n\n\n#line 5 \"test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp\"\
+    \n// #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
     #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
     \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
     using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
@@ -90,17 +133,18 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
-  code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_h\"\n#define\
-    \ VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n// #include<library/DataStructure/MergeHistoryForest.hpp>\n\
-    #include<otera/MergeHistoryForest>\nusing namespace otera;\n\n#include<bits/stdc++.h>\n\
-    #include<atcoder/modint>\n#include<atcoder/convolution>\nusing namespace std;\n\
-    \nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
-    using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
-    \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
-    \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
-    \ overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int\
-    \ i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n\
-    #define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+  code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_Ex\"\n\
+    #define VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
+    #include\"library/DataStructure/MergeHistoryForest.hpp\"\n// #include<otera/MergeHistoryForest>\n\
+    using namespace otera;\n\n#include<bits/stdc++.h>\n#include<atcoder/modint>\n\
+    #include<atcoder/convolution>\nusing namespace std;\n\nusing ll = long long;\n\
+    using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
+    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
+    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
+    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
+    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
+    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
+    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
     \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
     #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
     \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
@@ -167,12 +211,13 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}"
-  dependsOn: []
+  dependsOn:
+  - library/DataStructure/MergeHistoryForest.hpp
   isVerificationFile: true
   path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
   requiredBy: []
-  timestamp: '2022-03-29 23:55:22+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-09-24 19:32:12+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
 layout: document

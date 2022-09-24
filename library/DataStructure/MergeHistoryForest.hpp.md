@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+    title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/DataStructure/MergeHistoryForest.hpp\"\n\n\n\n#include<atcoder/dsu>\n\
@@ -93,10 +96,12 @@ data:
   path: library/DataStructure/MergeHistoryForest.hpp
   requiredBy: []
   timestamp: '2022-03-05 02:11:56+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
 documentation_of: library/DataStructure/MergeHistoryForest.hpp
 layout: document
+title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"
 ---
 
 - 概要

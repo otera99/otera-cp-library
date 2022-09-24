@@ -19,9 +19,9 @@ data:
     - icon: ':warning:'
       path: library/DataStructure/Healthy2DSegtree.hpp
       title: library/DataStructure/Healthy2DSegtree.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/DataStructure/MergeHistoryForest.hpp
-      title: library/DataStructure/MergeHistoryForest.hpp
+      title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"
     - icon: ':warning:'
       path: library/DataStructure/XorSegtree.hpp
       title: library/DataStructure/XorSegtree.hpp
@@ -71,7 +71,7 @@ data:
     - icon: ':warning:'
       path: library/Tree/CartesianTree.hpp
       title: library/Tree/CartesianTree.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/Tree/LCA.hpp
       title: library/Tree/LCA.hpp
   - name: library/Util
@@ -102,12 +102,12 @@ data:
   verificationCategories:
   - name: test/src/Convolution
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/src/Convolution/BitwiseTranformation.test.cpp
       title: test/src/Convolution/BitwiseTranformation.test.cpp
   - name: test/src/DataStructure/MergeHistoryForest
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
       title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
   - name: test/src/Number
