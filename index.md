@@ -25,6 +25,12 @@ data:
     - icon: ':warning:'
       path: library/DataStructure/XorSegtree.hpp
       title: library/DataStructure/XorSegtree.hpp
+  - name: library/Game
+    pages:
+    - icon: ':warning:'
+      path: library/Game/GameExperiment.hpp
+      title: "\u30B2\u30FC\u30E0\u306E\u5B9F\u9A13\u30B3\u30FC\u30C9\u306E\u7C21\u7565\
+        \u5316"
   - name: library/Math
     pages:
     - icon: ':warning:'
