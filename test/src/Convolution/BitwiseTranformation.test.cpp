@@ -1,8 +1,8 @@
 #define PROBLEM "https://atcoder.jp/contests/abc212/tasks/abc212_h"
 #define VERIFY "https://atcoder.jp/contests/abc212/submissions/30554763"
 #include<bits/stdc++.h>
-#include<otera/BitwiseTransformation>
-#include<otera/modint>
+#include<library/Convolution/BitwiseTransformation>
+#include<library/Atcoder/modint>
 using namespace std;
 
 #define int long long
