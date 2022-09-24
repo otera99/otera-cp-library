@@ -1,3 +1,7 @@
+---
+documentation_of: ../../../library/DataStructure/MergeHistoryForest.hpp
+---
+
 - 概要
 
 UnionFindと同様にして使うと、マージ過程を表す森を構築し、ある時点から辿り着ける頂点の集合をEuler Tour上の区間として表現できる。
