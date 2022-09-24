@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/src/Convolution/BitwiseTranformation.test.cpp
+    title: test/src/Convolution/BitwiseTranformation.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Convolution/BitwiseTransformation.hpp\"\n\n\n\n\
@@ -76,8 +79,9 @@ data:
   path: library/Convolution/BitwiseTransformation.hpp
   requiredBy: []
   timestamp: '2022-03-29 23:30:49+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/src/Convolution/BitwiseTranformation.test.cpp
 documentation_of: library/Convolution/BitwiseTransformation.hpp
 layout: document
 redirect_from:

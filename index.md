@@ -3,12 +3,12 @@ data:
   libraryCategories:
   - name: library/AtCoder
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/AtCoder/modint.hpp
       title: library/AtCoder/modint.hpp
   - name: library/Convolution
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/Convolution/BitwiseTransformation.hpp
       title: library/Convolution/BitwiseTransformation.hpp
   - name: library/DataStructure
@@ -102,7 +102,7 @@ data:
   verificationCategories:
   - name: test/src/Convolution
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/src/Convolution/BitwiseTranformation.test.cpp
       title: test/src/Convolution/BitwiseTranformation.test.cpp
   - name: test/src/DataStructure/MergeHistoryForest

@@ -8,10 +8,13 @@ data:
   - icon: ':warning:'
     path: library/Math/PowTable.hpp
     title: library/Math/PowTable.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/src/Convolution/BitwiseTranformation.test.cpp
+    title: test/src/Convolution/BitwiseTranformation.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/AtCoder/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
@@ -37,8 +40,9 @@ data:
   - library/Math/Factorial.hpp
   - library/Math/PowTable.hpp
   timestamp: '2022-03-29 09:25:41+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/src/Convolution/BitwiseTranformation.test.cpp
 documentation_of: library/AtCoder/modint.hpp
 layout: document
 redirect_from:
