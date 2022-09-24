@@ -9,33 +9,39 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Game/GameExperiment.hpp\"\n\n\n\nnamespace otera\
-    \ {\n    template<class S>\n    struct Game : public std::map<S, bool> {\n   \
-    \     public:\n        bool win(S now) {\n            bool res = dfs(now);\n \
-    \           return res;\n        }\n        private:\n        bool dfs(S now)\
-    \ {\n            if((*this).count(now)) return (*this)[now];\n            if(now.end_game())\
+    \ {\n    const auto S_cmp{[](auto &&a, auto &&b) -> bool {\n        return true;\n\
+    \    }};\n    template<class T, class S>\n    using S_map = std::map<T, S, decltype(S_cmp)>;\n\
+    \n    template<class S>\n    struct Game : public S_map<S, bool> {\n        public:\n\
+    \        Game() : S_map<S, bool>(S_cmp) {}\n        bool win(S now) {\n      \
+    \      bool res = dfs(now);\n            return res;\n        }\n        private:\n\
+    \        bool dfs(S now) {\n            if((*this).count(now)) return (*this)[now];\n\
+    \            if(now.end_game()) {\n                return now.win();\n       \
+    \     }\n            std::vector<S> nexts = now.next_game();\n            for(int\
+    \ i = 0; i < (int)nexts.size(); ++ i) {\n                S nxt = nexts[i];\n \
+    \               assert(nxt.alice != now.alice);\n                if(!dfs(nxt))\
+    \ {\n                    return (*this)[now] = true;\n                }\n    \
+    \        } \n            return (*this)[now] = false;\n        };\n    };\n} //\
+    \ namespace otera\n\n\n"
+  code: "#ifndef OTERA_GAME_EXPERIMENT_HPP\n#define OTERA_GAME_EXPERIMENT_HPP 1\n\n\
+    namespace otera {\n    const auto S_cmp{[](auto &&a, auto &&b) -> bool {\n   \
+    \     return true;\n    }};\n    template<class T, class S>\n    using S_map =\
+    \ std::map<T, S, decltype(S_cmp)>;\n\n    template<class S>\n    struct Game :\
+    \ public S_map<S, bool> {\n        public:\n        Game() : S_map<S, bool>(S_cmp)\
+    \ {}\n        bool win(S now) {\n            bool res = dfs(now);\n          \
+    \  return res;\n        }\n        private:\n        bool dfs(S now) {\n     \
+    \       if((*this).count(now)) return (*this)[now];\n            if(now.end_game())\
     \ {\n                return now.win();\n            }\n            std::vector<S>\
     \ nexts = now.next_game();\n            for(int i = 0; i < (int)nexts.size();\
     \ ++ i) {\n                S nxt = nexts[i];\n                assert(nxt.alice\
     \ != now.alice);\n                if(!dfs(nxt)) {\n                    return\
     \ (*this)[now] = true;\n                }\n            } \n            return\
-    \ (*this)[now] = false;\n        };\n    };\n} // namespace otera\n\n\n"
-  code: "#ifndef OTERA_GAME_EXPERIMENT_HPP\n#define OTERA_GAME_EXPERIMENT_HPP 1\n\n\
-    namespace otera {\n    template<class S>\n    struct Game : public std::map<S,\
-    \ bool> {\n        public:\n        bool win(S now) {\n            bool res =\
-    \ dfs(now);\n            return res;\n        }\n        private:\n        bool\
-    \ dfs(S now) {\n            if((*this).count(now)) return (*this)[now];\n    \
-    \        if(now.end_game()) {\n                return now.win();\n           \
-    \ }\n            std::vector<S> nexts = now.next_game();\n            for(int\
-    \ i = 0; i < (int)nexts.size(); ++ i) {\n                S nxt = nexts[i];\n \
-    \               assert(nxt.alice != now.alice);\n                if(!dfs(nxt))\
-    \ {\n                    return (*this)[now] = true;\n                }\n    \
-    \        } \n            return (*this)[now] = false;\n        };\n    };\n} //\
-    \ namespace otera\n\n#endif // OTERA_GAME_EXPERIMENT_HPP"
+    \ (*this)[now] = false;\n        };\n    };\n} // namespace otera\n\n#endif //\
+    \ OTERA_GAME_EXPERIMENT_HPP"
   dependsOn: []
   isVerificationFile: false
   path: library/Game/GameExperiment.hpp
   requiredBy: []
-  timestamp: '2022-09-24 18:26:40+09:00'
+  timestamp: '2022-09-25 00:56:55+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Game/GameExperiment.hpp
@@ -62,7 +68,7 @@ cout << gm.win(s) << endl;
 
 遷移しうる状態の集合```vector<S>```を返すメンバー関数```next_game```と，状態の勝敗を返すメンバー関数```win```と，ゲームが終了したかどうかを判定するメンバー関数```end_game```を定義する必要がある．
 
-また，```std::map```を使う関係で```<```を定義しなければいけないことにも注意する
+~~また，```std::map```を使う関係で```<```を定義しなければいけないことにも注意する~~ (2022/9/25に書き換えたので不要になった)
 
 ## 例
 
@@ -73,10 +79,10 @@ struct S {
     vc<int> v;
     bool alice;
     int asum, bsum;
-    // mapを使う関係で < を定義しないといけない
-    friend bool operator<(const S &l, const S&r) {
-        return true;
-    }
+    //  mapを使う関係で < を定義しないといけない (2022/9/25に書き換えたので不要になった)
+    // friend bool operator<(const S &l, const S&r) {
+    //     return true;
+    // }
     // 常に!aliceに遷移する
     vc<S> next_game() {
         auto get = [&](int i) -> vc<int> {

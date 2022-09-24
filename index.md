@@ -47,7 +47,7 @@ data:
       title: library/Math/PowTable.hpp
   - name: library/Number
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/Number/Rational.hpp
       title: library/Number/Rational.hpp
     - icon: ':warning:'
@@ -76,7 +76,7 @@ data:
       title: library/Tree/LCA.hpp
   - name: library/Util
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
     - icon: ':warning:'

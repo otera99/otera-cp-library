@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
+    title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Number/Rational.hpp\"\n\n\n\n// \u30AA\u30FC\u30D0\
@@ -155,8 +158,9 @@ data:
   path: library/Number/Rational.hpp
   requiredBy: []
   timestamp: '2022-03-05 02:48:38+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/src/Number/Rational.Educational_Codeforces117E.test.cpp
 documentation_of: library/Number/Rational.hpp
 layout: document
 redirect_from:

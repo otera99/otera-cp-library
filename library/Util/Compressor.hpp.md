@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/src/Util/Compressor.ABC036.test.cpp
+    title: test/src/Util/Compressor.ABC036.test.cpp
+  - icon: ':x:'
+    path: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
+    title: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Util/Compressor.hpp\"\n\n\n\nnamespace otera {\n\
@@ -105,8 +111,10 @@ data:
   path: library/Util/Compressor.hpp
   requiredBy: []
   timestamp: '2022-03-05 02:48:38+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
+  - test/src/Util/Compressor.ABC036.test.cpp
 documentation_of: library/Util/Compressor.hpp
 layout: document
 redirect_from:
