@@ -1,4 +1,5 @@
 ---
+title: マージ過程を表す森
 documentation_of: ../../../library/DataStructure/MergeHistoryForest.hpp
 ---
 
