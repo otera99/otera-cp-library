@@ -117,8 +117,8 @@ data:
   timestamp: '2022-03-05 02:48:38+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
   - test/src/Util/Compressor.ABC036.test.cpp
+  - test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
 documentation_of: library/Util/Compressor.hpp
 layout: document
 redirect_from:

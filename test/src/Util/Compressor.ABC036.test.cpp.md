@@ -18,7 +18,7 @@ data:
     - https://atcoder.jp/contests/abc036/tasks/abc036_c
   bundledCode: "#line 1 \"test/src/Util/Compressor.ABC036.test.cpp\"\n#define PROBLEM\
     \ \"https://atcoder.jp/contests/abc036/tasks/abc036_c\"\n#define VERIFY \"https://atcoder.jp/contests/abc036/submissions/28965263\"\
-    \n#define IGNORE ignore\n\n#include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n\
+    \n#define IGNORE\n\n#include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n\
     // #include<otera/Compressor>\n\nusing namespace std;\n\nusing ll = long long;\n\
     using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
     #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
@@ -78,8 +78,8 @@ data:
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc036/tasks/abc036_c\"\n#define\
     \ VERIFY \"https://atcoder.jp/contests/abc036/submissions/28965263\"\n#define\
-    \ IGNORE ignore\n\n#include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n\
-    // #include<otera/Compressor>\n\nusing namespace std;\n\nusing ll = long long;\n\
+    \ IGNORE\n\n#include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n//\
+    \ #include<otera/Compressor>\n\nusing namespace std;\n\nusing ll = long long;\n\
     using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
     #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
     \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
@@ -141,7 +141,7 @@ data:
   isVerificationFile: true
   path: test/src/Util/Compressor.ABC036.test.cpp
   requiredBy: []
-  timestamp: '2022-09-25 00:58:38+09:00'
+  timestamp: '2022-10-01 04:02:54+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Util/Compressor.ABC036.test.cpp

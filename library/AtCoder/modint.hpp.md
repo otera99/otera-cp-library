@@ -37,8 +37,8 @@ data:
   isVerificationFile: false
   path: library/AtCoder/modint.hpp
   requiredBy:
-  - library/Math/Factorial.hpp
   - library/Math/PowTable.hpp
+  - library/Math/Factorial.hpp
   timestamp: '2022-03-29 09:25:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
