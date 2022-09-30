@@ -17,8 +17,8 @@ data:
     - https://codeforces.com/contest/1626/problem/D
     - https://codeforces.com/contest/1626/submission/144768069
   bundledCode: "#line 1 \"test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp\"\
-    \n#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\n#define VERIFY\
-    \ \"https://codeforces.com/contest/1626/submission/144768069\"\n#define IGNORE\n\
+    \n#define IGNORE\n#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\
+    \n#define VERIFY \"https://codeforces.com/contest/1626/submission/144768069\"\n\
     #include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n// #include<otera/Compressor>\n\
     using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
     \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
@@ -87,9 +87,9 @@ data:
     }\n\nsigned main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    //\
     \ cout << fixed << setprecision(20);\n    INT(t); \n    rep(i, t)solve();\n  \
     \  // solve();\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\n#define\
-    \ VERIFY \"https://codeforces.com/contest/1626/submission/144768069\"\n#define\
-    \ IGNORE\n#include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n// #include<otera/Compressor>\n\
+  code: "#define IGNORE\n#define PROBLEM \"https://codeforces.com/contest/1626/problem/D\"\
+    \n#define VERIFY \"https://codeforces.com/contest/1626/submission/144768069\"\n\
+    #include<bits/stdc++.h>\n#include<library/Util/Compressor.hpp>\n// #include<otera/Compressor>\n\
     using namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing\
     \ ull = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int\
     \ i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
@@ -162,7 +162,7 @@ data:
   isVerificationFile: true
   path: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
   requiredBy: []
-  timestamp: '2022-10-01 04:02:54+09:00'
+  timestamp: '2022-10-01 04:27:01+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
