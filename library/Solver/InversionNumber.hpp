@@ -5,15 +5,17 @@
 #include<library/Util/Compressor.hpp>
 
 namespace otera {
-    long long InversionNumber(std::vector<long long> a) {
+    template<typename T>
+    long long InversionNumber(std::vector<T> a) {
         int _n = (int)a.size();
-        Compressor<long long> ca(a);
-        int sz = (int)ca.size();
-        atcoder::fenwick_tree<long long> bit(sz);
+        Compressor<T> ca(a);
+        int _sz = (int)ca.size();
+        atcoder::fenwick_tree<T> bit(sz);
         long long res = 0;
         for(int i = 0; i < _n; ++ i) {
-            res += bit.sum(ca.get(a[i]) + 1, sz);
-            bit.add(ca.get(a[i]), 1);
+            int _pos = ca.get(a[i]);
+            res += (long long)bit.sum(_pos + 1, _sz);
+            bit.add(_pos, 1);
         }
         return res;
     }

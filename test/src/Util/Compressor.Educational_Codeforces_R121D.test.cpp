@@ -1,6 +1,6 @@
 #define PROBLEM "https://codeforces.com/contest/1626/problem/D"
 #define VERIFY "https://codeforces.com/contest/1626/submission/144768069"
-#define IGNORE ignore
+#define IGNORE 1
 #include<bits/stdc++.h>
 #include<library/Util/Compressor.hpp>
 // #include<otera/Compressor>
