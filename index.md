@@ -76,7 +76,7 @@ data:
     - icon: ':warning:'
       path: library/Tree/CartesianTree.hpp
       title: library/Tree/CartesianTree.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/Tree/LCA.hpp
       title: library/Tree/LCA.hpp
   - name: library/Util
@@ -122,7 +122,7 @@ data:
       title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
   - name: test/src/Tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/src/Tree/LCA.test.cpp
       title: test/src/Tree/LCA.test.cpp
   - name: test/src/Util

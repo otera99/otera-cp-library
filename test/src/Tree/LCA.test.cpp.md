@@ -1,24 +1,24 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/Tree/LCA.hpp
     title: library/Tree/LCA.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
     links:
     - https://judge.yosupo.jp/problem/lca
   bundledCode: "#line 1 \"test/src/Tree/LCA.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\
-    \n\n#line 1 \"library/Tree/LCA.hpp\"\nnamespace otera {\n    class LCA {\n   \
-    \     public:\n            LCA(const std::vector<std::vector<int>> &g, int root\
-    \ = 0) {\n                int _n = (int)g.size();\n                int _N = 1;\n\
-    \                while((1<<_N) < _n) ++ _N;\n                parent.assign(_N,\
+    \n\n#include<bits/stdc++.h>\n#line 1 \"library/Tree/LCA.hpp\"\nnamespace otera\
+    \ {\n    class LCA {\n        public:\n            LCA(const std::vector<std::vector<int>>\
+    \ &g, int root = 0) {\n                int _n = (int)g.size();\n             \
+    \   int _N = 1;\n                while((1<<_N) < _n) ++ _N;\n                parent.assign(_N,\
     \ std::vector<int>(_n, -1));\n                dep.assign(_n, -1);\n          \
     \      dfs(g, root);\n                for(int i = 0; i + 1 < (int)parent.size();\
     \ ++ i) {\n                    for(int v = 0; v < _n; ++ v) {\n              \
@@ -43,36 +43,35 @@ data:
     \ g[v]) {\n                        if(nv == p) continue;\n                   \
     \     self(self, nv, v, d + 1);\n                    }\n                };\n \
     \               rec(rec, root, -1, 0);\n            }\n    };\n} // namespace\
-    \ otera\n#line 4 \"test/src/Tree/LCA.test.cpp\"\n#include<bits/stdc++.h>\nusing\
-    \ namespace std;\n\nusing ll = long long;\nusing ld = long double;\nusing ull\
-    \ = unsigned long long;\nusing uint = unsigned;\n#define repa(i, n) for(int i\
-    \ = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
-    \ repc(i, a, b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d,\
-    \ e, ...) e\n#define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n\
-    #define rep1a(i, n) for(int i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int\
-    \ i = a; i <= b; ++ i)\n#define rep1c(i, a, b, c) for(int i = a; i <= b; i +=\
-    \ c)\n#define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)\n\
-    #define per(i,n) for(int i=n-1;i>=0;i--)\n#define per1(i,n) for(int i=n;i>=1;i--)\n\
-    typedef pair<int, int> P;\ntypedef pair<ll, ll> LP;\n#define pb push_back\n#define\
-    \ eb emplace_back\n#define fr first\n#define sc second\n#define all(c) c.begin(),c.end()\n\
-    #define lb(c, x) distance((c).begin(), lower_bound(all(c), (x)))\n#define ub(c,\
-    \ x) distance((c).begin(), upper_bound(all(c), (x)))\n#define Sort(a) sort(all(a))\n\
-    #define Rev(a) reverse(all(a))\n#define Uniq(a) sort(all(a));a.erase(unique(all(a)),end(a))\n\
-    #define si(c) (int)(c).size()\ninline ll popcnt(ull a){ return __builtin_popcountll(a);\
-    \ }\n#define tpow(n) (1LL<<(n))\n#define unless(A) if(!(A))\nll intpow(ll a, ll\
-    \ b){ ll ans = 1; while(b){ if(b & 1) ans *= a; a *= a; b /= 2; } return ans;\
-    \ }\nll intpow(ll a, ll b, ll m) {ll ans = 1; while(b){ if(b & 1) (ans *= a) %=\
-    \ m; (a *= a) %= m; b /= 2; } return ans; }\ntemplate<class T> inline bool chmax(T&\
-    \ a, T b) { if (a < b) { a = b; return 1; } return 0; }\ntemplate<class T> inline\
-    \ bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }\n#define\
-    \ INT(...) int __VA_ARGS__;in(__VA_ARGS__)\n#define LL(...) ll __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define ULL(...) ull __VA_ARGS__;in(__VA_ARGS__)\n#define STR(...) string __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define CHR(...) char __VA_ARGS__;in(__VA_ARGS__)\n#define DBL(...) double __VA_ARGS__;in(__VA_ARGS__)\n\
-    #define LD(...) ld __VA_ARGS__;in(__VA_ARGS__)\n#define vec(type,name,...) vector<type>name(__VA_ARGS__)\n\
-    #define VEC(type,name,size) vector<type>name(size);in(name)\n#define vv(type,name,h,...)\
-    \ vector<vector<type>>name(h,vector<type>(__VA_ARGS__))\n#define VV(type,name,h,w)\
-    \ vector<vector<type>>name(h,vector<type>(w));in(name)\n#define vvv(type,name,h,w,...)\
-    \ vector<vector<vector<type>>>name(h,vector<vector<type>>(w,vector<type>(__VA_ARGS__)))\n\
+    \ otera\n#line 5 \"test/src/Tree/LCA.test.cpp\"\nusing namespace std;\n\nusing\
+    \ ll = long long;\nusing ld = long double;\nusing ull = unsigned long long;\n\
+    using uint = unsigned;\n#define repa(i, n) for(int i = 0; i < n; ++ i)\n#define\
+    \ repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int\
+    \ i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
+    \ overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int\
+    \ i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n\
+    #define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+    \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define per(i,n) for(int i=n-1;i>=0;i--)\n\
+    #define per1(i,n) for(int i=n;i>=1;i--)\ntypedef pair<int, int> P;\ntypedef pair<ll,\
+    \ ll> LP;\n#define pb push_back\n#define eb emplace_back\n#define fr first\n#define\
+    \ sc second\n#define all(c) c.begin(),c.end()\n#define lb(c, x) distance((c).begin(),\
+    \ lower_bound(all(c), (x)))\n#define ub(c, x) distance((c).begin(), upper_bound(all(c),\
+    \ (x)))\n#define Sort(a) sort(all(a))\n#define Rev(a) reverse(all(a))\n#define\
+    \ Uniq(a) sort(all(a));a.erase(unique(all(a)),end(a))\n#define si(c) (int)(c).size()\n\
+    inline ll popcnt(ull a){ return __builtin_popcountll(a); }\n#define tpow(n) (1LL<<(n))\n\
+    #define unless(A) if(!(A))\nll intpow(ll a, ll b){ ll ans = 1; while(b){ if(b\
+    \ & 1) ans *= a; a *= a; b /= 2; } return ans; }\nll intpow(ll a, ll b, ll m)\
+    \ {ll ans = 1; while(b){ if(b & 1) (ans *= a) %= m; (a *= a) %= m; b /= 2; } return\
+    \ ans; }\ntemplate<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b;\
+    \ return 1; } return 0; }\ntemplate<class T> inline bool chmin(T& a, T b) { if\
+    \ (a > b) { a = b; return 1; } return 0; }\n#define INT(...) int __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define LL(...) ll __VA_ARGS__;in(__VA_ARGS__)\n#define ULL(...) ull __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define STR(...) string __VA_ARGS__;in(__VA_ARGS__)\n#define CHR(...) char __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define DBL(...) double __VA_ARGS__;in(__VA_ARGS__)\n#define LD(...) ld __VA_ARGS__;in(__VA_ARGS__)\n\
+    #define vec(type,name,...) vector<type>name(__VA_ARGS__)\n#define VEC(type,name,size)\
+    \ vector<type>name(size);in(name)\n#define vv(type,name,h,...) vector<vector<type>>name(h,vector<type>(__VA_ARGS__))\n\
+    #define VV(type,name,h,w) vector<vector<type>>name(h,vector<type>(w));in(name)\n\
+    #define vvv(type,name,h,w,...) vector<vector<vector<type>>>name(h,vector<vector<type>>(w,vector<type>(__VA_ARGS__)))\n\
     template <class T> using vc = vector<T>;\ntemplate <class T> using vvc = vector<vc<T>>;\n\
     template <class T> using vvvc = vector<vvc<T>>;\ntemplate <class T> using vvvvc\
     \ = vector<vvvc<T>>;\ntemplate <class T> using pq = priority_queue<T>;\ntemplate\
@@ -102,9 +101,9 @@ data:
     \ {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    // cout << fixed <<\
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include\"library/Tree/LCA.hpp\"\
-    \n#include<bits/stdc++.h>\nusing namespace std;\n\nusing ll = long long;\nusing\
-    \ ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include<bits/stdc++.h>\n\
+    #include\"library/Tree/LCA.hpp\"\nusing namespace std;\n\nusing ll = long long;\n\
+    using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
     #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
     \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
     #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
@@ -166,8 +165,8 @@ data:
   isVerificationFile: true
   path: test/src/Tree/LCA.test.cpp
   requiredBy: []
-  timestamp: '2022-09-24 19:34:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-10-01 04:08:41+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/src/Tree/LCA.test.cpp
 layout: document
