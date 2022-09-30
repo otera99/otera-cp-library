@@ -1,6 +1,6 @@
+#define IGNORE
 #define PROBLEM "https://codeforces.com/contest/1612/problem/E"
 #define VERIFY "https://codeforces.com/contest/1612/submission/144885299"
-#define IGNORE
 #include<bits/stdc++.h>
 #include<library/Number/Rational.hpp>
 // #include<otera/Rational>
