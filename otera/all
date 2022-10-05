@@ -4,9 +4,13 @@
 #include <otera/Math.hpp>
 #include <otera/Compressor.hpp>
 #include <otera/RunLength.hpp>
+#include <otera/base.hpp>
 #include <otera/Timer.hpp>
 #include <otera/RandomGenerator.hpp>
 #include <otera/InversionNumber.hpp>
+#include <otera/NumberOfSubsequences.hpp>
+#include <otera/Matrix.hpp>
+#include <otera/LIS.hpp>
 #include <otera/GameExperiment.hpp>
 #include <otera/BostanMori.hpp>
 #include <otera/FPS.hpp>
@@ -21,3 +25,4 @@
 #include <otera/modint.hpp>
 #include <otera/PalindromicTree.hpp>
 #include <otera/BitwiseTransformation.hpp>
+#include <otera/ModintToFraction.hpp>

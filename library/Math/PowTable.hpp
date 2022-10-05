@@ -7,6 +7,7 @@ namespace otera{
     template<typename T>
     class powtable {
         public:
+        powtable(T x) : x_(x), pw_(1, 1) {}
         powtable(long long x) : x_(T(x)), pw_(1, 1) {}
         powtable(long long x, int n) : x_(T(x)), pw_(1, 1) {
             ensure(n);
@@ -17,7 +18,7 @@ namespace otera{
             return pw_[n];
         }
         T operator[](const int n) {
-                return pow(n);
+            return pow(n);
         }
         private:
         T x_;
