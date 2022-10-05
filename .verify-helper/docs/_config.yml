@@ -1,1 +1,1 @@
-exclude: [expander.py, generate_lib.py, ac-library/, otera/]
+exclude: [expander.py, generate_lib.py, ac-library/, otera/, library_generater.py, modify.py, modify_template.cpp]
