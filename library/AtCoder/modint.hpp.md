@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: library/Debug/ModintToFraction.hpp
+    title: library/Debug/ModintToFraction.hpp
+  - icon: ':warning:'
     path: library/Math/Factorial.hpp
     title: library/Math/Factorial.hpp
   - icon: ':warning:'
@@ -12,9 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/src/Convolution/BitwiseTranformation.test.cpp
     title: test/src/Convolution/BitwiseTranformation.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/src/Solver/NumberOfSubsequeces.test.cpp
+    title: test/src/Solver/NumberOfSubsequeces.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/AtCoder/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
@@ -37,11 +43,13 @@ data:
   isVerificationFile: false
   path: library/AtCoder/modint.hpp
   requiredBy:
+  - library/Debug/ModintToFraction.hpp
   - library/Math/PowTable.hpp
   - library/Math/Factorial.hpp
   timestamp: '2022-03-29 09:25:41+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/src/Solver/NumberOfSubsequeces.test.cpp
   - test/src/Convolution/BitwiseTranformation.test.cpp
 documentation_of: library/AtCoder/modint.hpp
 layout: document

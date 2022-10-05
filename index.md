@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: library/AtCoder
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/AtCoder/modint.hpp
       title: library/AtCoder/modint.hpp
   - name: library/Convolution
@@ -25,6 +25,11 @@ data:
     - icon: ':warning:'
       path: library/DataStructure/XorSegtree.hpp
       title: library/DataStructure/XorSegtree.hpp
+  - name: library/Debug
+    pages:
+    - icon: ':warning:'
+      path: library/Debug/ModintToFraction.hpp
+      title: library/Debug/ModintToFraction.hpp
   - name: library/Game
     pages:
     - icon: ':warning:'
@@ -71,6 +76,15 @@ data:
     - icon: ':warning:'
       path: library/Solver/InversionNumber.hpp
       title: library/Solver/InversionNumber.hpp
+    - icon: ':warning:'
+      path: library/Solver/LIS.hpp
+      title: library/Solver/LIS.hpp
+    - icon: ':warning:'
+      path: library/Solver/Matrix.hpp
+      title: library/Solver/Matrix.hpp
+    - icon: ':x:'
+      path: library/Solver/NumberOfSubsequences.hpp
+      title: library/Solver/NumberOfSubsequences.hpp
   - name: library/String
     pages:
     - icon: ':warning:'
@@ -98,17 +112,6 @@ data:
     - icon: ':warning:'
       path: library/Util/RunLength.hpp
       title: library/Util/RunLength.hpp
-  - name: .
-    pages:
-    - icon: ':warning:'
-      path: library_generater.py
-      title: library_generater.py
-    - icon: ':warning:'
-      path: modify.py
-      title: modify.py
-    - icon: ':warning:'
-      path: modify_template.cpp
-      title: modify_template.cpp
   verificationCategories:
   - name: test/src/Convolution
     pages:
@@ -125,6 +128,11 @@ data:
     - icon: ':x:'
       path: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
       title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
+  - name: test/src/Solver
+    pages:
+    - icon: ':x:'
+      path: test/src/Solver/NumberOfSubsequeces.test.cpp
+      title: test/src/Solver/NumberOfSubsequeces.test.cpp
   - name: test/src/Tree
     pages:
     - icon: ':heavy_check_mark:'

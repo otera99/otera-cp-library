@@ -4,6 +4,9 @@ exclude:
 - generate_lib.py
 - ac-library/
 - otera/
+- library_generater.py
+- modify.py
+- modify_template.cpp
 plugins:
 - jemoji
 - jekyll-redirect-from
