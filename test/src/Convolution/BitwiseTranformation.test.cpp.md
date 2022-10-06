@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/AtCoder/modint.hpp
     title: library/AtCoder/modint.hpp
   - icon: ':heavy_check_mark:'

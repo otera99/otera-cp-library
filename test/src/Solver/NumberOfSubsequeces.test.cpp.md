@@ -1,21 +1,24 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/AtCoder/modint.hpp
     title: library/AtCoder/modint.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/Solver/NumberOfSubsequences.hpp
     title: library/Solver/NumberOfSubsequences.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    links: []
-  bundledCode: "#line 1 \"test/src/Solver/NumberOfSubsequeces.test.cpp\"\n/**\n *\
+    PROBLEM: https://judge.yosupo.jp/problem/number_of_subsequences
+    links:
+    - https://judge.yosupo.jp/problem/number_of_subsequences
+  bundledCode: "#line 1 \"test/src/Solver/NumberOfSubsequeces.test.cpp\"\n#define\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/number_of_subsequences\"\n/**\n *\
     \    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/AtCoder/modint.hpp>\n\
     #include<library/Solver/NumberOfSubsequences.hpp>\n// #include<otera/modint>\n\
     // #include<otera/NumberOfSubsequences>\nusing namespace std;\n\n#define int long\
@@ -83,7 +86,8 @@ data:
     \    VEC(int, a, n);\n    out(NumberOfSubsequences<mint>(a) - mint(1));\n}\n\n\
     signed main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
     \ solve();\n    return 0;\n}\n"
-  code: "/**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/AtCoder/modint.hpp>\n\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_subsequences\"\
+    \n/**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/AtCoder/modint.hpp>\n\
     #include<library/Solver/NumberOfSubsequences.hpp>\n// #include<otera/modint>\n\
     // #include<otera/NumberOfSubsequences>\nusing namespace std;\n\n#define int long\
     \ long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
@@ -156,8 +160,8 @@ data:
   isVerificationFile: true
   path: test/src/Solver/NumberOfSubsequeces.test.cpp
   requiredBy: []
-  timestamp: '2022-10-06 08:49:33+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-10-06 09:25:04+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/src/Solver/NumberOfSubsequeces.test.cpp
 layout: document

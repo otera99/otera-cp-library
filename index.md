@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: library/AtCoder
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/AtCoder/modint.hpp
       title: library/AtCoder/modint.hpp
   - name: library/Convolution
@@ -82,7 +82,7 @@ data:
     - icon: ':warning:'
       path: library/Solver/Matrix.hpp
       title: library/Solver/Matrix.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/Solver/NumberOfSubsequences.hpp
       title: library/Solver/NumberOfSubsequences.hpp
   - name: library/String
@@ -130,7 +130,7 @@ data:
       title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
   - name: test/src/Solver
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/src/Solver/NumberOfSubsequeces.test.cpp
       title: test/src/Solver/NumberOfSubsequeces.test.cpp
   - name: test/src/Tree

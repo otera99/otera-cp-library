@@ -15,12 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/src/Convolution/BitwiseTranformation.test.cpp
     title: test/src/Convolution/BitwiseTranformation.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/src/Solver/NumberOfSubsequeces.test.cpp
     title: test/src/Solver/NumberOfSubsequeces.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/AtCoder/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
@@ -47,7 +47,7 @@ data:
   - library/Math/PowTable.hpp
   - library/Math/Factorial.hpp
   timestamp: '2022-03-29 09:25:41+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/src/Solver/NumberOfSubsequeces.test.cpp
   - test/src/Convolution/BitwiseTranformation.test.cpp
