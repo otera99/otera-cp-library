@@ -1,3 +1,4 @@
+#define PROBLEM "https://judge.yosupo.jp/problem/number_of_subsequences"
 /**
  *    author:  otera
 **/
