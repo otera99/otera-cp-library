@@ -1,8 +1,6 @@
 #ifndef OTERA_RATIONAL_HPP
 #define OTERA_RATIONAL_HPP 1
 
-// オーバーフローしそうな時は他の人のライブラリを使うべき
-// 有理数の比較はかなり危険なので
 namespace otera{
     template<typename T>
     struct Rational {
@@ -70,7 +68,7 @@ namespace otera{
                 return Rational(l.num * (lcm / l.den) - r.num * (lcm / r.den), lcm);
             }
             friend Rational operator*(const Rational &l, const Rational &r) {
-                T g1 = std::gcd(abs(l.num), abs(r.den));  g1 = std::abs(g1);
+                T g1 = std::gcd(std::abs(l.num), std::abs(r.den));  g1 = std::abs(g1);
                 T g2 = std::gcd(l.den, r.num);  g2 = std::abs(g2);
                 return Rational((l.num / g1) * (r.num / g2), (l.den / g2) * (r.den / g1));
             }
@@ -106,6 +104,13 @@ namespace otera{
             }
             Rational abs() const {
                 return Rational(std::abs(num), den);
+            }
+            Rational pow(long long _n) const {
+                if(!_n) return Rational(1);
+                Rational res = pow(_n>>1);
+                res *= res;
+                if(_n & 1) res *= *this;
+                return res;
             }
 
             explicit operator int() const {

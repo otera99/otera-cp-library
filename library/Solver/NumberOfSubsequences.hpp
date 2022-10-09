@@ -23,7 +23,7 @@ namespace otera {
         std::vector<Int> sdp(_n + 2);
         sdp[1] = 1;
         for(int i = 0; i < _n; ++ i) {
-            sdp[i + 2] = sdp[i + 1] * Int(2) - sdp[last[i] + 1];
+            sdp[i + 2] = sdp[i + 1] + sdp[i + 1] - sdp[last[i] + 1];
         }
         return sdp[_n + 1];
     }
@@ -48,7 +48,7 @@ namespace otera {
         std::vector<Int> sdp(_n + 2);
         sdp[1] = 1;
         for(int i = 0; i < _n; ++ i) {
-            sdp[i + 2] = sdp[i + 1] * Int(2) - sdp[last[i] + 1];
+            sdp[i + 2] = sdp[i + 1] + sdp[i + 1] - sdp[last[i] + 1];
         }
         return sdp[_n + 1];
     }
