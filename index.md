@@ -25,11 +25,6 @@ data:
     - icon: ':warning:'
       path: library/DataStructure/XorSegtree.hpp
       title: library/DataStructure/XorSegtree.hpp
-  - name: library/Debug
-    pages:
-    - icon: ':warning:'
-      path: library/Debug/ModintToFraction.hpp
-      title: library/Debug/ModintToFraction.hpp
   - name: library/Game
     pages:
     - icon: ':warning:'
@@ -55,14 +50,14 @@ data:
     - icon: ':warning:'
       path: library/Math/PowTable.hpp
       title: library/Math/PowTable.hpp
+    - icon: ':x:'
+      path: library/Math/SieveOfEratosthenes.hpp
+      title: library/Math/SieveOfEratosthenes.hpp
   - name: library/Number
     pages:
     - icon: ':x:'
       path: library/Number/Rational.hpp
       title: library/Number/Rational.hpp
-    - icon: ':warning:'
-      path: library/Number/SieveOfEratosthenes.hpp
-      title: library/Number/SieveOfEratosthenes.hpp
   - name: library/Other
     pages:
     - icon: ':warning:'
@@ -100,7 +95,7 @@ data:
       title: library/Tree/LCA.hpp
   - name: library/Util
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: library/Util/Compressor.hpp
       title: library/Util/Compressor.hpp
     - icon: ':warning:'
@@ -110,41 +105,34 @@ data:
       path: library/Util/Math.hpp
       title: library/Util/Math.hpp
     - icon: ':warning:'
+      path: library/Util/PairOps.hpp
+      title: library/Util/PairOps.hpp
+    - icon: ':warning:'
       path: library/Util/RunLength.hpp
       title: library/Util/RunLength.hpp
   verificationCategories:
-  - name: test/src/Convolution
+  - name: test/atcoder
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/src/Convolution/BitwiseTranformation.test.cpp
-      title: test/src/Convolution/BitwiseTranformation.test.cpp
-  - name: test/src/DataStructure/MergeHistoryForest
+      path: test/atcoder/abc212_h.test.cpp
+      title: test/atcoder/abc212_h.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc235_Ex.test.cpp
+      title: test/atcoder/abc235_Ex.test.cpp
+  - name: test/library_checker/string
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
-      title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
-  - name: test/src/Number
+      path: test/library_checker/string/number_of_subsequences.test.cpp
+      title: test/library_checker/string/number_of_subsequences.test.cpp
+  - name: test/library_checker/tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/tree/lca.test.cpp
+      title: test/library_checker/tree/lca.test.cpp
+  - name: test/yukicoder
     pages:
     - icon: ':x:'
-      path: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
-      title: test/src/Number/Rational.Educational_Codeforces117E.test.cpp
-  - name: test/src/Solver
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: test/src/Solver/NumberOfSubsequeces.test.cpp
-      title: test/src/Solver/NumberOfSubsequeces.test.cpp
-  - name: test/src/Tree
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: test/src/Tree/LCA.test.cpp
-      title: test/src/Tree/LCA.test.cpp
-  - name: test/src/Util
-    pages:
-    - icon: ':x:'
-      path: test/src/Util/Compressor.ABC036.test.cpp
-      title: test/src/Util/Compressor.ABC036.test.cpp
-    - icon: ':x:'
-      path: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
-      title: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
+      path: test/yukicoder/1611.test.cpp
+      title: test/yukicoder/1611.test.cpp
 layout: toppage
 ---

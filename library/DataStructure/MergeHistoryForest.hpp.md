@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
-    title: test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+    path: test/atcoder/abc235_Ex.test.cpp
+    title: test/atcoder/abc235_Ex.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -98,7 +98,7 @@ data:
   timestamp: '2022-03-05 02:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/src/DataStructure/MergeHistoryForest/MergeHistoryForest.test.cpp
+  - test/atcoder/abc235_Ex.test.cpp
 documentation_of: library/DataStructure/MergeHistoryForest.hpp
 layout: document
 title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"

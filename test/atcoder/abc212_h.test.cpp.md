@@ -18,20 +18,19 @@ data:
     links:
     - https://atcoder.jp/contests/abc212/submissions/30554763
     - https://atcoder.jp/contests/abc212/tasks/abc212_h
-  bundledCode: "#line 1 \"test/src/Convolution/BitwiseTranformation.test.cpp\"\n#define\
-    \ PROBLEM \"https://atcoder.jp/contests/abc212/tasks/abc212_h\"\n#define VERIFY\
-    \ \"https://atcoder.jp/contests/abc212/submissions/30554763\"\n#include<bits/stdc++.h>\n\
-    #line 1 \"library/Convolution/BitwiseTransformation.hpp\"\n\n\n\nnamespace otera\
-    \ {\n    namespace internal {\n        template<typename T> \n        std::pair<T,\
-    \ T> subset_zeta_unit_transform(std::pair<T, T> a) {\n            return std::make_pair(a.first,\
-    \ a.first + a.second);\n        }\n\n        template<typename T> \n        std::pair<T,\
-    \ T> subset_mobius_unit_transform(std::pair<T, T> a) {\n            return std::make_pair(a.first,\
-    \ -a.first + a.second);\n        }\n\n        template<typename T> \n        std::pair<T,\
-    \ T> supset_zeta_unit_transform(std::pair<T, T> a) {\n            return std::make_pair(a.first\
-    \ + a.second, a.second);\n        }\n\n        template<typename T> \n       \
-    \ std::pair<T, T> supset_mobius_unit_transform(std::pair<T, T> a) {\n        \
-    \    return std::make_pair(a.first - a.second, a.second);\n        }\n\n     \
-    \   template<typename T> \n        std::pair<T, T> walsh_hadamard_unit_transform(std::pair<T,\
+  bundledCode: "#line 1 \"test/atcoder/abc212_h.test.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/abc212/tasks/abc212_h\"\
+    \n#define VERIFY \"https://atcoder.jp/contests/abc212/submissions/30554763\"\n\
+    #include<bits/stdc++.h>\n#line 1 \"library/Convolution/BitwiseTransformation.hpp\"\
+    \n\n\n\nnamespace otera {\n    namespace internal {\n        template<typename\
+    \ T> \n        std::pair<T, T> subset_zeta_unit_transform(std::pair<T, T> a) {\n\
+    \            return std::make_pair(a.first, a.first + a.second);\n        }\n\n\
+    \        template<typename T> \n        std::pair<T, T> subset_mobius_unit_transform(std::pair<T,\
+    \ T> a) {\n            return std::make_pair(a.first, -a.first + a.second);\n\
+    \        }\n\n        template<typename T> \n        std::pair<T, T> supset_zeta_unit_transform(std::pair<T,\
+    \ T> a) {\n            return std::make_pair(a.first + a.second, a.second);\n\
+    \        }\n\n        template<typename T> \n        std::pair<T, T> supset_mobius_unit_transform(std::pair<T,\
+    \ T> a) {\n            return std::make_pair(a.first - a.second, a.second);\n\
+    \        }\n\n        template<typename T> \n        std::pair<T, T> walsh_hadamard_unit_transform(std::pair<T,\
     \ T> a) {\n            return std::make_pair(a.first + a.second, a.first - a.second);\n\
     \        }\n    } // namespace internal\n\n    template<typename T, std::pair<T,\
     \ T> (*unit_transform)(std::pair<T, T>)> \n    void kronecker_product(std::vector<T>\
@@ -59,7 +58,7 @@ data:
     \ &e) {\n    out << e.val();\n    return out;\n}\n\nstd::ostream& operator<<(std::ostream&\
     \ out, const atcoder::modint998244353 &e) {\n    out << e.val();\n    return out;\n\
     }\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint &e) {\n\
-    \    out << e.val();\n    return out;\n}\n\n\n#line 6 \"test/src/Convolution/BitwiseTranformation.test.cpp\"\
+    \    out << e.val();\n    return out;\n}\n\n\n#line 6 \"test/atcoder/abc212_h.test.cpp\"\
     \nusing namespace std;\n\n#define int long long\n\nusing ll = long long;\nusing\
     \ ld = long double;\nusing ull = unsigned long long;\nusing int128_t = __int128_t;\n\
     #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
@@ -205,15 +204,15 @@ data:
   - library/Convolution/BitwiseTransformation.hpp
   - library/AtCoder/modint.hpp
   isVerificationFile: true
-  path: test/src/Convolution/BitwiseTranformation.test.cpp
+  path: test/atcoder/abc212_h.test.cpp
   requiredBy: []
-  timestamp: '2022-09-24 19:42:59+09:00'
+  timestamp: '2022-10-10 05:27:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/src/Convolution/BitwiseTranformation.test.cpp
+documentation_of: test/atcoder/abc212_h.test.cpp
 layout: document
 redirect_from:
-- /verify/test/src/Convolution/BitwiseTranformation.test.cpp
-- /verify/test/src/Convolution/BitwiseTranformation.test.cpp.html
-title: test/src/Convolution/BitwiseTranformation.test.cpp
+- /verify/test/atcoder/abc212_h.test.cpp
+- /verify/test/atcoder/abc212_h.test.cpp.html
+title: test/atcoder/abc212_h.test.cpp
 ---

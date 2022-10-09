@@ -5,16 +5,10 @@ data:
   - icon: ':warning:'
     path: library/Solver/InversionNumber.hpp
     title: library/Solver/InversionNumber.hpp
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/src/Util/Compressor.ABC036.test.cpp
-    title: test/src/Util/Compressor.ABC036.test.cpp
-  - icon: ':x:'
-    path: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
-    title: test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Util/Compressor.hpp\"\n\n\n\nnamespace otera {\n\
@@ -115,10 +109,8 @@ data:
   requiredBy:
   - library/Solver/InversionNumber.hpp
   timestamp: '2022-03-05 02:48:38+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/src/Util/Compressor.ABC036.test.cpp
-  - test/src/Util/Compressor.Educational_Codeforces_R121D.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: library/Util/Compressor.hpp
 layout: document
 redirect_from:

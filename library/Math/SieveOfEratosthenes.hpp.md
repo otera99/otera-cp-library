@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/yukicoder/1611.test.cpp
+    title: test/yukicoder/1611.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Number/SieveOfEratosthenes.hpp\"\n\n\n\nnamespace\
+  bundledCode: "#line 1 \"library/Math/SieveOfEratosthenes.hpp\"\n\n\n\nnamespace\
     \ otera {\n    struct Eratos {\n        public:\n            Eratos() : Eratos(0)\
     \ {}\n            Eratos(int N) { init(N); }\n\n            void init(int N) {\n\
     \                _N = N;\n                _primes.clear();\n                _isprime.assign(_N\
@@ -73,15 +76,16 @@ data:
     \ // OTERA_SIEVE_OF_ERATOSTHENES_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Number/SieveOfEratosthenes.hpp
+  path: library/Math/SieveOfEratosthenes.hpp
   requiredBy: []
-  timestamp: '2022-04-03 10:21:17+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
-documentation_of: library/Number/SieveOfEratosthenes.hpp
+  timestamp: '2022-10-10 05:27:26+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/yukicoder/1611.test.cpp
+documentation_of: library/Math/SieveOfEratosthenes.hpp
 layout: document
 redirect_from:
-- /library/library/Number/SieveOfEratosthenes.hpp
-- /library/library/Number/SieveOfEratosthenes.hpp.html
-title: library/Number/SieveOfEratosthenes.hpp
+- /library/library/Math/SieveOfEratosthenes.hpp
+- /library/library/Math/SieveOfEratosthenes.hpp.html
+title: library/Math/SieveOfEratosthenes.hpp
 ---

@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/src/Tree/LCA.test.cpp
-    title: test/src/Tree/LCA.test.cpp
+    path: test/library_checker/tree/lca.test.cpp
+    title: test/library_checker/tree/lca.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -76,7 +76,7 @@ data:
   timestamp: '2022-02-27 07:53:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/src/Tree/LCA.test.cpp
+  - test/library_checker/tree/lca.test.cpp
 documentation_of: library/Tree/LCA.hpp
 layout: document
 redirect_from:

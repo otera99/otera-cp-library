@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/src/Convolution/BitwiseTranformation.test.cpp
-    title: test/src/Convolution/BitwiseTranformation.test.cpp
+    path: test/atcoder/abc212_h.test.cpp
+    title: test/atcoder/abc212_h.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -81,7 +81,7 @@ data:
   timestamp: '2022-03-29 23:30:49+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/src/Convolution/BitwiseTranformation.test.cpp
+  - test/atcoder/abc212_h.test.cpp
 documentation_of: library/Convolution/BitwiseTransformation.hpp
 layout: document
 redirect_from:

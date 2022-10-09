@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: library/Util/Compressor.hpp
     title: library/Util/Compressor.hpp
   _extendedRequiredBy: []
