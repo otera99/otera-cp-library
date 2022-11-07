@@ -1,3 +1,6 @@
+#ifndef OTERA_LCA_HPP
+#define OTERA_LCA_HPP 1
+
 namespace otera {
     class LCA {
         public:
@@ -53,3 +56,5 @@ namespace otera {
             }
     };
 } // namespace otera
+
+#endif // OTERA_LCA_HPP

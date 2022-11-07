@@ -1,1 +1,1 @@
-#include <otera/Factorial.hpp>
+#include <otera/factorial.hpp>
