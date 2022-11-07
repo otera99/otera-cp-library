@@ -1,6 +1,6 @@
 ---
 title: ゲームの実験コードの簡略化
-documentation_of: ../../../library/Game/GameExperiment.hpp
+documentation_of: ../../../library/game/game_experiment.hpp
 ---
 
 ## 概要
@@ -83,7 +83,7 @@ int n, m;
 // Sの定義
 
 void solve() {
-    Game<S> gm;
+    game<S> gm;
     cin >> n >> m;
     vector<int> a(2 * n);
     for(int i = 0; i < 2 * n; ++ i) {

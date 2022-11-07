@@ -1,6 +1,6 @@
 ---
 title: マージ過程を表す森
-documentation_of: ../../../library/DataStructure/MergeHistoryForest.hpp
+documentation_of: ../../../library/data_structure/merge_history_forest.hpp
 ---
 
 - 概要
