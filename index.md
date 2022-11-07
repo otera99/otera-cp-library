@@ -86,7 +86,7 @@ data:
     - icon: ':warning:'
       path: library/data_structure/heavy_light_decomposition.hpp
       title: library/data_structure/heavy_light_decomposition.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/data_structure/merge_history_forest.hpp
       title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"
     - icon: ':warning:'
@@ -105,7 +105,7 @@ data:
       title: library/graph/graph_base.hpp
   - name: library/modint
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/modint/modint.hpp
       title: library/modint/modint.hpp
   - name: library/string
@@ -119,7 +119,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc212_h.test.cpp
       title: test/atcoder/abc212_h.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/atcoder/abc235_Ex.test.cpp
       title: test/atcoder/abc235_Ex.test.cpp
   - name: test/library_checker/string

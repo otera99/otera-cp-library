@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: library/modint/modint.hpp
+    title: library/modint/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -9,7 +12,7 @@ data:
   attributes: {}
   bundledCode: "#line 1 \"test/library_checker/string/number_of_subsequences.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_subsequences\"\n\
-    /**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/atcoder/modint.hpp>\n\
+    /**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/modint/modint.hpp>\n\
     #include<library/solver/number_of_subsequences.hpp>\n// #include<otera/modint>\n\
     // #include<otera/number_of_subsequences>\nusing namespace std;\n\n#define int\
     \ long long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
@@ -77,7 +80,7 @@ data:
     \nsigned main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
     \ solve();\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_subsequences\"\
-    \n/**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/atcoder/modint.hpp>\n\
+    \n/**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/modint/modint.hpp>\n\
     #include<library/solver/number_of_subsequences.hpp>\n// #include<otera/modint>\n\
     // #include<otera/number_of_subsequences>\nusing namespace std;\n\n#define int\
     \ long long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
@@ -144,11 +147,12 @@ data:
     \    VEC(int, a, n);\n    out(number_of_subsequences<mint>(a) - mint(1));\n}\n\
     \nsigned main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
     \ solve();\n    return 0;\n}"
-  dependsOn: []
+  dependsOn:
+  - library/modint/modint.hpp
   isVerificationFile: true
   path: test/library_checker/string/number_of_subsequences.test.cpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  timestamp: '2022-11-08 07:28:39+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/string/number_of_subsequences.test.cpp

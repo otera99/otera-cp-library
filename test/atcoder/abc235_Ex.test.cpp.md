@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/data_structure/merge_history_forest.hpp
     title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_Ex
@@ -112,9 +112,9 @@ data:
     #define debug(...)\n#define dump(...)\n#endif\n\nusing mint = atcoder::modint998244353;\n\
     \ntypedef pair<ll, P> P2;\n\nvoid solve() {\n    INT(n, m, k);\n    map<int, vc<P>>\
     \ mp;\n    rep(i, m) {\n        INT(a, b); -- a, -- b; LL(c);\n        mp[c].eb(a,\
-    \ b);\n    }\n    MergeHistoryForest uf(n);\n    for(auto &[c, es]: mp) {\n  \
-    \      uf.merge_simultaneously(es);\n    }\n    vvc<mint> dp(2 * n - 1);\n   \
-    \ vvc<int> g = uf.get_forest();\n    auto dfs = [&](auto&&dfs, int v) -> void\
+    \ b);\n    }\n    merge_history_forest uf(n);\n    for(auto &[c, es]: mp) {\n\
+    \        uf.merge_simultaneously(es);\n    }\n    vvc<mint> dp(2 * n - 1);\n \
+    \   vvc<int> g = uf.get_forest();\n    auto dfs = [&](auto&&dfs, int v) -> void\
     \ {\n        if(g[v].empty()) {\n            dp[v] = {1, 1};\n            return;\n\
     \        }\n        for(int nv: g[v]) dfs(dfs, nv);\n        int sv = g[v][0];\n\
     \        vc<mint> dp2 = dp[sv], ndp2;\n        int cnt = 1;\n        rep(i, si(g[v]))\
@@ -190,9 +190,9 @@ data:
     #define debug(...)\n#define dump(...)\n#endif\n\nusing mint = atcoder::modint998244353;\n\
     \ntypedef pair<ll, P> P2;\n\nvoid solve() {\n    INT(n, m, k);\n    map<int, vc<P>>\
     \ mp;\n    rep(i, m) {\n        INT(a, b); -- a, -- b; LL(c);\n        mp[c].eb(a,\
-    \ b);\n    }\n    MergeHistoryForest uf(n);\n    for(auto &[c, es]: mp) {\n  \
-    \      uf.merge_simultaneously(es);\n    }\n    vvc<mint> dp(2 * n - 1);\n   \
-    \ vvc<int> g = uf.get_forest();\n    auto dfs = [&](auto&&dfs, int v) -> void\
+    \ b);\n    }\n    merge_history_forest uf(n);\n    for(auto &[c, es]: mp) {\n\
+    \        uf.merge_simultaneously(es);\n    }\n    vvc<mint> dp(2 * n - 1);\n \
+    \   vvc<int> g = uf.get_forest();\n    auto dfs = [&](auto&&dfs, int v) -> void\
     \ {\n        if(g[v].empty()) {\n            dp[v] = {1, 1};\n            return;\n\
     \        }\n        for(int nv: g[v]) dfs(dfs, nv);\n        int sv = g[v][0];\n\
     \        vc<mint> dp2 = dp[sv], ndp2;\n        int cnt = 1;\n        rep(i, si(g[v]))\
@@ -215,8 +215,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc235_Ex.test.cpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-11-08 07:28:39+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc235_Ex.test.cpp
 layout: document
