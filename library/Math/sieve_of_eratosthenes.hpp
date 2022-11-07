@@ -2,10 +2,10 @@
 #define OTERA_SIEVE_OF_ERATOSTHENES_HPP 1
 
 namespace otera {
-    struct Eratos {
+    struct eratos {
         public:
-            Eratos() : Eratos(0) {}
-            Eratos(int N) { init(N); }
+            eratos() : eratos(0) {}
+            eratos(int N) { init(N); }
 
             void init(int N) {
                 _N = N;

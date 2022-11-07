@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/lca"
 
 #include<bits/stdc++.h>
-#include"library/Tree/LCA.hpp"
+#include"library/tree/LCA.hpp"
 using namespace std;
 
 using ll = long long;

@@ -1,8 +1,8 @@
 #define PROBLEM "https://atcoder.jp/contests/abc235/tasks/abc235_Ex"
 #define VERIFY "https://atcoder.jp/contests/abc235/submissions/28582201"
 
-#include"library/DataStructure/MergeHistoryForest.hpp"
-// #include<otera/MergeHistoryForest>
+#include"library/data_structure/merge_history_forest.hpp"
+// #include<otera/merge_history_forest>
 using namespace otera;
 
 #include<bits/stdc++.h>

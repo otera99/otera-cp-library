@@ -2,8 +2,6 @@
 
 #!/usr/bin/env python3
 
-# This code is based on [ac-lirary](https://github.com/atcoder/ac-library)'s expander.py.
-
 import re
 import sys
 import argparse
@@ -27,7 +25,7 @@ if __name__ == "__main__":
     modify_writer = open(modify_file, "w")
     target_reader = open(opts.source).read()
     for line in target_reader.splitlines():
-        if line == "#include<bits/stdc++.h>":
+        if ("#include" in line) and ("<bits/stdc++.h>" in line):
             for line2 in open(opts.lib+"/modify_template.cpp").read().splitlines():
                 modify_writer.write(line2)
                 modify_writer.write("\n")

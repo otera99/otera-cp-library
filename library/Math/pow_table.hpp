@@ -1,15 +1,15 @@
 #ifndef OTERA_POW_TABLE_HPP
 #define OTERA_POW_TABLE_HPP 1
 
-#include<library/AtCoder/modint.hpp>
+#include<library/modint/modint.hpp>
 
 namespace otera{
     template<typename T>
-    class powtable {
+    class pow_table {
         public:
-        powtable(T x) : x_(x), pw_(1, 1) {}
-        powtable(long long x) : x_(T(x)), pw_(1, 1) {}
-        powtable(long long x, int n) : x_(T(x)), pw_(1, 1) {
+        pow_table(T x) : x_(x), pw_(1, 1) {}
+        pow_table(long long x) : x_(T(x)), pw_(1, 1) {}
+        pow_table(long long x, int n) : x_(T(x)), pw_(1, 1) {
             ensure(n);
         }
         T pow(const int n) {

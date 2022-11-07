@@ -3,13 +3,13 @@
 
 namespace otera {
     template <typename T>
-    struct Compressor {
+    struct compressor {
         public:
             static constexpr int absent = -1;
 
-            Compressor() : _xs(std::vector<T>{}) {}
+            compressor() : _xs(std::vector<T>{}) {}
 
-            Compressor(const std::vector<T> &vs) {
+            compressor(const std::vector<T> &vs) {
                 add(vs);
                 build();
             }

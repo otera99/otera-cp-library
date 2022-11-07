@@ -1,7 +1,6 @@
 #ifndef OTERA_PAIR_OPS_HPP
 #define OTERA_PAIR_OPS_HPP 1
 
-
 namespace otera {
     template<typename T, typenae U> std::pair<T, U> operator+(const std::pair<T, U> &lhs, const std::pair<T, U> &rhs) { return {lhs.first + rhs.first, lhs.second + rhs.second}; }
     template<typename T, typenae U> std::pair<T, U> operator-(const std::pair<T, U> &lhs, const std::pair<T, U> &rhs) { return {lhs.first - rhs.first, lhs.second - rhs.second}; }

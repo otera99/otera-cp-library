@@ -4,9 +4,9 @@
 namespace otera {
     // 根を最小にしたいならless<T>, 根を最大にしたいならgreater<T>
     template<typename T, typename Comparator>
-    struct CartesianTree {
+    struct cartesian_tree {
         public:
-            CartesianTree(const std::vector<T> &a) {
+            cartesian_tree(const std::vector<T> &a) {
                 build(a);
             }
 

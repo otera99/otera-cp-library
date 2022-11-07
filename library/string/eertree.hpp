@@ -1,8 +1,8 @@
-#ifndef OTERA_EERTREE
-#define OTERA_EERTREE 1
+#ifndef OTERA_EERTREE_HPP
+#define OTERA_EERTREE_HPP 1
 
 namespace otera {
-    struct PalindromicTree {
+    struct eertree_tree {
        public:
 
        private: 
@@ -13,4 +13,4 @@ namespace otera {
     
 } // namespace otera
 
-#endif // OTERA_EERTREE
+#endif // OTERA_EERTREE_HPP

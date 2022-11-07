@@ -3,8 +3,8 @@
  *    author:  otera
 **/
 #include<bits/stdc++.h>
-#include<library/Math/SieveOfEratosthenes.hpp>
-#include<library/Number/Rational.hpp>
+#include<library/math/sieve_of_eratosthenes.hpp>
+#include<library/number/rational.hpp>
 using namespace std;
 
 #define int long long
@@ -105,9 +105,9 @@ struct io_setup {
     }
 } io_setup_ {};
 
-otera::Eratos er;
+otera::eratos er;
 
-using rt = otera::Rational<ll>;
+using rt = otera::rational<ll>;
 
 const ll INF = 1LL<<60;
 

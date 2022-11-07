@@ -4,23 +4,23 @@
 
 namespace otera {
     template<typename U = unsigned, int bit_length = 32>
-    class BinaryTrie {
-        struct Node {
+    class binary_trie {
+        struct node {
             int cnt;
-            Node *ch[2] {nullptr, nullptr};
-            Node() : cnt(0) {}
-            ~Node() {
+            node *ch[2] {nullptr, nullptr};
+            node() : cnt(0) {}
+            ~node() {
                 delete ch[0];
                 delete ch[1];
             }
         };
         public:
-            BinaryTrie() : root(new Node) {}
-            ~BinaryTrie() { delete root; }
+            binary_trie() : root(new node) {}
+            ~binary_trie() { delete root; }
 
 
         private:
-            Node *root;
+            node *root;
     };
 } // namespace otera
 

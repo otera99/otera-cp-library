@@ -2,7 +2,7 @@
 #ifndef OTERA_BOSTAN_MORI_HPP
 #define OTERA_BOSTAN_MORI_HPP 1
 
-#include<library/Math/FPS.hpp>
+#include<library/math/FPS.hpp>
 
 namespace otera {
     template<typename mint>

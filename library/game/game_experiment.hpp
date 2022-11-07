@@ -9,9 +9,9 @@ namespace otera {
     using S_map = std::map<T, S, decltype(S_cmp)>;
 
     template<class S>
-    struct Game : public S_map<S, bool> {
+    struct game : public S_map<S, bool> {
         public:
-        Game() : S_map<S, bool>(S_cmp) {}
+        game() : S_map<S, bool>(S_cmp) {}
         bool win(S now) {
             bool res = dfs(now);
             return res;

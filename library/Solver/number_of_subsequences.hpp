@@ -4,7 +4,7 @@
 
 namespace otera {
     template<typename Int, typename T>
-    auto NumberOfSubsequences(const std::vector<T> &a) -> decltype(std::declval<T>() < std::declval<T>(), Int{}) {
+    auto number_of_subsequences(const std::vector<T> &a) -> decltype(std::declval<T>() < std::declval<T>(), Int{}) {
         const int _n = a.size();
         std::vector<std::pair<T, int>> sorted(_n);
         for(int i = 0; i < _n; ++ i) {
@@ -29,7 +29,7 @@ namespace otera {
     }
 
     template<typename Int>
-    auto NumberOfSubsequences(const std::string &s) -> decltype(Int{}) {
+    auto number_of_subsequences(const std::string &s) -> decltype(Int{}) {
         const int _n = s.size();
         std::vector<std::pair<char, int>> sorted(_n);
         for(int i = 0; i < _n; ++ i) {

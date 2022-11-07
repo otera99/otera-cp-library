@@ -1,12 +1,12 @@
-#ifndef OTERA_MERGE_HISTORICAL_FOREST
-#define OTERA_MERGE_HISTORICAL_FOREST 1
+#ifndef OTERA_MERGE_HISTORY_FOREST
+#define OTERA_MERGE_HISTORY_FOREST 1
 
 #include<atcoder/dsu>
 
 namespace otera {
-    struct MergeHistoryForest {
-        MergeHistoryForest() : MergeHistoryForest(0) {}
-        MergeHistoryForest(int n) : _n(n), g(2 * n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {
+    struct merge_history_forest {
+        merge_history_forest() : merge_history_forest(0) {}
+        merge_history_forest(int n) : _n(n), g(2 * n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {
             ite = n;
             count = 1;
             for(int i = 0; i < n; ++ i) {
@@ -94,4 +94,4 @@ namespace otera {
     };
 } // namespace otera
 
-#endif // OTERA_MERGE_HISTORICAL_FOREST
+#endif // OTERA_MERGE_HISTORY_FOREST

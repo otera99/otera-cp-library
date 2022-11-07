@@ -3,7 +3,7 @@
 
 namespace otera {
     template<typename T>
-    struct Matrix {
+    struct matrix {
         std::vector<std::vector<T>> dat;
     }
 } // namespace otera

@@ -2,13 +2,13 @@
 #define OTERA_INVERSION_NUMBER_HPP 1
 
 #include<atcoder/fenwicktree>
-#include<library/Util/Compressor.hpp>
+#include<library/util/compressor.hpp>
 
 namespace otera {
     template<typename T>
-    long long InversionNumber(std::vector<T> a) {
+    long long inversion_number(std::vector<T> a) {
         int _n = (int)a.size();
-        Compressor<T> ca(a);
+        compressor<T> ca(a);
         int _sz = (int)ca.size();
         atcoder::fenwick_tree<T> bit(sz);
         long long res = 0;

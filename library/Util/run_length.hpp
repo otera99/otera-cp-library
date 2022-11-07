@@ -1,13 +1,13 @@
-#ifndef OTERA_RUNLENGTH_HPP
-#define OTERA_RUNLENGTH_HPP 1
+#ifndef OTERA_RUN_LENGTH_HPP
+#define OTERA_RUN_LENGTH_HPP 1
 
 namespace otera{
     template <typename Container>
-    class RunLength {
+    class run_length {
         public:
             using content_type = typename Container::value_type;
             using value_type = std::pair<content_type, long long>;
-            RunLength(const Container &c) noexcept {
+            run_length(const Container &c) noexcept {
                 _compressed = compress(c);
             }
 
@@ -62,4 +62,4 @@ namespace otera{
     };
 } // namespace otera
 
-#endif // OTERA_RUNLENGTH_HPP
+#endif // OTERA_RUN_LENGTH_HPP

@@ -3,10 +3,10 @@
  *    author:  otera
 **/
 #include<bits/stdc++.h>
-#include<library/AtCoder/modint.hpp>
-#include<library/Solver/NumberOfSubsequences.hpp>
+#include<library/atcoder/modint.hpp>
+#include<library/solver/number_of_subsequences.hpp>
 // #include<otera/modint>
-// #include<otera/NumberOfSubsequences>
+// #include<otera/number_of_subsequences>
 using namespace std;
 
 #define int long long
@@ -114,7 +114,7 @@ using mint = modint998;
 void solve() {
     INT(n);
     VEC(int, a, n);
-    out(NumberOfSubsequences<mint>(a) - mint(1));
+    out(number_of_subsequences<mint>(a) - mint(1));
 }
 
 signed main() {

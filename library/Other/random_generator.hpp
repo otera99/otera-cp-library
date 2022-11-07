@@ -1,7 +1,10 @@
+#ifndef OTERA_RANDOM_GENERATOR_HPP
+#define OTERA_RANDOM_GENERATOR_HPP 1
+
 namespace otera {
-    class RandomGenerator {
+    class random_gen {
         public:
-            RandomGenerator() : mt64(std::chrono::steady_clock::now().time_since_epoch().count()) {}
+            random_gen() : mt64(std::chrono::steady_clock::now().time_since_epoch().count()) {}
 
             // [a, b)
             long long operator()(long long a, long long b) {
@@ -12,3 +15,5 @@ namespace otera {
             std::mt19937_64 mt64;
     };
 } // namespace otera
+
+#endif // OTERA_RANDOM_GENERATOR_HPP

@@ -1,7 +1,7 @@
 #ifndef OTERA_FACTORIAL_HPP
 #define OTERA_FACTORIAL_HPP 1
 
-#include<library/AtCoder/modint.hpp>
+#include<library/modint/modint.hpp>
 
 namespace otera{
     template<typename T>
@@ -11,11 +11,21 @@ namespace otera{
         factorial(int n) {
             ensure(n);
         }
+        T perm(const int n, const int k) {
+            if(k < 0 or n < k) return 0;
+            ensure(n);
+            return fact_[n] * finv_[n - k];
+        }
         T com(const int n, const int k) {
             if(n == k) return 1;
             if(n < k or n < 0 or k < 0) return 0;
             ensure(n);
             return fact_[n] * finv_[k] * finv_[n - k];
+        }
+        T hom(const int n, const int k) {
+            if(n < 0 or k < 0) return 0;
+            if(k == 0) return 1;
+            return com(n + k - 1, k);
         }
         T fact(const int n) {
             if(n < 0) return 0;

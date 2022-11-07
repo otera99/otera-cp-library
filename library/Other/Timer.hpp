@@ -1,7 +1,10 @@
+#ifndef OTERA_TIMER_HPP
+#define OTERA_TIMER_HPP 1
+
 namespace otera {
-    struct Timer {
+    struct timer {
         public:
-        Timer() {
+        timer() {
             start();
         }
         void start() {
@@ -14,3 +17,5 @@ namespace otera {
         int time;
     };
 } // namespace otera
+
+#endif // OTERA_TIMER_HPP
