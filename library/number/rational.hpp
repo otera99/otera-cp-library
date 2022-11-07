@@ -95,7 +95,7 @@ namespace otera{
                 num += den;
                 return *this;
             }
-            Rational& operator--() {
+            rational& operator--() {
                 num -= den;
                 return *this;
             }
