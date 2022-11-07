@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yukicoder/1611.test.cpp
     title: test/yukicoder/1611.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/number/rational.hpp\"\n\n\n\nnamespace otera{\n\
@@ -59,7 +59,7 @@ data:
     \            }\n            rational& operator/=(const rational &r) {\n      \
     \          *this = *this / r;\n                return *this;\n            }\n\
     \            rational& operator++() {\n                num += den;\n         \
-    \       return *this;\n            }\n            Rational& operator--() {\n \
+    \       return *this;\n            }\n            rational& operator--() {\n \
     \               num -= den;\n                return *this;\n            }\n  \
     \          rational inv() const {\n                return rational(den, num);\n\
     \            }\n            rational abs() const {\n                return rational(std::abs(num),\
@@ -130,7 +130,7 @@ data:
     \            }\n            rational& operator/=(const rational &r) {\n      \
     \          *this = *this / r;\n                return *this;\n            }\n\
     \            rational& operator++() {\n                num += den;\n         \
-    \       return *this;\n            }\n            Rational& operator--() {\n \
+    \       return *this;\n            }\n            rational& operator--() {\n \
     \               num -= den;\n                return *this;\n            }\n  \
     \          rational inv() const {\n                return rational(den, num);\n\
     \            }\n            rational abs() const {\n                return rational(std::abs(num),\
@@ -157,8 +157,8 @@ data:
   isVerificationFile: false
   path: library/number/rational.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:48:17+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2022-11-08 08:44:06+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yukicoder/1611.test.cpp
 documentation_of: library/number/rational.hpp

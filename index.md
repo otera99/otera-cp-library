@@ -48,7 +48,7 @@ data:
     - icon: ':warning:'
       path: library/math/pow_table.hpp
       title: library/math/pow_table.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/math/sieve_of_eratosthenes.hpp
       title: library/math/sieve_of_eratosthenes.hpp
   - name: library/modint
@@ -58,7 +58,7 @@ data:
       title: library/modint/modint.hpp
   - name: library/number
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/number/rational.hpp
       title: library/number/rational.hpp
   - name: library/other
@@ -134,7 +134,7 @@ data:
       title: test/library_checker/tree/lca.test.cpp
   - name: test/yukicoder
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yukicoder/1611.test.cpp
       title: test/yukicoder/1611.test.cpp
 layout: toppage
