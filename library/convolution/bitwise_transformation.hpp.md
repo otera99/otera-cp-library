@@ -11,7 +11,7 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Convolution/BitwiseTransformation.hpp\"\n\n\n\n\
+  bundledCode: "#line 1 \"library/convolution/bitwise_transformation.hpp\"\n\n\n\n\
     namespace otera {\n    namespace internal {\n        template<typename T> \n \
     \       std::pair<T, T> subset_zeta_unit_transform(std::pair<T, T> a) {\n    \
     \        return std::make_pair(a.first, a.first + a.second);\n        }\n\n  \
@@ -76,16 +76,16 @@ data:
     \ OTERA_BITWISE_TRANSFORMATION"
   dependsOn: []
   isVerificationFile: false
-  path: library/Convolution/BitwiseTransformation.hpp
+  path: library/convolution/bitwise_transformation.hpp
   requiredBy: []
-  timestamp: '2022-03-29 23:30:49+09:00'
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/abc212_h.test.cpp
-documentation_of: library/Convolution/BitwiseTransformation.hpp
+documentation_of: library/convolution/bitwise_transformation.hpp
 layout: document
 redirect_from:
-- /library/library/Convolution/BitwiseTransformation.hpp
-- /library/library/Convolution/BitwiseTransformation.hpp.html
-title: library/Convolution/BitwiseTransformation.hpp
+- /library/library/convolution/bitwise_transformation.hpp
+- /library/library/convolution/bitwise_transformation.hpp.html
+title: library/convolution/bitwise_transformation.hpp
 ---

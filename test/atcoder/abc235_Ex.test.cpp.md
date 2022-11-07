@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: library/DataStructure/MergeHistoryForest.hpp
+  - icon: ':x:'
+    path: library/data_structure/merge_history_forest.hpp
     title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://atcoder.jp/contests/abc235/tasks/abc235_Ex
@@ -17,13 +17,13 @@ data:
     - https://atcoder.jp/contests/abc235/tasks/abc235_Ex
   bundledCode: "#line 1 \"test/atcoder/abc235_Ex.test.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_Ex\"\
     \n#define VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\
-    \n#line 1 \"library/DataStructure/MergeHistoryForest.hpp\"\n\n\n\n#include<atcoder/dsu>\n\
-    \nnamespace otera {\n    struct MergeHistoryForest {\n        MergeHistoryForest()\
-    \ : MergeHistoryForest(0) {}\n        MergeHistoryForest(int n) : _n(n), g(2 *\
-    \ n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {\n        \
-    \    ite = n;\n            count = 1;\n            for(int i = 0; i < n; ++ i)\
-    \ {\n                ids[i] = i;\n                root[i] = true;\n          \
-    \  }\n        }\n \n        int node_num() const {\n            return ite;\n\
+    \n#line 1 \"library/data_structure/merge_history_forest.hpp\"\n\n\n\n#include<atcoder/dsu>\n\
+    \nnamespace otera {\n    struct merge_history_forest {\n        merge_history_forest()\
+    \ : merge_history_forest(0) {}\n        merge_history_forest(int n) : _n(n), g(2\
+    \ * n - 1), uf(n), ids(2 * n - 1), root(2 * n - 1), time(2 * n - 1) {\n      \
+    \      ite = n;\n            count = 1;\n            for(int i = 0; i < n; ++\
+    \ i) {\n                ids[i] = i;\n                root[i] = true;\n       \
+    \     }\n        }\n \n        int node_num() const {\n            return ite;\n\
     \        }\n        const auto& get_dsu() const {\n            return uf;\n  \
     \      }\n        const auto& get_forest() const {\n            return g;\n  \
     \      }\n        auto get_roots() const {\n            std::vector<int> roots;\n\
@@ -56,7 +56,7 @@ data:
     \  int _n;\n        mutable int ite;\n        mutable int count;\n        std::vector<std::vector<int>>\
     \ g;\n        mutable atcoder::dsu uf;\n        std::vector<int> ids;\n      \
     \  std::vector<bool> root;\n        std::vector<int> time;\n    };\n} // namespace\
-    \ otera\n\n\n#line 5 \"test/atcoder/abc235_Ex.test.cpp\"\n// #include<otera/MergeHistoryForest>\n\
+    \ otera\n\n\n#line 5 \"test/atcoder/abc235_Ex.test.cpp\"\n// #include<otera/merge_history_forest>\n\
     using namespace otera;\n\n#include<bits/stdc++.h>\n#include<atcoder/modint>\n\
     #include<atcoder/convolution>\nusing namespace std;\n\nusing ll = long long;\n\
     using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
@@ -134,7 +134,7 @@ data:
     \ 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc235/tasks/abc235_Ex\"\n\
     #define VERIFY \"https://atcoder.jp/contests/abc235/submissions/28582201\"\n\n\
-    #include\"library/DataStructure/MergeHistoryForest.hpp\"\n// #include<otera/MergeHistoryForest>\n\
+    #include\"library/data_structure/merge_history_forest.hpp\"\n// #include<otera/merge_history_forest>\n\
     using namespace otera;\n\n#include<bits/stdc++.h>\n#include<atcoder/modint>\n\
     #include<atcoder/convolution>\nusing namespace std;\n\nusing ll = long long;\n\
     using ld = long double;\nusing ull = unsigned long long;\nusing uint = unsigned;\n\
@@ -211,12 +211,12 @@ data:
     \ setprecision(20);\n    // INT(t); rep(i, t)solve();\n    solve();\n    return\
     \ 0;\n}"
   dependsOn:
-  - library/DataStructure/MergeHistoryForest.hpp
+  - library/data_structure/merge_history_forest.hpp
   isVerificationFile: true
   path: test/atcoder/abc235_Ex.test.cpp
   requiredBy: []
-  timestamp: '2022-10-10 05:27:26+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-11-08 07:21:25+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/atcoder/abc235_Ex.test.cpp
 layout: document

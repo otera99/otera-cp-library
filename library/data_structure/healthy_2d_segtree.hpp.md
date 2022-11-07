@@ -8,11 +8,11 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/DataStructure/Healthy2DSegtree.hpp\"\n\n\n\n#include<atcoder/segtree>\n\
-    \nnamespace otera {\n    template <class S, S (*op)(S, S), S (*e)()> struct health_2d_segtree\
-    \ {\n    public:\n        health_2d_segtree() : health_2d_segtree(0) {}\n    \
-    \    explicit health_2d_segtree(const std::vector<std::vector<long long>>& v)\
-    \ : _n((int)v.size()) {\n            log = atcoder::internal::ceil_pow2(_n);\n\
+  bundledCode: "#line 1 \"library/data_structure/healthy_2d_segtree.hpp\"\n\n\n\n\
+    #include<atcoder/segtree>\n\nnamespace otera {\n    template <class S, S (*op)(S,\
+    \ S), S (*e)()> struct health_2d_segtree {\n    public:\n        health_2d_segtree()\
+    \ : health_2d_segtree(0) {}\n        explicit health_2d_segtree(const std::vector<std::vector<long\
+    \ long>>& v) : _n((int)v.size()) {\n            log = atcoder::internal::ceil_pow2(_n);\n\
     \            size = 1 << log;\n            index.resize(2 * size);\n         \
     \   for(int i = 0; i < _n; ++ i) {\n                for(int id: v[i]) {\n    \
     \                index[size + i].push_back(id);\n                }\n         \
@@ -92,15 +92,15 @@ data:
     } // namespace otera\n\n#endif // OTERA_HEALTHY_2D_SEGTREE_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/DataStructure/Healthy2DSegtree.hpp
+  path: library/data_structure/healthy_2d_segtree.hpp
   requiredBy: []
-  timestamp: '2022-09-02 19:58:27+09:00'
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/DataStructure/Healthy2DSegtree.hpp
+documentation_of: library/data_structure/healthy_2d_segtree.hpp
 layout: document
 redirect_from:
-- /library/library/DataStructure/Healthy2DSegtree.hpp
-- /library/library/DataStructure/Healthy2DSegtree.hpp.html
-title: library/DataStructure/Healthy2DSegtree.hpp
+- /library/library/data_structure/healthy_2d_segtree.hpp
+- /library/library/data_structure/healthy_2d_segtree.hpp.html
+title: library/data_structure/healthy_2d_segtree.hpp
 ---

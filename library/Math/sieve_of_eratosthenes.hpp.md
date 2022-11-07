@@ -2,18 +2,15 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/yukicoder/1611.test.cpp
-    title: test/yukicoder/1611.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Math/SieveOfEratosthenes.hpp\"\n\n\n\nnamespace\
-    \ otera {\n    struct Eratos {\n        public:\n            Eratos() : Eratos(0)\
-    \ {}\n            Eratos(int N) { init(N); }\n\n            void init(int N) {\n\
+  bundledCode: "#line 1 \"library/Math/sieve_of_eratosthenes.hpp\"\n\n\n\nnamespace\
+    \ otera {\n    struct eratos {\n        public:\n            eratos() : eratos(0)\
+    \ {}\n            eratos(int N) { init(N); }\n\n            void init(int N) {\n\
     \                _N = N;\n                _primes.clear();\n                _isprime.assign(_N\
     \ + 1, true);\n                _min_factor.assign(_N + 1, -1);\n             \
     \   _isprime[0] = _isprime[1] = false;\n                _min_factor[0] = 0, _min_factor[1]\
@@ -43,8 +40,8 @@ data:
     \ _primes;\n            std::vector<bool> _isprime;\n            std::vector<int>\
     \ _min_factor;\n    };\n} // namespace otera\n\n\n"
   code: "#ifndef OTERA_SIEVE_OF_ERATOSTHENES_HPP\n#define OTERA_SIEVE_OF_ERATOSTHENES_HPP\
-    \ 1\n\nnamespace otera {\n    struct Eratos {\n        public:\n            Eratos()\
-    \ : Eratos(0) {}\n            Eratos(int N) { init(N); }\n\n            void init(int\
+    \ 1\n\nnamespace otera {\n    struct eratos {\n        public:\n            eratos()\
+    \ : eratos(0) {}\n            eratos(int N) { init(N); }\n\n            void init(int\
     \ N) {\n                _N = N;\n                _primes.clear();\n          \
     \      _isprime.assign(_N + 1, true);\n                _min_factor.assign(_N +\
     \ 1, -1);\n                _isprime[0] = _isprime[1] = false;\n              \
@@ -76,16 +73,15 @@ data:
     \ // OTERA_SIEVE_OF_ERATOSTHENES_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Math/SieveOfEratosthenes.hpp
+  path: library/Math/sieve_of_eratosthenes.hpp
   requiredBy: []
-  timestamp: '2022-10-10 05:27:26+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/yukicoder/1611.test.cpp
-documentation_of: library/Math/SieveOfEratosthenes.hpp
+  timestamp: '2022-11-08 07:21:25+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: library/Math/sieve_of_eratosthenes.hpp
 layout: document
 redirect_from:
-- /library/library/Math/SieveOfEratosthenes.hpp
-- /library/library/Math/SieveOfEratosthenes.hpp.html
-title: library/Math/SieveOfEratosthenes.hpp
+- /library/library/Math/sieve_of_eratosthenes.hpp
+- /library/library/Math/sieve_of_eratosthenes.hpp.html
+title: library/Math/sieve_of_eratosthenes.hpp
 ---

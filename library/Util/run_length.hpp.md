@@ -8,10 +8,10 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Util/RunLength.hpp\"\n\n\n\nnamespace otera{\n \
-    \   template <typename Container>\n    class RunLength {\n        public:\n  \
-    \          using content_type = typename Container::value_type;\n            using\
-    \ value_type = std::pair<content_type, long long>;\n            RunLength(const\
+  bundledCode: "#line 1 \"library/Util/run_length.hpp\"\n\n\n\nnamespace otera{\n\
+    \    template <typename Container>\n    class run_length {\n        public:\n\
+    \            using content_type = typename Container::value_type;\n          \
+    \  using value_type = std::pair<content_type, long long>;\n            run_length(const\
     \ Container &c) noexcept {\n                _compressed = compress(c);\n     \
     \       }\n\n            void clear() {\n                _compressed.clear();\n\
     \            }\n\n            int size() const noexcept {\n                return\
@@ -40,10 +40,10 @@ data:
     \                   res.emplace_back(*ite_l, ite_r - ite_l);\n               \
     \ }\n                return res;\n            }\n        private:\n          \
     \  std::vector<value_type> _compressed;\n    };\n} // namespace otera\n\n\n"
-  code: "#ifndef OTERA_RUNLENGTH_HPP\n#define OTERA_RUNLENGTH_HPP 1\n\nnamespace otera{\n\
-    \    template <typename Container>\n    class RunLength {\n        public:\n \
-    \           using content_type = typename Container::value_type;\n           \
-    \ using value_type = std::pair<content_type, long long>;\n            RunLength(const\
+  code: "#ifndef OTERA_RUN_LENGTH_HPP\n#define OTERA_RUN_LENGTH_HPP 1\n\nnamespace\
+    \ otera{\n    template <typename Container>\n    class run_length {\n        public:\n\
+    \            using content_type = typename Container::value_type;\n          \
+    \  using value_type = std::pair<content_type, long long>;\n            run_length(const\
     \ Container &c) noexcept {\n                _compressed = compress(c);\n     \
     \       }\n\n            void clear() {\n                _compressed.clear();\n\
     \            }\n\n            int size() const noexcept {\n                return\
@@ -72,18 +72,18 @@ data:
     \                   res.emplace_back(*ite_l, ite_r - ite_l);\n               \
     \ }\n                return res;\n            }\n        private:\n          \
     \  std::vector<value_type> _compressed;\n    };\n} // namespace otera\n\n#endif\
-    \ // OTERA_RUNLENGTH_HPP"
+    \ // OTERA_RUN_LENGTH_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Util/RunLength.hpp
+  path: library/Util/run_length.hpp
   requiredBy: []
-  timestamp: '2022-03-05 02:48:38+09:00'
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Util/RunLength.hpp
+documentation_of: library/Util/run_length.hpp
 layout: document
 redirect_from:
-- /library/library/Util/RunLength.hpp
-- /library/library/Util/RunLength.hpp.html
-title: library/Util/RunLength.hpp
+- /library/library/Util/run_length.hpp
+- /library/library/Util/run_length.hpp.html
+title: library/Util/run_length.hpp
 ---

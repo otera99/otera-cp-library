@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/AtCoder/modint.hpp
-    title: library/AtCoder/modint.hpp
+    path: library/convolution/bitwise_transformation.hpp
+    title: library/convolution/bitwise_transformation.hpp
   - icon: ':heavy_check_mark:'
-    path: library/Convolution/BitwiseTransformation.hpp
-    title: library/Convolution/BitwiseTransformation.hpp
+    path: library/modint/modint.hpp
+    title: library/modint/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,7 +20,7 @@ data:
     - https://atcoder.jp/contests/abc212/tasks/abc212_h
   bundledCode: "#line 1 \"test/atcoder/abc212_h.test.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/abc212/tasks/abc212_h\"\
     \n#define VERIFY \"https://atcoder.jp/contests/abc212/submissions/30554763\"\n\
-    #include<bits/stdc++.h>\n#line 1 \"library/Convolution/BitwiseTransformation.hpp\"\
+    #include<bits/stdc++.h>\n#line 1 \"library/convolution/bitwise_transformation.hpp\"\
     \n\n\n\nnamespace otera {\n    namespace internal {\n        template<typename\
     \ T> \n        std::pair<T, T> subset_zeta_unit_transform(std::pair<T, T> a) {\n\
     \            return std::make_pair(a.first, a.first + a.second);\n        }\n\n\
@@ -51,32 +51,31 @@ data:
     \    }\n\n    template<typename T> void walsh_hadamard_inv(std::vector<T> &x)\
     \ {\n        const int n = (int)x.size();\n        kronecker_product<T, internal::walsh_hadamard_unit_transform<T>>(x);\n\
     \        for(auto &val: x) val /= n;\n    }\n} // namespace otera\n\n\n#line 1\
-    \ \"library/AtCoder/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\nnamespace\
-    \ otera {\n    using modint107 = atcoder::modint1000000007;\n    using modint998\
-    \ = atcoder::modint998244353;\n    using modint = atcoder::modint;\n}; //namespace\
-    \ otera\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
+    \ \"library/modint/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\nnamespace otera\
+    \ {\n    using modint107 = atcoder::modint1000000007;\n    using modint998 = atcoder::modint998244353;\n\
+    \    using modint = atcoder::modint;\n}; //namespace otera\n\nstd::ostream& operator<<(std::ostream&\
+    \ out, const atcoder::modint1000000007 &e) {\n    out << e.val();\n    return\
+    \ out;\n}\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint998244353\
     \ &e) {\n    out << e.val();\n    return out;\n}\n\nstd::ostream& operator<<(std::ostream&\
-    \ out, const atcoder::modint998244353 &e) {\n    out << e.val();\n    return out;\n\
-    }\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint &e) {\n\
-    \    out << e.val();\n    return out;\n}\n\n\n#line 6 \"test/atcoder/abc212_h.test.cpp\"\
-    \nusing namespace std;\n\n#define int long long\n\nusing ll = long long;\nusing\
-    \ ld = long double;\nusing ull = unsigned long long;\nusing int128_t = __int128_t;\n\
-    #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
-    \ i = a; i < b; ++ i)\n#define repc(i, a, b, c) for(int i = a; i < b; i += c)\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b, c, d, ...) d\n\
-    #define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define\
-    \ rep1a(i, n) for(int i = 0; i <= n; ++ i)\n#define rep1b(i, a, b) for(int i =\
-    \ a; i <= b; ++ i)\n#define rep1c(i, a, b, c) for(int i = a; i <= b; i += c)\n\
-    #define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define\
-    \ rev_repa(i, n) for(int i=n-1;i>=0;i--)\n#define rev_repb(i, a, b) assert(a >\
-    \ b);for(int i=a;i>b;i--)\n#define rev_rep(...) overload3(__VA_ARGS__, rev_repb,\
-    \ rev_repa)(__VA_ARGS__)\n#define rev_rep1a(i, n) for(int i=n;i>=1;i--)\n#define\
-    \ rev_rep1b(i, a, b) assert(a >= b);for(int i=a;i>=b;i--)\n#define rev_rep1(...)\
-    \ overload3(__VA_ARGS__, rev_rep1b, rev_rep1a)(__VA_ARGS__)\ntypedef pair<int,\
-    \ int> P;\ntypedef pair<ll, ll> LP;\n#define pb push_back\n#define pf push_front\n\
-    #define ppb pop_back\n#define ppf pop_front\n#define eb emplace_back\n#define\
-    \ fr first\n#define sc second\n#define all(c) c.begin(),c.end()\n#define rall(c)\
-    \ c.rbegin(), c.rend()\n#define lb(c, x) distance((c).begin(), lower_bound(all(c),\
+    \ out, const atcoder::modint &e) {\n    out << e.val();\n    return out;\n}\n\n\
+    \n#line 6 \"test/atcoder/abc212_h.test.cpp\"\nusing namespace std;\n\n#define\
+    \ int long long\n\nusing ll = long long;\nusing ld = long double;\nusing ull =\
+    \ unsigned long long;\nusing int128_t = __int128_t;\n#define repa(i, n) for(int\
+    \ i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define\
+    \ repc(i, a, b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d,\
+    \ e, ...) e\n#define overload3(a, b, c, d, ...) d\n#define rep(...) overload4(__VA_ARGS__,\
+    \ repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= n; ++\
+    \ i)\n#define rep1b(i, a, b) for(int i = a; i <= b; ++ i)\n#define rep1c(i, a,\
+    \ b, c) for(int i = a; i <= b; i += c)\n#define rep1(...) overload4(__VA_ARGS__,\
+    \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define rev_repa(i, n) for(int i=n-1;i>=0;i--)\n\
+    #define rev_repb(i, a, b) assert(a > b);for(int i=a;i>b;i--)\n#define rev_rep(...)\
+    \ overload3(__VA_ARGS__, rev_repb, rev_repa)(__VA_ARGS__)\n#define rev_rep1a(i,\
+    \ n) for(int i=n;i>=1;i--)\n#define rev_rep1b(i, a, b) assert(a >= b);for(int\
+    \ i=a;i>=b;i--)\n#define rev_rep1(...) overload3(__VA_ARGS__, rev_rep1b, rev_rep1a)(__VA_ARGS__)\n\
+    typedef pair<int, int> P;\ntypedef pair<ll, ll> LP;\n#define pb push_back\n#define\
+    \ pf push_front\n#define ppb pop_back\n#define ppf pop_front\n#define eb emplace_back\n\
+    #define fr first\n#define sc second\n#define all(c) c.begin(),c.end()\n#define\
+    \ rall(c) c.rbegin(), c.rend()\n#define lb(c, x) distance((c).begin(), lower_bound(all(c),\
     \ (x)))\n#define ub(c, x) distance((c).begin(), upper_bound(all(c), (x)))\n#define\
     \ Sort(a) sort(all(a))\n#define Rev(a) reverse(all(a))\n#define Uniq(a) sort(all(a));a.erase(unique(all(a)),end(a))\n\
     #define si(c) (int)(c).size()\ninline ll popcnt(ull a){ return __builtin_popcountll(a);\
@@ -130,7 +129,7 @@ data:
     \ solve();\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://atcoder.jp/contests/abc212/tasks/abc212_h\"\n#define\
     \ VERIFY \"https://atcoder.jp/contests/abc212/submissions/30554763\"\n#include<bits/stdc++.h>\n\
-    #include\"library/Convolution/BitwiseTransformation.hpp\"\n#include\"library/AtCoder/modint.hpp\"\
+    #include\"library/convolution/bitwise_transformation.hpp\"\n#include\"library/modint/modint.hpp\"\
     \nusing namespace std;\n\n#define int long long\n\nusing ll = long long;\nusing\
     \ ld = long double;\nusing ull = unsigned long long;\nusing int128_t = __int128_t;\n\
     #define repa(i, n) for(int i = 0; i < n; ++ i)\n#define repb(i, a, b) for(int\
@@ -201,12 +200,12 @@ data:
     }\n\nsigned main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
     \ solve();\n    return 0;\n}"
   dependsOn:
-  - library/Convolution/BitwiseTransformation.hpp
-  - library/AtCoder/modint.hpp
+  - library/convolution/bitwise_transformation.hpp
+  - library/modint/modint.hpp
   isVerificationFile: true
   path: test/atcoder/abc212_h.test.cpp
   requiredBy: []
-  timestamp: '2022-10-10 05:27:26+09:00'
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc212_h.test.cpp

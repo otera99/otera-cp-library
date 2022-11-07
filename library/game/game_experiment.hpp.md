@@ -8,11 +8,11 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Game/GameExperiment.hpp\"\n\n\n\nnamespace otera\
+  bundledCode: "#line 1 \"library/game/game_experiment.hpp\"\n\n\n\nnamespace otera\
     \ {\n    const auto S_cmp{[](auto &&a, auto &&b) -> bool {\n        return true;\n\
     \    }};\n    template<class T, class S>\n    using S_map = std::map<T, S, decltype(S_cmp)>;\n\
-    \n    template<class S>\n    struct Game : public S_map<S, bool> {\n        public:\n\
-    \        Game() : S_map<S, bool>(S_cmp) {}\n        bool win(S now) {\n      \
+    \n    template<class S>\n    struct game : public S_map<S, bool> {\n        public:\n\
+    \        game() : S_map<S, bool>(S_cmp) {}\n        bool win(S now) {\n      \
     \      bool res = dfs(now);\n            return res;\n        }\n        private:\n\
     \        bool dfs(S now) {\n            if((*this).count(now)) return (*this)[now];\n\
     \            if(now.end_game()) {\n                return now.win();\n       \
@@ -25,8 +25,8 @@ data:
   code: "#ifndef OTERA_GAME_EXPERIMENT_HPP\n#define OTERA_GAME_EXPERIMENT_HPP 1\n\n\
     namespace otera {\n    const auto S_cmp{[](auto &&a, auto &&b) -> bool {\n   \
     \     return true;\n    }};\n    template<class T, class S>\n    using S_map =\
-    \ std::map<T, S, decltype(S_cmp)>;\n\n    template<class S>\n    struct Game :\
-    \ public S_map<S, bool> {\n        public:\n        Game() : S_map<S, bool>(S_cmp)\
+    \ std::map<T, S, decltype(S_cmp)>;\n\n    template<class S>\n    struct game :\
+    \ public S_map<S, bool> {\n        public:\n        game() : S_map<S, bool>(S_cmp)\
     \ {}\n        bool win(S now) {\n            bool res = dfs(now);\n          \
     \  return res;\n        }\n        private:\n        bool dfs(S now) {\n     \
     \       if((*this).count(now)) return (*this)[now];\n            if(now.end_game())\
@@ -39,12 +39,12 @@ data:
     \ OTERA_GAME_EXPERIMENT_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Game/GameExperiment.hpp
+  path: library/game/game_experiment.hpp
   requiredBy: []
-  timestamp: '2022-09-25 00:56:55+09:00'
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Game/GameExperiment.hpp
+documentation_of: library/game/game_experiment.hpp
 layout: document
 title: "\u30B2\u30FC\u30E0\u306E\u5B9F\u9A13\u30B3\u30FC\u30C9\u306E\u7C21\u7565\u5316"
 ---
@@ -129,7 +129,7 @@ int n, m;
 // Sの定義
 
 void solve() {
-    Game<S> gm;
+    game<S> gm;
     cin >> n >> m;
     vector<int> a(2 * n);
     for(int i = 0; i < 2 * n; ++ i) {

@@ -1,28 +1,18 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: library/AtCoder/modint.hpp
-    title: library/AtCoder/modint.hpp
-  - icon: ':heavy_check_mark:'
-    path: library/Solver/NumberOfSubsequences.hpp
-    title: library/Solver/NumberOfSubsequences.hpp
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
-  attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/number_of_subsequences
-    links:
-    - https://judge.yosupo.jp/problem/number_of_subsequences
+  _verificationStatusIcon: ':x:'
+  attributes: {}
   bundledCode: "#line 1 \"test/library_checker/string/number_of_subsequences.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_subsequences\"\n\
-    /**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/AtCoder/modint.hpp>\n\
-    #include<library/Solver/NumberOfSubsequences.hpp>\n// #include<otera/modint>\n\
-    // #include<otera/NumberOfSubsequences>\nusing namespace std;\n\n#define int long\
-    \ long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
+    /**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/atcoder/modint.hpp>\n\
+    #include<library/solver/number_of_subsequences.hpp>\n// #include<otera/modint>\n\
+    // #include<otera/number_of_subsequences>\nusing namespace std;\n\n#define int\
+    \ long long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
     \ long long;\nusing int128_t = __int128_t;\n#define repa(i, n) for(int i = 0;\
     \ i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i,\
     \ a, b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...)\
@@ -83,14 +73,14 @@ data:
     \ precision = 20) {\n        ios::sync_with_stdio(false);\n        cin.tie(0);\n\
     \        cout << fixed << setprecision(precision);\n    }\n} io_setup_ {};\n\n\
     using namespace otera;\n\nusing mint = modint998;\n\nvoid solve() {\n    INT(n);\n\
-    \    VEC(int, a, n);\n    out(NumberOfSubsequences<mint>(a) - mint(1));\n}\n\n\
-    signed main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
+    \    VEC(int, a, n);\n    out(number_of_subsequences<mint>(a) - mint(1));\n}\n\
+    \nsigned main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
     \ solve();\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_subsequences\"\
-    \n/**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/AtCoder/modint.hpp>\n\
-    #include<library/Solver/NumberOfSubsequences.hpp>\n// #include<otera/modint>\n\
-    // #include<otera/NumberOfSubsequences>\nusing namespace std;\n\n#define int long\
-    \ long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
+    \n/**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/atcoder/modint.hpp>\n\
+    #include<library/solver/number_of_subsequences.hpp>\n// #include<otera/modint>\n\
+    // #include<otera/number_of_subsequences>\nusing namespace std;\n\n#define int\
+    \ long long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
     \ long long;\nusing int128_t = __int128_t;\n#define repa(i, n) for(int i = 0;\
     \ i < n; ++ i)\n#define repb(i, a, b) for(int i = a; i < b; ++ i)\n#define repc(i,\
     \ a, b, c) for(int i = a; i < b; i += c)\n#define overload4(a, b, c, d, e, ...)\
@@ -151,17 +141,15 @@ data:
     \ precision = 20) {\n        ios::sync_with_stdio(false);\n        cin.tie(0);\n\
     \        cout << fixed << setprecision(precision);\n    }\n} io_setup_ {};\n\n\
     using namespace otera;\n\nusing mint = modint998;\n\nvoid solve() {\n    INT(n);\n\
-    \    VEC(int, a, n);\n    out(NumberOfSubsequences<mint>(a) - mint(1));\n}\n\n\
-    signed main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
+    \    VEC(int, a, n);\n    out(number_of_subsequences<mint>(a) - mint(1));\n}\n\
+    \nsigned main() {\n    int testcase = 1;\n    // in(testcase);\n    while(testcase--)\
     \ solve();\n    return 0;\n}"
-  dependsOn:
-  - library/AtCoder/modint.hpp
-  - library/Solver/NumberOfSubsequences.hpp
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/string/number_of_subsequences.test.cpp
   requiredBy: []
-  timestamp: '2022-10-10 05:27:26+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-11-08 07:21:25+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/string/number_of_subsequences.test.cpp
 layout: document

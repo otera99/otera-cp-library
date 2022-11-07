@@ -9,16 +9,16 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Solver/Matrix.hpp\"\n\n\n\nnamespace otera {\n \
-    \   template<typename T>\n    struct Matrix {\n        std::vector<std::vector<T>>\
+    \   template<typename T>\n    struct matrix {\n        std::vector<std::vector<T>>\
     \ dat;\n    }\n} // namespace otera\n\n\n"
   code: "#ifndef OTERA_MATRIX_HPP\n#define OTERA_MATRIX_HPP 1\n\nnamespace otera {\n\
-    \    template<typename T>\n    struct Matrix {\n        std::vector<std::vector<T>>\
+    \    template<typename T>\n    struct matrix {\n        std::vector<std::vector<T>>\
     \ dat;\n    }\n} // namespace otera\n\n#endif // OTERA_MATRIX_HPP"
   dependsOn: []
   isVerificationFile: false
   path: library/Solver/Matrix.hpp
   requiredBy: []
-  timestamp: '2022-10-06 08:49:33+09:00'
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Solver/Matrix.hpp

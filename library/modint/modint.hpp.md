@@ -6,21 +6,18 @@ data:
     path: library/Math/Factorial.hpp
     title: library/Math/Factorial.hpp
   - icon: ':warning:'
-    path: library/Math/PowTable.hpp
-    title: library/Math/PowTable.hpp
+    path: library/Math/pow_table.hpp
+    title: library/Math/pow_table.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc212_h.test.cpp
     title: test/atcoder/abc212_h.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/string/number_of_subsequences.test.cpp
-    title: test/library_checker/string/number_of_subsequences.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/AtCoder/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
+  bundledCode: "#line 1 \"library/modint/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
     \nnamespace otera {\n    using modint107 = atcoder::modint1000000007;\n    using\
     \ modint998 = atcoder::modint998244353;\n    using modint = atcoder::modint;\n\
     }; //namespace otera\n\nstd::ostream& operator<<(std::ostream& out, const atcoder::modint1000000007\
@@ -38,19 +35,18 @@ data:
     \    out << e.val();\n    return out;\n}\n\n#endif // OTERA_MODINT"
   dependsOn: []
   isVerificationFile: false
-  path: library/AtCoder/modint.hpp
+  path: library/modint/modint.hpp
   requiredBy:
-  - library/Math/PowTable.hpp
+  - library/Math/pow_table.hpp
   - library/Math/Factorial.hpp
-  timestamp: '2022-03-29 09:25:41+09:00'
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/string/number_of_subsequences.test.cpp
   - test/atcoder/abc212_h.test.cpp
-documentation_of: library/AtCoder/modint.hpp
+documentation_of: library/modint/modint.hpp
 layout: document
 redirect_from:
-- /library/library/AtCoder/modint.hpp
-- /library/library/AtCoder/modint.hpp.html
-title: library/AtCoder/modint.hpp
+- /library/library/modint/modint.hpp
+- /library/library/modint/modint.hpp.html
+title: library/modint/modint.hpp
 ---

@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: library/Solver/InversionNumber.hpp
-    title: library/Solver/InversionNumber.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -12,9 +9,9 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"library/Util/Compressor.hpp\"\n\n\n\nnamespace otera {\n\
-    \    template <typename T>\n    struct Compressor {\n        public:\n       \
-    \     static constexpr int absent = -1;\n\n            Compressor() : _xs(std::vector<T>{})\
-    \ {}\n\n            Compressor(const std::vector<T> &vs) {\n                add(vs);\n\
+    \    template <typename T>\n    struct compressor {\n        public:\n       \
+    \     static constexpr int absent = -1;\n\n            compressor() : _xs(std::vector<T>{})\
+    \ {}\n\n            compressor(const std::vector<T> &vs) {\n                add(vs);\n\
     \                build();\n            }\n\n            void add(const std::vector<T>\
     \ &vs) {\n                std::copy(vs.begin(), vs.end(), std::back_inserter(_xs));\n\
     \            }\n\n            void add(const T &e) {\n                _xs.emplace_back(e);\n\
@@ -58,9 +55,9 @@ data:
     \ _xs.end(), e)- _xs.begin()) - 1;\n            }\n        private:\n        \
     \    std::vector<T> _xs;\n    };\n} // namespace otera\n\n\n"
   code: "#ifndef OTERA_COMPRESSOR_HPP\n#define OTERA_COMPRESSOR_HPP 1\n\nnamespace\
-    \ otera {\n    template <typename T>\n    struct Compressor {\n        public:\n\
-    \            static constexpr int absent = -1;\n\n            Compressor() : _xs(std::vector<T>{})\
-    \ {}\n\n            Compressor(const std::vector<T> &vs) {\n                add(vs);\n\
+    \ otera {\n    template <typename T>\n    struct compressor {\n        public:\n\
+    \            static constexpr int absent = -1;\n\n            compressor() : _xs(std::vector<T>{})\
+    \ {}\n\n            compressor(const std::vector<T> &vs) {\n                add(vs);\n\
     \                build();\n            }\n\n            void add(const std::vector<T>\
     \ &vs) {\n                std::copy(vs.begin(), vs.end(), std::back_inserter(_xs));\n\
     \            }\n\n            void add(const T &e) {\n                _xs.emplace_back(e);\n\
@@ -106,9 +103,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/Util/Compressor.hpp
-  requiredBy:
-  - library/Solver/InversionNumber.hpp
-  timestamp: '2022-03-05 02:48:38+09:00'
+  requiredBy: []
+  timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/Util/Compressor.hpp
