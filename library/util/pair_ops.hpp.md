@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Util/pair_ops.hpp\"\n\n\n\nnamespace otera {\n \
+  bundledCode: "#line 1 \"library/util/pair_ops.hpp\"\n\n\n\nnamespace otera {\n \
     \   template<typename T, typenae U> std::pair<T, U> operator+(const std::pair<T,\
     \ U> &lhs, const std::pair<T, U> &rhs) { return {lhs.first + rhs.first, lhs.second\
     \ + rhs.second}; }\n    template<typename T, typenae U> std::pair<T, U> operator-(const\
@@ -64,15 +64,15 @@ data:
     \n#endif // OTERA_TUPLE_OPS_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Util/pair_ops.hpp
+  path: library/util/pair_ops.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  timestamp: '2022-11-08 07:42:15+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Util/pair_ops.hpp
+documentation_of: library/util/pair_ops.hpp
 layout: document
 redirect_from:
-- /library/library/Util/pair_ops.hpp
-- /library/library/Util/pair_ops.hpp.html
-title: library/Util/pair_ops.hpp
+- /library/library/util/pair_ops.hpp
+- /library/library/util/pair_ops.hpp.html
+title: library/util/pair_ops.hpp
 ---

@@ -1,15 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/modint/modint.hpp
     title: library/modint/modint.hpp
+  - icon: ':heavy_check_mark:'
+    path: library/solver/number_of_subsequences.hpp
+    title: library/solver/number_of_subsequences.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
-  attributes: {}
+  _verificationStatusIcon: ':heavy_check_mark:'
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/number_of_subsequences
+    links:
+    - https://judge.yosupo.jp/problem/number_of_subsequences
   bundledCode: "#line 1 \"test/library_checker/string/number_of_subsequences.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_subsequences\"\n\
     /**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/modint/modint.hpp>\n\
@@ -149,11 +156,12 @@ data:
     \ solve();\n    return 0;\n}"
   dependsOn:
   - library/modint/modint.hpp
+  - library/solver/number_of_subsequences.hpp
   isVerificationFile: true
   path: test/library_checker/string/number_of_subsequences.test.cpp
   requiredBy: []
-  timestamp: '2022-11-08 07:28:39+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-11-08 07:42:15+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/string/number_of_subsequences.test.cpp
 layout: document

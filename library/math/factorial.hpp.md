@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/modint/modint.hpp
     title: library/modint/modint.hpp
   _extendedRequiredBy: []
@@ -11,7 +11,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Math/Factorial.hpp\"\n\n\n\n#include<library/modint/modint.hpp>\n\
+  bundledCode: "#line 1 \"library/math/factorial.hpp\"\n\n\n\n#include<library/modint/modint.hpp>\n\
     \nnamespace otera{\n    template<typename T>\n    class factorial {\n        public:\n\
     \        factorial() {}\n        factorial(int n) {\n            ensure(n);\n\
     \        }\n        T perm(const int n, const int k) {\n            if(k < 0 or\
@@ -66,15 +66,15 @@ data:
   dependsOn:
   - library/modint/modint.hpp
   isVerificationFile: false
-  path: library/Math/Factorial.hpp
+  path: library/math/factorial.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  timestamp: '2022-11-08 07:48:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Math/Factorial.hpp
+documentation_of: library/math/factorial.hpp
 layout: document
 redirect_from:
-- /library/library/Math/Factorial.hpp
-- /library/library/Math/Factorial.hpp.html
-title: library/Math/Factorial.hpp
+- /library/library/math/factorial.hpp
+- /library/library/math/factorial.hpp.html
+title: library/math/factorial.hpp
 ---

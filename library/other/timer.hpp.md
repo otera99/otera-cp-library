@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Other/Timer.hpp\"\n\n\n\nnamespace otera {\n   \
+  bundledCode: "#line 1 \"library/other/timer.hpp\"\n\n\n\nnamespace otera {\n   \
     \ struct timer {\n        public:\n        timer() {\n            start();\n \
     \       }\n        void start() {\n            time = std::clock();\n        }\
     \   \n        double elapsed() {\n            return 1.0 * (std::clock() - time)\
@@ -22,15 +22,15 @@ data:
     } // namespace otera\n\n#endif // OTERA_TIMER_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Other/Timer.hpp
+  path: library/other/timer.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  timestamp: '2022-11-08 07:48:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Other/Timer.hpp
+documentation_of: library/other/timer.hpp
 layout: document
 redirect_from:
-- /library/library/Other/Timer.hpp
-- /library/library/Other/Timer.hpp.html
-title: library/Other/Timer.hpp
+- /library/library/other/timer.hpp
+- /library/library/other/timer.hpp.html
+title: library/other/timer.hpp
 ---

@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/tree/lca.test.cpp
+    title: test/library_checker/tree/lca.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Tree/LCA.hpp\"\n\n\n\nnamespace otera {\n    class\
+  bundledCode: "#line 1 \"library/tree/LCA.hpp\"\n\n\n\nnamespace otera {\n    class\
     \ LCA {\n        public:\n            LCA(const std::vector<std::vector<int>>\
     \ &g, int root = 0) {\n                int _n = (int)g.size();\n             \
     \   int _N = 1;\n                while((1<<_N) < _n) ++ _N;\n                parent.assign(_N,\
@@ -68,15 +71,16 @@ data:
     \ otera\n\n#endif // OTERA_LCA_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Tree/LCA.hpp
+  path: library/tree/LCA.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
-documentation_of: library/Tree/LCA.hpp
+  timestamp: '2022-11-08 07:42:15+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/tree/lca.test.cpp
+documentation_of: library/tree/LCA.hpp
 layout: document
 redirect_from:
-- /library/library/Tree/LCA.hpp
-- /library/library/Tree/LCA.hpp.html
-title: library/Tree/LCA.hpp
+- /library/library/tree/LCA.hpp
+- /library/library/tree/LCA.hpp.html
+title: library/tree/LCA.hpp
 ---

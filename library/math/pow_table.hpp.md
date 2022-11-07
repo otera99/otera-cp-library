@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/modint/modint.hpp
     title: library/modint/modint.hpp
   _extendedRequiredBy: []
@@ -11,7 +11,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Math/pow_table.hpp\"\n\n\n\n#include<library/modint/modint.hpp>\n\
+  bundledCode: "#line 1 \"library/math/pow_table.hpp\"\n\n\n\n#include<library/modint/modint.hpp>\n\
     \nnamespace otera{\n    template<typename T>\n    class pow_table {\n        public:\n\
     \        pow_table(T x) : x_(x), pw_(1, 1) {}\n        pow_table(long long x)\
     \ : x_(T(x)), pw_(1, 1) {}\n        pow_table(long long x, int n) : x_(T(x)),\
@@ -40,15 +40,15 @@ data:
   dependsOn:
   - library/modint/modint.hpp
   isVerificationFile: false
-  path: library/Math/pow_table.hpp
+  path: library/math/pow_table.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  timestamp: '2022-11-08 07:42:15+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Math/pow_table.hpp
+documentation_of: library/math/pow_table.hpp
 layout: document
 redirect_from:
-- /library/library/Math/pow_table.hpp
-- /library/library/Math/pow_table.hpp.html
-title: library/Math/pow_table.hpp
+- /library/library/math/pow_table.hpp
+- /library/library/math/pow_table.hpp.html
+title: library/math/pow_table.hpp
 ---

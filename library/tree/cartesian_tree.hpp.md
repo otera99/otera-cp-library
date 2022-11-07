@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Tree/cartesian_tree.hpp\"\n\n\n\nnamespace otera\
+  bundledCode: "#line 1 \"library/tree/cartesian_tree.hpp\"\n\n\n\nnamespace otera\
     \ {\n    // \u6839\u3092\u6700\u5C0F\u306B\u3057\u305F\u3044\u306A\u3089less<T>,\
     \ \u6839\u3092\u6700\u5927\u306B\u3057\u305F\u3044\u306A\u3089greater<T>\n   \
     \ template<typename T, typename Comparator>\n    struct cartesian_tree {\n   \
@@ -62,15 +62,15 @@ data:
     #endif // OTERA_CARTESIAN_TREE_HPP\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/Tree/cartesian_tree.hpp
+  path: library/tree/cartesian_tree.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  timestamp: '2022-11-08 07:42:15+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Tree/cartesian_tree.hpp
+documentation_of: library/tree/cartesian_tree.hpp
 layout: document
 redirect_from:
-- /library/library/Tree/cartesian_tree.hpp
-- /library/library/Tree/cartesian_tree.hpp.html
-title: library/Tree/cartesian_tree.hpp
+- /library/library/tree/cartesian_tree.hpp
+- /library/library/tree/cartesian_tree.hpp.html
+title: library/tree/cartesian_tree.hpp
 ---

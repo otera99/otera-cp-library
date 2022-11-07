@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Util/run_length.hpp\"\n\n\n\nnamespace otera{\n\
+  bundledCode: "#line 1 \"library/util/run_length.hpp\"\n\n\n\nnamespace otera{\n\
     \    template <typename Container>\n    class run_length {\n        public:\n\
     \            using content_type = typename Container::value_type;\n          \
     \  using value_type = std::pair<content_type, long long>;\n            run_length(const\
@@ -75,15 +75,15 @@ data:
     \ // OTERA_RUN_LENGTH_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Util/run_length.hpp
+  path: library/util/run_length.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  timestamp: '2022-11-08 07:42:15+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Util/run_length.hpp
+documentation_of: library/util/run_length.hpp
 layout: document
 redirect_from:
-- /library/library/Util/run_length.hpp
-- /library/library/Util/run_length.hpp.html
-title: library/Util/run_length.hpp
+- /library/library/util/run_length.hpp
+- /library/library/util/run_length.hpp.html
+title: library/util/run_length.hpp
 ---

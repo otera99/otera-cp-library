@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Util/Math.hpp\"\n\n\n\nnamespace otera {\n    //\
+  bundledCode: "#line 1 \"library/util/math.hpp\"\n\n\n\nnamespace otera {\n    //\
     \ return floor(x / y)\n    template<typename T>\n    constexpr inline T fld(const\
     \ T x, const T y) {\n        if((x ^ y) >= 0) return x / y;\n        if(y > 0)\
     \ return (x - (y - 1)) / y;\n        else return (x - (y + 1)) / y;\n    }\n \
@@ -31,15 +31,15 @@ data:
     \ OTERA_MATH_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Util/Math.hpp
+  path: library/util/math.hpp
   requiredBy: []
-  timestamp: '2022-05-21 13:31:32+09:00'
+  timestamp: '2022-11-08 07:48:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Util/Math.hpp
+documentation_of: library/util/math.hpp
 layout: document
 redirect_from:
-- /library/library/Util/Math.hpp
-- /library/library/Util/Math.hpp.html
-title: library/Util/Math.hpp
+- /library/library/util/math.hpp
+- /library/library/util/math.hpp.html
+title: library/util/math.hpp
 ---

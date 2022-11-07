@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: library/solver/inversion_number.hpp
+    title: library/solver/inversion_number.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Util/Compressor.hpp\"\n\n\n\nnamespace otera {\n\
+  bundledCode: "#line 1 \"library/util/compressor.hpp\"\n\n\n\nnamespace otera {\n\
     \    template <typename T>\n    struct compressor {\n        public:\n       \
     \     static constexpr int absent = -1;\n\n            compressor() : _xs(std::vector<T>{})\
     \ {}\n\n            compressor(const std::vector<T> &vs) {\n                add(vs);\n\
@@ -102,15 +105,16 @@ data:
     \    std::vector<T> _xs;\n    };\n} // namespace otera\n\n#endif // OTERA_COMPRESSOR_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Util/Compressor.hpp
-  requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
+  path: library/util/compressor.hpp
+  requiredBy:
+  - library/solver/inversion_number.hpp
+  timestamp: '2022-11-08 07:48:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: library/Util/Compressor.hpp
+documentation_of: library/util/compressor.hpp
 layout: document
 redirect_from:
-- /library/library/Util/Compressor.hpp
-- /library/library/Util/Compressor.hpp.html
-title: library/Util/Compressor.hpp
+- /library/library/util/compressor.hpp
+- /library/library/util/compressor.hpp.html
+title: library/util/compressor.hpp
 ---

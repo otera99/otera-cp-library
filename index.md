@@ -1,75 +1,6 @@
 ---
 data:
   libraryCategories:
-  - name: library/Math
-    pages:
-    - icon: ':warning:'
-      path: library/Math/FPS.hpp
-      title: library/Math/FPS.hpp
-    - icon: ':warning:'
-      path: library/Math/Factorial.hpp
-      title: library/Math/Factorial.hpp
-    - icon: ':warning:'
-      path: library/Math/bostan_mori.hpp
-      title: library/Math/bostan_mori.hpp
-    - icon: ':warning:'
-      path: library/Math/pow_table.hpp
-      title: library/Math/pow_table.hpp
-    - icon: ':warning:'
-      path: library/Math/sieve_of_eratosthenes.hpp
-      title: library/Math/sieve_of_eratosthenes.hpp
-  - name: library/Number
-    pages:
-    - icon: ':warning:'
-      path: library/Number/Rational.hpp
-      title: library/Number/Rational.hpp
-  - name: library/Other
-    pages:
-    - icon: ':warning:'
-      path: library/Other/Timer.hpp
-      title: library/Other/Timer.hpp
-    - icon: ':warning:'
-      path: library/Other/random_generator.hpp
-      title: library/Other/random_generator.hpp
-  - name: library/Solver
-    pages:
-    - icon: ':warning:'
-      path: library/Solver/LIS.hpp
-      title: library/Solver/LIS.hpp
-    - icon: ':warning:'
-      path: library/Solver/Matrix.hpp
-      title: library/Solver/Matrix.hpp
-    - icon: ':warning:'
-      path: library/Solver/inversion_number.hpp
-      title: library/Solver/inversion_number.hpp
-    - icon: ':warning:'
-      path: library/Solver/number_of_subsequences.hpp
-      title: library/Solver/number_of_subsequences.hpp
-  - name: library/Tree
-    pages:
-    - icon: ':warning:'
-      path: library/Tree/LCA.hpp
-      title: library/Tree/LCA.hpp
-    - icon: ':warning:'
-      path: library/Tree/cartesian_tree.hpp
-      title: library/Tree/cartesian_tree.hpp
-  - name: library/Util
-    pages:
-    - icon: ':warning:'
-      path: library/Util/Compressor.hpp
-      title: library/Util/Compressor.hpp
-    - icon: ':warning:'
-      path: library/Util/Math.hpp
-      title: library/Util/Math.hpp
-    - icon: ':warning:'
-      path: library/Util/enumerate_quotient.hpp
-      title: library/Util/enumerate_quotient.hpp
-    - icon: ':warning:'
-      path: library/Util/pair_ops.hpp
-      title: library/Util/pair_ops.hpp
-    - icon: ':warning:'
-      path: library/Util/run_length.hpp
-      title: library/Util/run_length.hpp
   - name: library/convolution
     pages:
     - icon: ':heavy_check_mark:'
@@ -103,16 +34,85 @@ data:
     - icon: ':warning:'
       path: library/graph/graph_base.hpp
       title: library/graph/graph_base.hpp
+  - name: library/math
+    pages:
+    - icon: ':warning:'
+      path: library/math/FPS.hpp
+      title: library/math/FPS.hpp
+    - icon: ':warning:'
+      path: library/math/bostan_mori.hpp
+      title: library/math/bostan_mori.hpp
+    - icon: ':warning:'
+      path: library/math/factorial.hpp
+      title: library/math/factorial.hpp
+    - icon: ':warning:'
+      path: library/math/pow_table.hpp
+      title: library/math/pow_table.hpp
+    - icon: ':x:'
+      path: library/math/sieve_of_eratosthenes.hpp
+      title: library/math/sieve_of_eratosthenes.hpp
   - name: library/modint
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/modint/modint.hpp
       title: library/modint/modint.hpp
+  - name: library/number
+    pages:
+    - icon: ':x:'
+      path: library/number/rational.hpp
+      title: library/number/rational.hpp
+  - name: library/other
+    pages:
+    - icon: ':warning:'
+      path: library/other/random_generator.hpp
+      title: library/other/random_generator.hpp
+    - icon: ':warning:'
+      path: library/other/timer.hpp
+      title: library/other/timer.hpp
+  - name: library/solver
+    pages:
+    - icon: ':warning:'
+      path: library/solver/LIS.hpp
+      title: library/solver/LIS.hpp
+    - icon: ':warning:'
+      path: library/solver/inversion_number.hpp
+      title: library/solver/inversion_number.hpp
+    - icon: ':warning:'
+      path: library/solver/matrix.hpp
+      title: library/solver/matrix.hpp
+    - icon: ':heavy_check_mark:'
+      path: library/solver/number_of_subsequences.hpp
+      title: library/solver/number_of_subsequences.hpp
   - name: library/string
     pages:
     - icon: ':warning:'
       path: library/string/eertree.hpp
       title: library/string/eertree.hpp
+  - name: library/tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: library/tree/LCA.hpp
+      title: library/tree/LCA.hpp
+    - icon: ':warning:'
+      path: library/tree/cartesian_tree.hpp
+      title: library/tree/cartesian_tree.hpp
+  - name: library/util
+    pages:
+    - icon: ':warning:'
+      path: library/util/compressor.hpp
+      title: library/util/compressor.hpp
+    - icon: ':warning:'
+      path: library/util/enumerate_quotient.hpp
+      title: library/util/enumerate_quotient.hpp
+    - icon: ':warning:'
+      path: library/util/math.hpp
+      title: library/util/math.hpp
+    - icon: ':warning:'
+      path: library/util/pair_ops.hpp
+      title: library/util/pair_ops.hpp
+    - icon: ':warning:'
+      path: library/util/run_length.hpp
+      title: library/util/run_length.hpp
   verificationCategories:
   - name: test/atcoder
     pages:
@@ -124,12 +124,12 @@ data:
       title: test/atcoder/abc235_Ex.test.cpp
   - name: test/library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/number_of_subsequences.test.cpp
       title: test/library_checker/string/number_of_subsequences.test.cpp
   - name: test/library_checker/tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lca.test.cpp
       title: test/library_checker/tree/lca.test.cpp
   - name: test/yukicoder

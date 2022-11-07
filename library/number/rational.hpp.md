@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/yukicoder/1611.test.cpp
+    title: test/yukicoder/1611.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"library/Number/Rational.hpp\"\n\n\n\nnamespace otera{\n\
+  bundledCode: "#line 1 \"library/number/rational.hpp\"\n\n\n\nnamespace otera{\n\
     \    template<typename T>\n    struct rational {\n        public:\n          \
     \  rational() : rational(0) {}\n            rational(T n) : num(n), den(1) {}\n\
     \            rational(T n, T d) {\n                assert(d != 0);\n         \
@@ -152,15 +155,16 @@ data:
     \ l < r ? l : r;\n}\n\n#endif // OTERA_RATIONAL_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: library/Number/Rational.hpp
+  path: library/number/rational.hpp
   requiredBy: []
-  timestamp: '2022-11-08 07:21:25+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
-documentation_of: library/Number/Rational.hpp
+  timestamp: '2022-11-08 07:48:17+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/yukicoder/1611.test.cpp
+documentation_of: library/number/rational.hpp
 layout: document
 redirect_from:
-- /library/library/Number/Rational.hpp
-- /library/library/Number/Rational.hpp.html
-title: library/Number/Rational.hpp
+- /library/library/number/rational.hpp
+- /library/library/number/rational.hpp.html
+title: library/number/rational.hpp
 ---
