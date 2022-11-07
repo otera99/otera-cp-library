@@ -3,7 +3,7 @@
  *    author:  otera
 **/
 #include<bits/stdc++.h>
-#include<library/atcoder/modint.hpp>
+#include<library/modint/modint.hpp>
 #include<library/solver/number_of_subsequences.hpp>
 // #include<otera/modint>
 // #include<otera/number_of_subsequences>

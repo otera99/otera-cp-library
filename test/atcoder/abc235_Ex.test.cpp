@@ -99,7 +99,7 @@ void solve() {
         INT(a, b); -- a, -- b; LL(c);
         mp[c].eb(a, b);
     }
-    MergeHistoryForest uf(n);
+    merge_history_forest uf(n);
     for(auto &[c, es]: mp) {
         uf.merge_simultaneously(es);
     }
