@@ -11,7 +11,8 @@
 #include <otera/pair_ops.hpp>
 #include <otera/compressor.hpp>
 #include <otera/run_length.hpp>
-#include <otera/graph_base.hpp>
+#include <otera/heavy_light_decomposition.hpp>
+#include <otera/graph.hpp>
 #include <otera/random_generator.hpp>
 #include <otera/timer.hpp>
 #include <otera/matrix.hpp>

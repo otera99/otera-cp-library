@@ -4,7 +4,7 @@
 namespace otera {
     template<typename GraphType>
     class heavy_light_decomposition {
-
+        
     };
 } // namespace otera
 

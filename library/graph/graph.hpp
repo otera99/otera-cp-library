@@ -7,6 +7,8 @@ namespace otera {
         int to;
         T cost;
         int id;
+
+        edge(int to, T cost, int id) : to(to), cost(cost), id(id) {}
     };
 
     template<typename T = int>
@@ -17,21 +19,20 @@ namespace otera {
         using edge_type = edge<T>;
 
         graph() : _n(0), _m(0), is_directed(false) {}
-        graph(int n) : _n(n), _m(0), is_directed(false) {}
-        graph(int n, bool is_directed) : _n(n), _m(0), is_directed(is_directed) {}
+        graph(int n, bool is_directed = false) : _n(n), _m(0), is_directed(is_directed) {}
 
         void add_edge(int frm, int to, T cost = 1, int id = -1) {
             assert(0 <= frm and frm < _n and 0 <= to and to < _n);
             if(id == -1) id = _m;
-            g[frm].emplace_back(to, cost, id);
-            g[to].emplace_back(frm, cost, id);
+            (*this)[frm].emplace_back(to, cost, id);
+            (*this)[to].emplace_back(frm, cost, id);
             ++ _m;
         }
 
         void add_directed_edge(int frm, int to, T cost = 1, int id = -1) {
             assert(0 <= frm and frm < _n and 0 <= to and to < _n);
             if(id == -1) id = _m;
-            g[frm].emplace_back(to, cost, id);
+            (*this)[frm].emplace_back(to, cost, id);
             ++ _m;
         }
 
@@ -40,7 +41,7 @@ namespace otera {
         }
 
         void read_graph(int m, bool wt = false, int off = 1) {
-            assert(!is_ditected);
+            assert(!is_directed);
             for(int i = 0; i < m; ++ i) {
                 int a, b; std::cin >> a >> b;
                 a -= off, b -= off;
@@ -55,7 +56,7 @@ namespace otera {
         }
 
         void read_directed_graph(int m, bool wt = false, int off = 1) {
-            assert(is_ditected);
+            assert(is_directed);
             for(int i = 0; i < m; ++ i) {
                 int a, b; std::cin >> a >> b;
                 a -= off, b -= off;
@@ -80,7 +81,7 @@ namespace otera {
         int deg(int v) {
             return (int)size((*this)[v]);
         }
-    }
+    };
 } // namespace otera
 
 #endif // OTERA_GRAPH_BASE_HPP
