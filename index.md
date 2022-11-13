@@ -32,8 +32,11 @@ data:
   - name: library/graph
     pages:
     - icon: ':warning:'
-      path: library/graph/graph_base.hpp
-      title: library/graph/graph_base.hpp
+      path: library/graph/graph.hpp
+      title: library/graph/graph.hpp
+    - icon: ':warning:'
+      path: library/graph/heavy_light_decomposition.hpp
+      title: library/graph/heavy_light_decomposition.hpp
   - name: library/math
     pages:
     - icon: ':warning:'
