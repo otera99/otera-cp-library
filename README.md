@@ -27,4 +27,4 @@
 
 ## ライセンス
 
-`otera`内のファイルは全て，[CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode) を採用しています．
+`otera`フォルダ内のファイルは全て，[CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode) を採用．
