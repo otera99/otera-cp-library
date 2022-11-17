@@ -11,7 +11,7 @@ data:
     - icon: ':warning:'
       path: library/data_structure/binary_trie.hpp
       title: library/data_structure/binary_trie.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/data_structure/healthy_2d_segtree.hpp
       title: library/data_structure/healthy_2d_segtree.hpp
     - icon: ':warning:'
@@ -31,7 +31,7 @@ data:
         \u5316"
   - name: library/graph
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/graph/graph.hpp
       title: library/graph/graph.hpp
     - icon: ':warning:'
@@ -101,7 +101,7 @@ data:
       title: library/tree/cartesian_tree.hpp
   - name: library/util
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/util/compressor.hpp
       title: library/util/compressor.hpp
     - icon: ':warning:'
@@ -125,6 +125,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc235_Ex.test.cpp
       title: test/atcoder/abc235_Ex.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc266_Ex.test.cpp
+      title: test/atcoder/abc266_Ex.test.cpp
+    - icon: ':x:'
+      path: test/atcoder/abc277_g.test.cpp
+      title: test/atcoder/abc277_g.test.cpp
   - name: test/library_checker/string
     pages:
     - icon: ':heavy_check_mark:'

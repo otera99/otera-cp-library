@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/atcoder/abc277_g.test.cpp
+    title: test/atcoder/abc277_g.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/graph/graph.hpp\"\n\n\n\nnamespace otera {\n   \
@@ -82,8 +85,9 @@ data:
   path: library/graph/graph.hpp
   requiredBy: []
   timestamp: '2022-11-17 09:49:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/atcoder/abc277_g.test.cpp
 documentation_of: library/graph/graph.hpp
 layout: document
 redirect_from:
