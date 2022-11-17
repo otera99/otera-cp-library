@@ -19,7 +19,9 @@ namespace otera {
         using edge_type = edge<T>;
 
         graph() : _n(0), _m(0), is_directed(false) {}
-        graph(int n, bool is_directed = false) : _n(n), _m(0), is_directed(is_directed) {}
+        graph(int n, bool is_directed = false) : _n(n), _m(0), is_directed(is_directed) {
+            (*this).assign(n, std::vector<edge<T>>());
+        }
 
         void add_edge(int frm, int to, T cost = 1, int id = -1) {
             assert(0 <= frm and frm < _n and 0 <= to and to < _n);
