@@ -125,7 +125,7 @@ void solve() {
         q[i] = x[i] + y[i] - t[i];
     }
     p.eb(0), q.eb(0);
-    otera::Compressor<ll> ps(p), qs(q);
+    otera::compressor<ll> ps(p), qs(q);
     rep(i, n + 1) {
         p[i] = ps.get(p[i]);
         q[i] = qs.get(q[i]);
