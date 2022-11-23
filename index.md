@@ -37,6 +37,12 @@ data:
     - icon: ':warning:'
       path: library/graph/heavy_light_decomposition.hpp
       title: library/graph/heavy_light_decomposition.hpp
+    - icon: ':warning:'
+      path: library/graph/shortest_walk.hpp
+      title: library/graph/shortest_walk.hpp
+    - icon: ':x:'
+      path: library/graph/topological_sort.hpp
+      title: library/graph/topological_sort.hpp
   - name: library/math
     pages:
     - icon: ':warning:'
@@ -56,7 +62,7 @@ data:
       title: library/math/sieve_of_eratosthenes.hpp
   - name: library/modint
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/modint/modint.hpp
       title: library/modint/modint.hpp
   - name: library/number
@@ -131,6 +137,9 @@ data:
     - icon: ':x:'
       path: test/atcoder/abc277_g.test.cpp
       title: test/atcoder/abc277_g.test.cpp
+    - icon: ':x:'
+      path: test/atcoder/typical90_bs.test.cpp
+      title: test/atcoder/typical90_bs.test.cpp
   - name: test/library_checker/string
     pages:
     - icon: ':heavy_check_mark:'
