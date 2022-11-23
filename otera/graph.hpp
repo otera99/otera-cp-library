@@ -33,6 +33,7 @@ namespace otera {
 
         void add_directed_edge(int frm, int to, T cost = 1, int id = -1) {
             assert(0 <= frm and frm < _n and 0 <= to and to < _n);
+            assert(is_directed);
             if(id == -1) id = _m;
             (*this)[frm].emplace_back(to, cost, id);
             ++ _m;

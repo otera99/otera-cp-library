@@ -12,7 +12,9 @@
 #include <otera/compressor.hpp>
 #include <otera/run_length.hpp>
 #include <otera/heavy_light_decomposition.hpp>
+#include <otera/topological_sort.hpp>
 #include <otera/graph.hpp>
+#include <otera/shortest_walk.hpp>
 #include <otera/random_generator.hpp>
 #include <otera/timer.hpp>
 #include <otera/matrix.hpp>
