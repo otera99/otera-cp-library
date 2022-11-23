@@ -1,4 +1,4 @@
-#define PROBLEM "https://atcoder.jp/contests/typical90/tasks/typical90_bs"
+#define PROBLEM "https://atcoder.jp/contests/typical90/tasks/typical90_071"
 #include<bits/stdc++.h>
 #include<library/graph/graph.hpp>
 #include<library/graph/topological_sort.hpp>
