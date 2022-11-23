@@ -8,8 +8,7 @@ namespace otera{
     class pow_table {
         public:
         pow_table(T x) : x_(x), pw_(1, 1) {}
-        pow_table(long long x) : x_(T(x)), pw_(1, 1) {}
-        pow_table(long long x, int n) : x_(T(x)), pw_(1, 1) {
+        pow_table(T x, int n) : x_(x), pw_(1, 1) {
             ensure(n);
         }
         T pow(const int n) {
