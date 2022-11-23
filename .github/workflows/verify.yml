@@ -22,7 +22,7 @@ jobs:
       run: pip3 install -U online-judge-verify-helper
 
     - name: Generate otera library
-      run: python3 library_generater.py
+      run: python3 library_generator.py
 
     - name: Run tests
       env:
