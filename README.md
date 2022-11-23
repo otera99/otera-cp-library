@@ -12,14 +12,27 @@
 
 `otera`フォルダに`library`フォルダ下にあるライブラリを全て置いているので、`otera`フォルダのファイルをincludeすると使用できる.
 
-`expander.py`というスクリプト(python3.5 or later)で、`python3 path/to/otera-cp-library/expander.py --lib path/to/otera-cp-library main.cpp`とすると、`combined_otera.cpp`が生成され、`otera`フォルダ下にライブラリが全て展開される(AtCoderなどのACLに対応しているジャッジではこちらを提出する).
-また、`-ac`オプションをつけて実行すると、[AtCoder Library (ACL)](https://github.com/atcoder/ac-library)のコードも全て展開され、`combined.cpp`も生成される(CodeforcesなどのACLに対応してないジャッジではこちらを提出する).
+`expander.py`というスクリプトを、`python3 path/to/otera-cp-library/expander.py --lib path/to/otera-cp-library main.cpp`として走らせると、`combined_otera.cpp`が生成され、`otera`フォルダ下にライブラリが全て展開される.
+
+また、`-ac`オプションをつけて実行すると、[AtCoder Library (ACL)](https://github.com/atcoder/ac-library)のコードも全て展開され、`combined.cpp`も生成される.
 
 なお、[cp-commands](https://github.com/otera99/cp-commands)を用いることで、ライブラリの展開と合わせて，[oj](https://aresune.com/?_=%2Fonline-judge-tools%2Foj%23%2F57C5Qg75s5BqH5nOjgXq3c%3D)でのテストなどをまとめて行うことができる．
 
 ## ライブラリの追加方法
 
-`library`フォルダ下に`.hpp`ファイルのライブラリを追加してから`library_generator.py`というスクリプト(python3.5 or later)を走らせると、`otera`フォルダ下にライブラリが生成される．
+`library`フォルダ下に`.hpp`ファイルのライブラリを追加してから`library_generator.py`というスクリプトをpythonで走らせると、`otera`フォルダ下にライブラリが生成される．
+
+## Tips
+
+### testファイルの書き方
+
+AtCoderの問題をtestに用いる時には[dropbox](https://www.dropbox.com/sh/arnpe0ef5wds8cv/AAAk_SECQ2Nc6SVGii3rHX6Fa?dl=0)上のパスに準拠して問題のurlを`#define PROBLEM ...`に書く．
+
+誤差judgeは`#define ERROR <許容誤差>`とする．
+
+### VSCODEでコード補完を適用する方法
+
+`c_cpp_properties.json`(`Command + Shift + p`ででてきた検索欄からたどり着ける)の`includePath`に`otera`フォルダの絶対パスを記入しておくと良い．
 
 ## バグ報告など
 
