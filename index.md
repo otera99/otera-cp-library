@@ -12,6 +12,9 @@ data:
       path: library/data_structure/binary_trie.hpp
       title: library/data_structure/binary_trie.hpp
     - icon: ':heavy_check_mark:'
+      path: library/data_structure/cartesian_tree.hpp
+      title: library/data_structure/cartesian_tree.hpp
+    - icon: ':heavy_check_mark:'
       path: library/data_structure/healthy_2d_segtree.hpp
       title: library/data_structure/healthy_2d_segtree.hpp
     - icon: ':warning:'
@@ -102,9 +105,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/tree/LCA.hpp
       title: library/tree/LCA.hpp
-    - icon: ':warning:'
-      path: library/tree/cartesian_tree.hpp
-      title: library/tree/cartesian_tree.hpp
   - name: library/util
     pages:
     - icon: ':heavy_check_mark:'
@@ -147,6 +147,9 @@ data:
       title: test/library_checker/string/number_of_subsequences.test.cpp
   - name: test/library_checker/tree
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/tree/cartesian_tree.test.cpp
+      title: test/library_checker/tree/cartesian_tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lca.test.cpp
       title: test/library_checker/tree/lca.test.cpp
