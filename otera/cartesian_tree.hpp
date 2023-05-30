@@ -8,8 +8,8 @@ namespace otera {
         public:
             static constexpr int absent = -1;
 
-            cartesian_tree(const std::vector<T> &a) {
-                build(a);
+            cartesian_tree(const std::vector<T> &a, Comparator comp = Comparator{}) {
+                build(a, comp);
             }
 
             int parent(std::size_t i) const {
@@ -27,7 +27,7 @@ namespace otera {
 
             void build(const std::vector<T> &a, Comparator comp = Comparator{}) {
                 int n = (int)a.size();
-                std::vector<T> st;
+                std::vector<int> st;
                 st.reserve(n);
                 _par.assign(n, -1);
                 for(int i = 0; i < n; ++ i) {
@@ -44,7 +44,7 @@ namespace otera {
                 (*this).assign(n, { absent, absent });
                 for(int i = 0; i < n; ++ i) {
                     int p = _par[i];
-                    (p >= 0 ? (*this)[p][p <= i] : _root) = i;
+                    (p >= 0 ? (*this)[p][p <= i] : (*this)._root) = i;
                 }
             }
     };

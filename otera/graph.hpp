@@ -5,17 +5,17 @@ namespace otera {
     template<typename T>
     struct edge {
         int to;
-        T cost;
+        T weight;
         int id;
-
-        edge(int to, T cost, int id) : to(to), cost(cost), id(id) {}
+        edge(int to, T weight, int id) : to(to), weight(weight), id(id) {}
+        operator int() const { return to; }
     };
 
     template<typename T = int>
     struct graph : std::vector<std::vector<edge<T>>> {
         int _n, _m;
         bool is_directed;
-        using cost_type = T;
+        using weight_type = T;
         using edge_type = edge<T>;
 
         graph() : _n(0), _m(0), is_directed(false) {}
@@ -23,19 +23,19 @@ namespace otera {
             (*this).assign(n, std::vector<edge<T>>());
         }
 
-        void add_edge(int frm, int to, T cost = 1, int id = -1) {
+        void add_edge(int frm, int to, T weight = 1, int id = -1) {
             assert(0 <= frm and frm < _n and 0 <= to and to < _n);
             if(id == -1) id = _m;
-            (*this)[frm].emplace_back(to, cost, id);
-            (*this)[to].emplace_back(frm, cost, id);
+            (*this)[frm].emplace_back(to, weight, id);
+            (*this)[to].emplace_back(frm, weight, id);
             ++ _m;
         }
 
-        void add_directed_edge(int frm, int to, T cost = 1, int id = -1) {
+        void add_directed_edge(int frm, int to, T weight = 1, int id = -1) {
             assert(0 <= frm and frm < _n and 0 <= to and to < _n);
             assert(is_directed);
             if(id == -1) id = _m;
-            (*this)[frm].emplace_back(to, cost, id);
+            (*this)[frm].emplace_back(to, weight, id);
             ++ _m;
         }
 
