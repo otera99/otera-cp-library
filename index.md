@@ -14,12 +14,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/data_structure/cartesian_tree.hpp
       title: library/data_structure/cartesian_tree.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/data_structure/healthy_2d_segtree.hpp
       title: library/data_structure/healthy_2d_segtree.hpp
-    - icon: ':warning:'
-      path: library/data_structure/heavy_light_decomposition.hpp
-      title: library/data_structure/heavy_light_decomposition.hpp
     - icon: ':heavy_check_mark:'
       path: library/data_structure/merge_history_forest.hpp
       title: "\u30DE\u30FC\u30B8\u904E\u7A0B\u3092\u8868\u3059\u68EE"
@@ -32,9 +29,12 @@ data:
       path: library/game/game_experiment.hpp
       title: "\u30B2\u30FC\u30E0\u306E\u5B9F\u9A13\u30B3\u30FC\u30C9\u306E\u7C21\u7565\
         \u5316"
+    - icon: ':warning:'
+      path: library/game/grundy_experiment.hpp
+      title: library/game/grundy_experiment.hpp
   - name: library/graph
     pages:
-    - icon: ':x:'
+    - icon: ':question:'
       path: library/graph/graph.hpp
       title: library/graph/graph.hpp
     - icon: ':warning:'
@@ -49,9 +49,6 @@ data:
   - name: library/math
     pages:
     - icon: ':warning:'
-      path: library/math/FPS.hpp
-      title: library/math/FPS.hpp
-    - icon: ':warning:'
       path: library/math/bostan_mori.hpp
       title: library/math/bostan_mori.hpp
     - icon: ':warning:'
@@ -65,7 +62,7 @@ data:
       title: library/math/sieve_of_eratosthenes.hpp
   - name: library/modint
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/modint/modint.hpp
       title: library/modint/modint.hpp
   - name: library/number
@@ -81,6 +78,11 @@ data:
     - icon: ':warning:'
       path: library/other/timer.hpp
       title: library/other/timer.hpp
+  - name: library/polynomial
+    pages:
+    - icon: ':warning:'
+      path: library/polynomial/fps.hpp
+      title: library/polynomial/fps.hpp
   - name: library/solver
     pages:
     - icon: ':warning:'
@@ -105,9 +107,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/tree/LCA.hpp
       title: library/tree/LCA.hpp
+    - icon: ':warning:'
+      path: library/tree/centroid.hpp
+      title: library/tree/centroid.hpp
   - name: library/util
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/util/compressor.hpp
       title: library/util/compressor.hpp
     - icon: ':warning:'
@@ -131,10 +136,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc235_Ex.test.cpp
       title: test/atcoder/abc235_Ex.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/atcoder/abc266_Ex.test.cpp
       title: test/atcoder/abc266_Ex.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/atcoder/abc277_g.test.cpp
       title: test/atcoder/abc277_g.test.cpp
     - icon: ':x:'

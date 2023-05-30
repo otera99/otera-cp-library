@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/data_structure/healthy_2d_segtree.hpp
     title: library/data_structure/healthy_2d_segtree.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/util/compressor.hpp
     title: library/util/compressor.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://atcoder.jp/contests/abc266/tasks/abc266_Ex
@@ -184,7 +184,7 @@ data:
   path: test/atcoder/abc266_Ex.test.cpp
   requiredBy: []
   timestamp: '2022-11-18 02:06:15+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/atcoder/abc266_Ex.test.cpp
 layout: document

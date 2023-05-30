@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: library/graph/graph.hpp
     title: library/graph/graph.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/modint/modint.hpp
     title: library/modint/modint.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://atcoder.jp/contests/abc277/tasks/abc277_g
@@ -193,8 +193,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc277_g.test.cpp
   requiredBy: []
-  timestamp: '2022-11-23 16:40:35+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-05-31 05:55:58+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc277_g.test.cpp
 layout: document

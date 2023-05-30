@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: library/graph/graph.hpp
     title: library/graph/graph.hpp
   - icon: ':x:'
@@ -196,7 +196,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/typical90_bs.test.cpp
   requiredBy: []
-  timestamp: '2022-11-23 16:43:10+09:00'
+  timestamp: '2023-05-31 05:55:58+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/atcoder/typical90_bs.test.cpp

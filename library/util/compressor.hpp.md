@@ -6,12 +6,12 @@ data:
     path: library/solver/inversion_number.hpp
     title: library/solver/inversion_number.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/atcoder/abc266_Ex.test.cpp
     title: test/atcoder/abc266_Ex.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/util/compressor.hpp\"\n\n\n\nnamespace otera {\n\
@@ -112,7 +112,7 @@ data:
   requiredBy:
   - library/solver/inversion_number.hpp
   timestamp: '2022-11-08 07:48:17+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/atcoder/abc266_Ex.test.cpp
 documentation_of: library/util/compressor.hpp

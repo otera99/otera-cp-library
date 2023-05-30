@@ -12,15 +12,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc212_h.test.cpp
     title: test/atcoder/abc212_h.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/atcoder/abc277_g.test.cpp
     title: test/atcoder/abc277_g.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/library_checker/string/number_of_subsequences.test.cpp
     title: test/library_checker/string/number_of_subsequences.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/modint/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
@@ -43,14 +43,14 @@ data:
   isVerificationFile: false
   path: library/modint/modint.hpp
   requiredBy:
-  - library/math/factorial.hpp
   - library/math/pow_table.hpp
+  - library/math/factorial.hpp
   timestamp: '2022-11-08 07:21:25+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/string/number_of_subsequences.test.cpp
   - test/atcoder/abc277_g.test.cpp
   - test/atcoder/abc212_h.test.cpp
+  - test/library_checker/string/number_of_subsequences.test.cpp
 documentation_of: library/modint/modint.hpp
 layout: document
 redirect_from:

@@ -160,7 +160,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/cartesian_tree.test.cpp
   requiredBy: []
-  timestamp: '2022-11-24 05:18:13+09:00'
+  timestamp: '2023-05-31 05:55:58+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/cartesian_tree.test.cpp
