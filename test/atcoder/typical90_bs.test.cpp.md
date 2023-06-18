@@ -196,7 +196,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/typical90_bs.test.cpp
   requiredBy: []
-  timestamp: '2023-05-31 05:55:58+09:00'
+  timestamp: '2023-06-18 12:48:50+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/atcoder/typical90_bs.test.cpp

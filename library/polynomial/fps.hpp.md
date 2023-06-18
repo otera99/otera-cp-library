@@ -62,28 +62,29 @@ data:
     \       fps integral() const {\n            const int n = (int) this->size();\n\
     \            fps ret(n + 1);\n            ret[0] = T(0);\n            for(int\
     \ i = 0; i < n; ++ i) ret[i + 1] = (*this)[i] / T(i + 1);\n            return\
-    \ ret;\n        }\n\n        fps inv(int n = -1) const {\n            assert(((*this)[0])\
-    \ != T(0));\n            if(n == -1) n = (int)this->size();\n            fps ret({T(1)\
-    \ / (*this)[0]});\n            for(int i = 1; i < n; i <<= 1) {\n            \
-    \    ret = (ret + ret - ret * ret * pre(i<<1)).pre(i<<1);\n            }\n   \
-    \         return ret.pre(n);\n        } \n\n        fps log(int n = -1) const\
-    \ {\n            assert((*this)[0] == T(1));\n            if(n == -1) n = (int)this->size();\n\
-    \            return (this->diff() * this->inv(n)).pre(n - 1).integral();\n   \
-    \     }\n\n        fps exp(int n = -1) const {\n            if(n == -1) n = this->size();\n\
-    \            assert((*this)[0] == T(0));\n            fps ret({T(1)});\n     \
-    \       for(int i = 1; i < n; i <<= 1) {\n                ret = (ret * (pre(i\
-    \ << 1) + T(1) - ret.log(i << 1))).pre(i << 1);\n            }\n            return\
-    \ ret.pre(n);\n        }\n\n        fps pow(long long k, int deg = -1) const {\n\
-    \            const int n = (int)this->size();\n            if(deg == -1) deg =\
-    \ n;\n            if(k == 0) {\n                fps ret(deg, T(0));\n        \
-    \        ret[0] = T(1);\n                return ret;\n            }  \n      \
-    \      for(int i = 0; i < n; i++) {\n                if(i * k > deg) return fps(deg,\
-    \ T(0));\n                if((*this)[i] != T(0)) {\n                    T rev\
-    \ = T(1) / (*this)[i];\n                    fps ret = ((((*this).pre(deg) * rev)\
-    \ >> i).log() * k).exp() * ((*this)[i].pow(k));\n                    ret = (ret\
-    \ << (i * k)).pre(deg);\n                    return ret;\n                }\n\
-    \            }\n            return *this;\n        }\n    };\n} // namespace otera\n\
-    \n#endif // OTERA_FPS_HPP\n"
+    \ ret;\n        }\n\n        fps inv(int deg = -1) const {\n            assert(((*this)[0])\
+    \ != T(0));\n            if(deg == -1) deg = (int)this->size();\n            fps\
+    \ ret({T(1) / (*this)[0]});\n            for(int i = 1; i < deg; i <<= 1) {\n\
+    \                ret = (ret + ret - ret * ret * pre(i<<1)).pre(i<<1);\n      \
+    \      }\n            return ret.pre(deg);\n        } \n\n        fps log(int\
+    \ deg = -1) const {\n            assert((*this)[0] == T(1));\n            if(deg\
+    \ == -1) deg = (int)this->size();\n            return (this->diff() * this->inv(deg)).pre(deg\
+    \ - 1).integral();\n        }\n\n        fps exp(int deg = -1) const {\n     \
+    \       if(deg == -1) deg = (int)this->size();\n            assert((*this)[0]\
+    \ == T(0));\n            fps ret({T(1)});\n            for(int i = 1; i < deg;\
+    \ i <<= 1) {\n                ret = (ret * (pre(i << 1) + T(1) - ret.log(i <<\
+    \ 1))).pre(i << 1);\n            }\n            return ret.pre(deg);\n       \
+    \ }\n\n        fps pow(long long k, int deg = -1) const {\n            const int\
+    \ n = (int)this->size();\n            if(deg == -1) deg = n;\n            if(k\
+    \ == 0) {\n                fps ret(deg, T(0));\n                ret[0] = T(1);\n\
+    \                return ret;\n            }  \n            for(int i = 0; i <\
+    \ n; i++) {\n                if(i * k > deg) return fps(deg, T(0));\n        \
+    \        if((*this)[i] != T(0)) {\n                    T rev = T(1) / (*this)[i];\n\
+    \                    fps ret = ((((*this) * rev) >> i).log(deg) * k).exp(deg)\
+    \ * ((*this)[i].pow(k));\n                    ret = (ret << (i * k)).pre(deg);\n\
+    \                    if((int)ret.size() < deg) ret.resize(deg, T(0));\n      \
+    \              return ret;\n                }\n            }\n            return\
+    \ FPS(deg, T{0});\n        }\n    };\n} // namespace otera\n\n#endif // OTERA_FPS_HPP\n"
   code: "// UNFINISHED\n#ifndef OTERA_FPS_HPP\n#define OTERA_FPS_HPP 1\n\n#include<atcoder/convolution>\n\
     \nnamespace otera {\n    template<typename T>\n    struct fps : std::vector<T>\
     \ {\n        using std::vector<T>::vector;\n        \n        void shrink() {\n\
@@ -137,33 +138,35 @@ data:
     \ return ret;\n        }\n\n        fps integral() const {\n            const\
     \ int n = (int) this->size();\n            fps ret(n + 1);\n            ret[0]\
     \ = T(0);\n            for(int i = 0; i < n; ++ i) ret[i + 1] = (*this)[i] / T(i\
-    \ + 1);\n            return ret;\n        }\n\n        fps inv(int n = -1) const\
-    \ {\n            assert(((*this)[0]) != T(0));\n            if(n == -1) n = (int)this->size();\n\
-    \            fps ret({T(1) / (*this)[0]});\n            for(int i = 1; i < n;\
-    \ i <<= 1) {\n                ret = (ret + ret - ret * ret * pre(i<<1)).pre(i<<1);\n\
-    \            }\n            return ret.pre(n);\n        } \n\n        fps log(int\
-    \ n = -1) const {\n            assert((*this)[0] == T(1));\n            if(n ==\
-    \ -1) n = (int)this->size();\n            return (this->diff() * this->inv(n)).pre(n\
-    \ - 1).integral();\n        }\n\n        fps exp(int n = -1) const {\n       \
-    \     if(n == -1) n = this->size();\n            assert((*this)[0] == T(0));\n\
-    \            fps ret({T(1)});\n            for(int i = 1; i < n; i <<= 1) {\n\
-    \                ret = (ret * (pre(i << 1) + T(1) - ret.log(i << 1))).pre(i <<\
-    \ 1);\n            }\n            return ret.pre(n);\n        }\n\n        fps\
-    \ pow(long long k, int deg = -1) const {\n            const int n = (int)this->size();\n\
-    \            if(deg == -1) deg = n;\n            if(k == 0) {\n              \
-    \  fps ret(deg, T(0));\n                ret[0] = T(1);\n                return\
-    \ ret;\n            }  \n            for(int i = 0; i < n; i++) {\n          \
-    \      if(i * k > deg) return fps(deg, T(0));\n                if((*this)[i] !=\
-    \ T(0)) {\n                    T rev = T(1) / (*this)[i];\n                  \
-    \  fps ret = ((((*this).pre(deg) * rev) >> i).log() * k).exp() * ((*this)[i].pow(k));\n\
-    \                    ret = (ret << (i * k)).pre(deg);\n                    return\
-    \ ret;\n                }\n            }\n            return *this;\n        }\n\
-    \    };\n} // namespace otera\n\n#endif // OTERA_FPS_HPP"
+    \ + 1);\n            return ret;\n        }\n\n        fps inv(int deg = -1) const\
+    \ {\n            assert(((*this)[0]) != T(0));\n            if(deg == -1) deg\
+    \ = (int)this->size();\n            fps ret({T(1) / (*this)[0]});\n          \
+    \  for(int i = 1; i < deg; i <<= 1) {\n                ret = (ret + ret - ret\
+    \ * ret * pre(i<<1)).pre(i<<1);\n            }\n            return ret.pre(deg);\n\
+    \        } \n\n        fps log(int deg = -1) const {\n            assert((*this)[0]\
+    \ == T(1));\n            if(deg == -1) deg = (int)this->size();\n            return\
+    \ (this->diff() * this->inv(deg)).pre(deg - 1).integral();\n        }\n\n    \
+    \    fps exp(int deg = -1) const {\n            if(deg == -1) deg = (int)this->size();\n\
+    \            assert((*this)[0] == T(0));\n            fps ret({T(1)});\n     \
+    \       for(int i = 1; i < deg; i <<= 1) {\n                ret = (ret * (pre(i\
+    \ << 1) + T(1) - ret.log(i << 1))).pre(i << 1);\n            }\n            return\
+    \ ret.pre(deg);\n        }\n\n        fps pow(long long k, int deg = -1) const\
+    \ {\n            const int n = (int)this->size();\n            if(deg == -1) deg\
+    \ = n;\n            if(k == 0) {\n                fps ret(deg, T(0));\n      \
+    \          ret[0] = T(1);\n                return ret;\n            }  \n    \
+    \        for(int i = 0; i < n; i++) {\n                if(i * k > deg) return\
+    \ fps(deg, T(0));\n                if((*this)[i] != T(0)) {\n                \
+    \    T rev = T(1) / (*this)[i];\n                    fps ret = ((((*this) * rev)\
+    \ >> i).log(deg) * k).exp(deg) * ((*this)[i].pow(k));\n                    ret\
+    \ = (ret << (i * k)).pre(deg);\n                    if((int)ret.size() < deg)\
+    \ ret.resize(deg, T(0));\n                    return ret;\n                }\n\
+    \            }\n            return FPS(deg, T{0});\n        }\n    };\n} // namespace\
+    \ otera\n\n#endif // OTERA_FPS_HPP"
   dependsOn: []
   isVerificationFile: false
   path: library/polynomial/fps.hpp
   requiredBy: []
-  timestamp: '2023-05-31 05:55:58+09:00'
+  timestamp: '2023-06-18 12:48:50+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/polynomial/fps.hpp

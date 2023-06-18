@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: library/tree/centroid.hpp
   requiredBy: []
-  timestamp: '2023-05-31 05:55:58+09:00'
+  timestamp: '2023-06-18 12:48:50+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/tree/centroid.hpp

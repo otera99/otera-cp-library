@@ -40,6 +40,9 @@ data:
     - icon: ':warning:'
       path: library/graph/heavy_light_decomposition.hpp
       title: library/graph/heavy_light_decomposition.hpp
+    - icon: ':x:'
+      path: library/graph/reverse_graph.hpp
+      title: library/graph/reverse_graph.hpp
     - icon: ':warning:'
       path: library/graph/shortest_walk.hpp
       title: library/graph/shortest_walk.hpp
@@ -110,6 +113,9 @@ data:
     - icon: ':warning:'
       path: library/tree/centroid.hpp
       title: library/tree/centroid.hpp
+    - icon: ':warning:'
+      path: library/tree/dfs_order.hpp
+      title: library/tree/dfs_order.hpp
   - name: library/util
     pages:
     - icon: ':x:'
@@ -127,6 +133,11 @@ data:
     - icon: ':warning:'
       path: library/util/run_length.hpp
       title: library/util/run_length.hpp
+  - name: test/atcoder
+    pages:
+    - icon: ':warning:'
+      path: test/atcoder/arc161_c.cpp
+      title: test/atcoder/arc161_c.cpp
   verificationCategories:
   - name: test/atcoder
     pages:
@@ -142,6 +153,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc277_g.test.cpp
       title: test/atcoder/abc277_g.test.cpp
+    - icon: ':x:'
+      path: test/atcoder/abc304_h.test.cpp
+      title: test/atcoder/abc304_h.test.cpp
     - icon: ':x:'
       path: test/atcoder/typical90_bs.test.cpp
       title: test/atcoder/typical90_bs.test.cpp

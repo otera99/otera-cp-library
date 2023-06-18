@@ -193,7 +193,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc277_g.test.cpp
   requiredBy: []
-  timestamp: '2023-05-31 05:55:58+09:00'
+  timestamp: '2023-06-18 12:48:50+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc277_g.test.cpp
