@@ -138,30 +138,30 @@ namespace otera {
             return ret;
         }
 
-        fps inv(int n = -1) const {
+        fps inv(int deg = -1) const {
             assert(((*this)[0]) != T(0));
-            if(n == -1) n = (int)this->size();
+            if(deg == -1) deg = (int)this->size();
             fps ret({T(1) / (*this)[0]});
-            for(int i = 1; i < n; i <<= 1) {
+            for(int i = 1; i < deg; i <<= 1) {
                 ret = (ret + ret - ret * ret * pre(i<<1)).pre(i<<1);
             }
-            return ret.pre(n);
+            return ret.pre(deg);
         } 
 
-        fps log(int n = -1) const {
+        fps log(int deg = -1) const {
             assert((*this)[0] == T(1));
-            if(n == -1) n = (int)this->size();
-            return (this->diff() * this->inv(n)).pre(n - 1).integral();
+            if(deg == -1) deg = (int)this->size();
+            return (this->diff() * this->inv(deg)).pre(deg - 1).integral();
         }
 
-        fps exp(int n = -1) const {
-            if(n == -1) n = this->size();
+        fps exp(int deg = -1) const {
+            if(deg == -1) deg = (int)this->size();
             assert((*this)[0] == T(0));
             fps ret({T(1)});
-            for(int i = 1; i < n; i <<= 1) {
+            for(int i = 1; i < deg; i <<= 1) {
                 ret = (ret * (pre(i << 1) + T(1) - ret.log(i << 1))).pre(i << 1);
             }
-            return ret.pre(n);
+            return ret.pre(deg);
         }
 
         fps pow(long long k, int deg = -1) const {
@@ -176,12 +176,13 @@ namespace otera {
                 if(i * k > deg) return fps(deg, T(0));
                 if((*this)[i] != T(0)) {
                     T rev = T(1) / (*this)[i];
-                    fps ret = ((((*this).pre(deg) * rev) >> i).log() * k).exp() * ((*this)[i].pow(k));
+                    fps ret = ((((*this) * rev) >> i).log(deg) * k).exp(deg) * ((*this)[i].pow(k));
                     ret = (ret << (i * k)).pre(deg);
+                    if((int)ret.size() < deg) ret.resize(deg, T(0));
                     return ret;
                 }
             }
-            return *this;
+            return FPS(deg, T{0});
         }
     };
 } // namespace otera

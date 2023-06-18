@@ -1,5 +1,6 @@
 #include <otera/modint.hpp>
 #include <otera/centroid.hpp>
+#include <otera/dfs_order.hpp>
 #include <otera/LCA.hpp>
 #include <otera/healthy_2d_segtree.hpp>
 #include <otera/cartesian_tree.hpp>
@@ -11,6 +12,7 @@
 #include <otera/pair_ops.hpp>
 #include <otera/compressor.hpp>
 #include <otera/run_length.hpp>
+#include <otera/reverse_graph.hpp>
 #include <otera/heavy_light_decomposition.hpp>
 #include <otera/topological_sort.hpp>
 #include <otera/graph.hpp>

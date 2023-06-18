@@ -1,8 +1,8 @@
-#ifndef OTERA_GRAPH_BASE_HPP
-#define OTERA_GRAPH_BASE_HPP 1
+#ifndef OTERA_GRAPH_HPP
+#define OTERA_GRAPH_HPP 1
 
 namespace otera {
-    template<typename T>
+    template<typename T = long long>
     struct edge {
         int to;
         T weight;
@@ -11,7 +11,7 @@ namespace otera {
         operator int() const { return to; }
     };
 
-    template<typename T = int>
+    template<typename T = long long>
     struct graph : std::vector<std::vector<edge<T>>> {
         int _n, _m;
         bool is_directed;
@@ -87,4 +87,4 @@ namespace otera {
     };
 } // namespace otera
 
-#endif // OTERA_GRAPH_BASE_HPP
+#endif // OTERA_GRAPH_HPP

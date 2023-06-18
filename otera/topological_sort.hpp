@@ -1,8 +1,10 @@
 #ifndef OTERA_TOPOLOGICAL_SORT_HPP
 #define OTERA_TOPOLOGICAL_SORT_HPP 1
 
+#include<otera/graph>
+
 namespace otera {
-    template<typename GraphType>
+    template<typename GraphType = graph<long long>>
     class topological_sort {
         public:
         topological_sort(const GraphType& g) {
