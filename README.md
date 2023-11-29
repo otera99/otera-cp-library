@@ -16,8 +16,6 @@
 
 また、`-ac`オプションをつけて実行すると、[AtCoder Library (ACL)](https://github.com/atcoder/ac-library)のコードも全て展開され、`combined.cpp`も生成される.
 
-なお、[cp-commands](https://github.com/otera99/cp-commands)を用いることで、ライブラリの展開と合わせて，[oj](https://aresune.com/?_=%2Fonline-judge-tools%2Foj%23%2F57C5Qg75s5BqH5nOjgXq3c%3D)でのテストなどをまとめて行うことができる．
-
 ## ライブラリの追加方法
 
 `library`フォルダ下に`.hpp`ファイルのライブラリを追加してから`library_generator.py`というスクリプトをpythonで走らせると、`otera`フォルダ下にライブラリが生成される．
