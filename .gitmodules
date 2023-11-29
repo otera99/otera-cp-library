@@ -1,3 +1,6 @@
 [submodule "ac-library"]
 	path = ac-library
 	url = https://github.com/atcoder/ac-library
+[submodule "cp-templete"]
+	path = cp-templete
+	url = https://github.com/otera99/cp-template

@@ -34,16 +34,6 @@ AtCoderの問題をtestに用いる時には[dropbox](https://www.dropbox.com/sh
 
 `c_cpp_properties.json`(`Command + Shift + p`ででてきた検索欄からたどり着ける)の`includePath`に`otera`フォルダの絶対パスを記入しておくと良い．
 
-## バグ報告など
-
-[@otera1999](https://twitter.com/otera1999) まで報告を頂けるとありがたいです．
-
-### バグリスト
-
-- modintを任意mod(modint::setmod(p))で設定した時に，factorialが正しい値を返さない(おそらくpow_tableも？)
-  (2022/12/2 factorialの実装を修正)
-- typenameに何も書いてないと警告を出すべき(modint想定のもの)
-
 ## ライセンス
 
 `otera`フォルダ内のファイルは全て，[CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode) を採用．
