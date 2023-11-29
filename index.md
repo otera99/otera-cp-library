@@ -31,7 +31,7 @@ data:
         \u5316"
     - icon: ':warning:'
       path: library/game/grundy_experiment.hpp
-      title: library/game/grundy_experiment.hpp
+      title: "Grundy\u6570\u306E\u5B9F\u9A13\u30B3\u30FC\u30C9\u306E\u7C21\u7565\u5316"
   - name: library/graph
     pages:
     - icon: ':question:'

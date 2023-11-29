@@ -43,14 +43,14 @@ data:
   isVerificationFile: false
   path: library/modint/modint.hpp
   requiredBy:
-  - library/math/pow_table.hpp
   - library/math/factorial.hpp
+  - library/math/pow_table.hpp
   timestamp: '2022-11-08 07:21:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/string/number_of_subsequences.test.cpp
   - test/atcoder/abc212_h.test.cpp
   - test/atcoder/abc277_g.test.cpp
-  - test/library_checker/string/number_of_subsequences.test.cpp
 documentation_of: library/modint/modint.hpp
 layout: document
 redirect_from:

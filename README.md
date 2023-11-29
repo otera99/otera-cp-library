@@ -16,8 +16,6 @@
 
 また、`-ac`オプションをつけて実行すると、[AtCoder Library (ACL)](https://github.com/atcoder/ac-library)のコードも全て展開され、`combined.cpp`も生成される.
 
-なお、[cp-commands](https://github.com/otera99/cp-commands)を用いることで、ライブラリの展開と合わせて，[oj](https://aresune.com/?_=%2Fonline-judge-tools%2Foj%23%2F57C5Qg75s5BqH5nOjgXq3c%3D)でのテストなどをまとめて行うことができる．
-
 ## ライブラリの追加方法
 
 `library`フォルダ下に`.hpp`ファイルのライブラリを追加してから`library_generator.py`というスクリプトをpythonで走らせると、`otera`フォルダ下にライブラリが生成される．
@@ -33,16 +31,6 @@ AtCoderの問題をtestに用いる時には[dropbox](https://www.dropbox.com/sh
 ### VSCODEでコード補完を適用する方法
 
 `c_cpp_properties.json`(`Command + Shift + p`ででてきた検索欄からたどり着ける)の`includePath`に`otera`フォルダの絶対パスを記入しておくと良い．
-
-## バグ報告など
-
-[@otera1999](https://twitter.com/otera1999) まで報告を頂けるとありがたいです．
-
-### バグリスト
-
-- modintを任意mod(modint::setmod(p))で設定した時に，factorialが正しい値を返さない(おそらくpow_tableも？)
-  (2022/12/2 factorialの実装を修正)
-- typenameに何も書いてないと警告を出すべき(modint想定のもの)
 
 ## ライセンス
 
