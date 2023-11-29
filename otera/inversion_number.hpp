@@ -10,7 +10,7 @@ namespace otera {
         int _n = (int)a.size();
         compressor<T> ca(a);
         int _sz = (int)ca.size();
-        atcoder::fenwick_tree<T> bit(sz);
+        atcoder::fenwick_tree<T> bit(_sz);
         long long res = 0;
         for(int i = 0; i < _n; ++ i) {
             int _pos = ca.get(a[i]);

@@ -19,18 +19,20 @@ namespace otera {
         private:
         int dfs(S now) {
             if((*this).count(now)) return (*this)[now];
-            if(now.end_game()) {
-                return now.win();
-            }
             std::vector<S> nexts = now.next_game();
+            std::vector<int> cands;
             for(int i = 0; i < (int)nexts.size(); ++ i) {
                 S nxt = nexts[i];
-                assert(nxt.alice != now.alice);
-                if(!dfs(nxt)) {
-                    return (*this)[now] = true;
-                }
+                cands.emplace_back(dfs(nxt));
             } 
-            return (*this)[now] = false;
+            std::sort(cands.begin(), cands.end());
+            cands.erase(std::unique(cands.begin(), cands.end()), cands.end());
+            for(int i = 0; i < (int)cands.size(); ++ i) {
+                if(cands[i] != i) {
+                    return (*this)[now] = i;
+                }
+            }
+            return (*this)[now] = (int)cands.size();
         };
     };
 } // namespace otera
