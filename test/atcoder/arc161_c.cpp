@@ -1,6 +1,4 @@
-/**
- *    author:  otera
-**/
+#define PROBLEM "https://atcoder.jp/contests/arc161/tasks/arc161_c"
 #include<bits/stdc++.h>
 #include<library/tree/dfs_order.hpp>
 

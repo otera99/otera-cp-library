@@ -12,6 +12,7 @@
 #include <otera/pair_ops.hpp>
 #include <otera/compressor.hpp>
 #include <otera/run_length.hpp>
+#include <otera/range_vertices.hpp>
 #include <otera/reverse_graph.hpp>
 #include <otera/heavy_light_decomposition.hpp>
 #include <otera/topological_sort.hpp>
