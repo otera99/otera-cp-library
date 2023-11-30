@@ -18,7 +18,7 @@ for(int i = 1; i < n; ++ i) {
 }
 
 // 配列上のv(セグ木ではv + n)から区間[l, r)に辺を貼るとき
-for(int u: range_vertices(l, r)) {
+for(int u: range_vertices(n, l, r)) {
     // add an edge from v + n to u
 }
 ```
