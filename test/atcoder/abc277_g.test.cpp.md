@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: library/graph/graph.hpp
     title: library/graph/graph.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/modint/modint.hpp
     title: library/modint/modint.hpp
   _extendedRequiredBy: []

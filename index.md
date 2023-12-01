@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: library/convolution
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/convolution/bitwise_transformation.hpp
       title: library/convolution/bitwise_transformation.hpp
   - name: library/data_structure
@@ -65,7 +65,7 @@ data:
       title: library/math/sieve_of_eratosthenes.hpp
   - name: library/modint
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/modint/modint.hpp
       title: library/modint/modint.hpp
   - name: library/number
@@ -131,6 +131,10 @@ data:
       path: library/util/pair_ops.hpp
       title: library/util/pair_ops.hpp
     - icon: ':warning:'
+      path: library/util/range_vertices.hpp
+      title: "\u975E\u518D\u5E30\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u306E\u533A\u9593\
+        \u306B\u5BFE\u5FDC\u3059\u308B\u9802\u70B9\u96C6\u5408"
+    - icon: ':warning:'
       path: library/util/run_length.hpp
       title: library/util/run_length.hpp
   - name: test/atcoder
@@ -141,7 +145,7 @@ data:
   verificationCategories:
   - name: test/atcoder
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/atcoder/abc212_h.test.cpp
       title: test/atcoder/abc212_h.test.cpp
     - icon: ':heavy_check_mark:'

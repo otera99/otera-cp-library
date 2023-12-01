@@ -9,7 +9,7 @@ data:
     path: library/math/pow_table.hpp
     title: library/math/pow_table.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/atcoder/abc212_h.test.cpp
     title: test/atcoder/abc212_h.test.cpp
   - icon: ':heavy_check_mark:'
@@ -18,9 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/string/number_of_subsequences.test.cpp
     title: test/library_checker/string/number_of_subsequences.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"library/modint/modint.hpp\"\n\n\n\n#include<atcoder/modint>\n\
@@ -46,7 +46,7 @@ data:
   - library/math/factorial.hpp
   - library/math/pow_table.hpp
   timestamp: '2022-11-08 07:21:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/string/number_of_subsequences.test.cpp
   - test/atcoder/abc212_h.test.cpp

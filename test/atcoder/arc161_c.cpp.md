@@ -13,41 +13,41 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    links: []
-  bundledCode: "#line 1 \"test/atcoder/arc161_c.cpp\"\n/**\n *    author:  otera\n\
-    **/\n#include<bits/stdc++.h>\n#include<library/tree/dfs_order.hpp>\n\nnamespace\
-    \ otera {}\nusing namespace std;\nusing namespace otera;\n\nstruct io_setup {\n\
-    \    io_setup(int precision = 20) {\n        ios::sync_with_stdio(false);\n  \
-    \      cin.tie(0);\n        cout << fixed << setprecision(precision);\n    }\n\
-    } io_setup_ {};\n\n#define int long long\n\nusing ll = long long;\nusing ld =\
-    \ long double;\nusing ull = unsigned long long;\nusing i128 = __int128_t;\nusing\
-    \ u128 = __uint128_t;\n#define repa(i, n) for(int i = 0; i < (n); ++ i)\n#define\
-    \ repb(i, a, b) for(int i = (a); i < (b); ++ i)\n#define repc(i, a, b, c) for(int\
-    \ i = (a); i < (b); i += (c))\n#define overload4(a, b, c, d, e, ...) e\n#define\
-    \ overload3(a, b, c, d, ...) d\n#define rep(...) overload4(__VA_ARGS__, repc,\
-    \ repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= (n); ++ i)\n\
-    #define rep1b(i, a, b) for(int i = (a); i <= (b); ++ i)\n#define rep1c(i, a, b,\
-    \ c) for(int i = (a); i <= (b); i += (c))\n#define rep1(...) overload4(__VA_ARGS__,\
-    \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define rev_repa(i, n) for(int i=(n)-1;i>=0;i--)\n\
-    #define rev_repb(i, a, b) assert((a) > (b));for(int i=(a);i>(b);i--)\n#define\
-    \ rev_rep(...) overload3(__VA_ARGS__, rev_repb, rev_repa)(__VA_ARGS__)\n#define\
-    \ rev_rep1a(i, n) for(int i=(n);i>=1;i--)\n#define rev_rep1b(i, a, b) assert((a)\
-    \ >= (b));for(int i=(a);i>=(b);i--)\n#define rev_rep1(...) overload3(__VA_ARGS__,\
-    \ rev_rep1b, rev_rep1a)(__VA_ARGS__)\n#define for_subset(t, s) for(ll t = (s);\
-    \ t >= 0; t = (t == 0 ? -1 : (t - 1) & (s)))\ntypedef pair<int, int> P;\ntypedef\
-    \ pair<ll, ll> LP;\n#define pb push_back\n#define pf push_front\n#define ppb pop_back\n\
-    #define ppf pop_front\n#define eb emplace_back\n#define mkp make_pair\n#define\
-    \ mkt make_tuple\n#define fr first\n#define sc second\n#define all(c) std::begin(c),\
-    \ std::end(c)\n#define rall(c) std::rbegin(c), std::rend(c)\n#define lb(c, x)\
-    \ distance(std::begin(c), lower_bound(all(c), (x)))\n#define ub(c, x) distance(std::begin(c),\
-    \ upper_bound(all(c), (x)))\n#define Sort(a) sort(all(a))\n#define Rev(a) reverse(all(a))\n\
-    #define Uniq(a) sort(all(a));(a).erase(unique(all(a)),std::end(a))\n#define si(c)\
-    \ (int)(c).size()\ninline ll popcnt(ull a){ return __builtin_popcountll(a); }\n\
-    #define kth_bit(x, k) ((x>>k)&1)\n#define unless(A) if(!(A))\n#define elif else\
-    \ if\nll modulo(ll n, ll d){ return (n % d + d) % d; };\nll intpow(ll a, ll b){\
-    \ ll ans = 1; while(b){ if(b & 1) ans *= a; a *= a; b /= 2; } return ans; }\n\
-    ll intpow(ll a, ll b, ll m) {ll ans = 1; while(b){ if(b & 1) (ans *= a) %= m;\
-    \ (a *= a) %= m; b /= 2; } return ans; }\ntemplate<class T> inline bool chmax(T&\
+    links:
+    - https://atcoder.jp/contests/arc161/tasks/arc161_c
+  bundledCode: "#line 1 \"test/atcoder/arc161_c.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/arc161/tasks/arc161_c\"\
+    \n#include<bits/stdc++.h>\n#include<library/tree/dfs_order.hpp>\n\nnamespace otera\
+    \ {}\nusing namespace std;\nusing namespace otera;\n\nstruct io_setup {\n    io_setup(int\
+    \ precision = 20) {\n        ios::sync_with_stdio(false);\n        cin.tie(0);\n\
+    \        cout << fixed << setprecision(precision);\n    }\n} io_setup_ {};\n\n\
+    #define int long long\n\nusing ll = long long;\nusing ld = long double;\nusing\
+    \ ull = unsigned long long;\nusing i128 = __int128_t;\nusing u128 = __uint128_t;\n\
+    #define repa(i, n) for(int i = 0; i < (n); ++ i)\n#define repb(i, a, b) for(int\
+    \ i = (a); i < (b); ++ i)\n#define repc(i, a, b, c) for(int i = (a); i < (b);\
+    \ i += (c))\n#define overload4(a, b, c, d, e, ...) e\n#define overload3(a, b,\
+    \ c, d, ...) d\n#define rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n\
+    #define rep1a(i, n) for(int i = 0; i <= (n); ++ i)\n#define rep1b(i, a, b) for(int\
+    \ i = (a); i <= (b); ++ i)\n#define rep1c(i, a, b, c) for(int i = (a); i <= (b);\
+    \ i += (c))\n#define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)\n\
+    #define rev_repa(i, n) for(int i=(n)-1;i>=0;i--)\n#define rev_repb(i, a, b) assert((a)\
+    \ > (b));for(int i=(a);i>(b);i--)\n#define rev_rep(...) overload3(__VA_ARGS__,\
+    \ rev_repb, rev_repa)(__VA_ARGS__)\n#define rev_rep1a(i, n) for(int i=(n);i>=1;i--)\n\
+    #define rev_rep1b(i, a, b) assert((a) >= (b));for(int i=(a);i>=(b);i--)\n#define\
+    \ rev_rep1(...) overload3(__VA_ARGS__, rev_rep1b, rev_rep1a)(__VA_ARGS__)\n#define\
+    \ for_subset(t, s) for(ll t = (s); t >= 0; t = (t == 0 ? -1 : (t - 1) & (s)))\n\
+    typedef pair<int, int> P;\ntypedef pair<ll, ll> LP;\n#define pb push_back\n#define\
+    \ pf push_front\n#define ppb pop_back\n#define ppf pop_front\n#define eb emplace_back\n\
+    #define mkp make_pair\n#define mkt make_tuple\n#define fr first\n#define sc second\n\
+    #define all(c) std::begin(c), std::end(c)\n#define rall(c) std::rbegin(c), std::rend(c)\n\
+    #define lb(c, x) distance(std::begin(c), lower_bound(all(c), (x)))\n#define ub(c,\
+    \ x) distance(std::begin(c), upper_bound(all(c), (x)))\n#define Sort(a) sort(all(a))\n\
+    #define Rev(a) reverse(all(a))\n#define Uniq(a) sort(all(a));(a).erase(unique(all(a)),std::end(a))\n\
+    #define si(c) (int)(c).size()\ninline ll popcnt(ull a){ return __builtin_popcountll(a);\
+    \ }\n#define kth_bit(x, k) ((x>>k)&1)\n#define unless(A) if(!(A))\n#define elif\
+    \ else if\nll modulo(ll n, ll d){ return (n % d + d) % d; };\nll intpow(ll a,\
+    \ ll b){ ll ans = 1; while(b){ if(b & 1) ans *= a; a *= a; b /= 2; } return ans;\
+    \ }\nll intpow(ll a, ll b, ll m) {ll ans = 1; while(b){ if(b & 1) (ans *= a) %=\
+    \ m; (a *= a) %= m; b /= 2; } return ans; }\ntemplate<class T> inline bool chmax(T&\
     \ a, T b) { if (a < b) { a = b; return 1; } return 0; }\ntemplate<class T> inline\
     \ bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }\n#define\
     \ INT(...) int __VA_ARGS__;in(__VA_ARGS__)\n#define LL(...) ll __VA_ARGS__;in(__VA_ARGS__)\n\
@@ -102,39 +102,39 @@ data:
     \ != -1) ans[v] = s[par];\n            else ans[v] = 'B';\n        }\n    }\n\
     \    out(ans);\n}\n\nsigned main() {\n    int testcase = 1;\n    in(testcase);\n\
     \    while(testcase--) solve();\n    return 0;\n}\n"
-  code: "/**\n *    author:  otera\n**/\n#include<bits/stdc++.h>\n#include<library/tree/dfs_order.hpp>\n\
-    \nnamespace otera {}\nusing namespace std;\nusing namespace otera;\n\nstruct io_setup\
-    \ {\n    io_setup(int precision = 20) {\n        ios::sync_with_stdio(false);\n\
-    \        cin.tie(0);\n        cout << fixed << setprecision(precision);\n    }\n\
-    } io_setup_ {};\n\n#define int long long\n\nusing ll = long long;\nusing ld =\
-    \ long double;\nusing ull = unsigned long long;\nusing i128 = __int128_t;\nusing\
-    \ u128 = __uint128_t;\n#define repa(i, n) for(int i = 0; i < (n); ++ i)\n#define\
-    \ repb(i, a, b) for(int i = (a); i < (b); ++ i)\n#define repc(i, a, b, c) for(int\
-    \ i = (a); i < (b); i += (c))\n#define overload4(a, b, c, d, e, ...) e\n#define\
-    \ overload3(a, b, c, d, ...) d\n#define rep(...) overload4(__VA_ARGS__, repc,\
-    \ repb, repa)(__VA_ARGS__)\n#define rep1a(i, n) for(int i = 0; i <= (n); ++ i)\n\
-    #define rep1b(i, a, b) for(int i = (a); i <= (b); ++ i)\n#define rep1c(i, a, b,\
-    \ c) for(int i = (a); i <= (b); i += (c))\n#define rep1(...) overload4(__VA_ARGS__,\
-    \ rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define rev_repa(i, n) for(int i=(n)-1;i>=0;i--)\n\
-    #define rev_repb(i, a, b) assert((a) > (b));for(int i=(a);i>(b);i--)\n#define\
-    \ rev_rep(...) overload3(__VA_ARGS__, rev_repb, rev_repa)(__VA_ARGS__)\n#define\
-    \ rev_rep1a(i, n) for(int i=(n);i>=1;i--)\n#define rev_rep1b(i, a, b) assert((a)\
-    \ >= (b));for(int i=(a);i>=(b);i--)\n#define rev_rep1(...) overload3(__VA_ARGS__,\
-    \ rev_rep1b, rev_rep1a)(__VA_ARGS__)\n#define for_subset(t, s) for(ll t = (s);\
-    \ t >= 0; t = (t == 0 ? -1 : (t - 1) & (s)))\ntypedef pair<int, int> P;\ntypedef\
-    \ pair<ll, ll> LP;\n#define pb push_back\n#define pf push_front\n#define ppb pop_back\n\
-    #define ppf pop_front\n#define eb emplace_back\n#define mkp make_pair\n#define\
-    \ mkt make_tuple\n#define fr first\n#define sc second\n#define all(c) std::begin(c),\
-    \ std::end(c)\n#define rall(c) std::rbegin(c), std::rend(c)\n#define lb(c, x)\
-    \ distance(std::begin(c), lower_bound(all(c), (x)))\n#define ub(c, x) distance(std::begin(c),\
-    \ upper_bound(all(c), (x)))\n#define Sort(a) sort(all(a))\n#define Rev(a) reverse(all(a))\n\
-    #define Uniq(a) sort(all(a));(a).erase(unique(all(a)),std::end(a))\n#define si(c)\
-    \ (int)(c).size()\ninline ll popcnt(ull a){ return __builtin_popcountll(a); }\n\
-    #define kth_bit(x, k) ((x>>k)&1)\n#define unless(A) if(!(A))\n#define elif else\
-    \ if\nll modulo(ll n, ll d){ return (n % d + d) % d; };\nll intpow(ll a, ll b){\
-    \ ll ans = 1; while(b){ if(b & 1) ans *= a; a *= a; b /= 2; } return ans; }\n\
-    ll intpow(ll a, ll b, ll m) {ll ans = 1; while(b){ if(b & 1) (ans *= a) %= m;\
-    \ (a *= a) %= m; b /= 2; } return ans; }\ntemplate<class T> inline bool chmax(T&\
+  code: "#define PROBLEM \"https://atcoder.jp/contests/arc161/tasks/arc161_c\"\n#include<bits/stdc++.h>\n\
+    #include<library/tree/dfs_order.hpp>\n\nnamespace otera {}\nusing namespace std;\n\
+    using namespace otera;\n\nstruct io_setup {\n    io_setup(int precision = 20)\
+    \ {\n        ios::sync_with_stdio(false);\n        cin.tie(0);\n        cout <<\
+    \ fixed << setprecision(precision);\n    }\n} io_setup_ {};\n\n#define int long\
+    \ long\n\nusing ll = long long;\nusing ld = long double;\nusing ull = unsigned\
+    \ long long;\nusing i128 = __int128_t;\nusing u128 = __uint128_t;\n#define repa(i,\
+    \ n) for(int i = 0; i < (n); ++ i)\n#define repb(i, a, b) for(int i = (a); i <\
+    \ (b); ++ i)\n#define repc(i, a, b, c) for(int i = (a); i < (b); i += (c))\n#define\
+    \ overload4(a, b, c, d, e, ...) e\n#define overload3(a, b, c, d, ...) d\n#define\
+    \ rep(...) overload4(__VA_ARGS__, repc, repb, repa)(__VA_ARGS__)\n#define rep1a(i,\
+    \ n) for(int i = 0; i <= (n); ++ i)\n#define rep1b(i, a, b) for(int i = (a); i\
+    \ <= (b); ++ i)\n#define rep1c(i, a, b, c) for(int i = (a); i <= (b); i += (c))\n\
+    #define rep1(...) overload4(__VA_ARGS__, rep1c, rep1b, rep1a)(__VA_ARGS__)\n#define\
+    \ rev_repa(i, n) for(int i=(n)-1;i>=0;i--)\n#define rev_repb(i, a, b) assert((a)\
+    \ > (b));for(int i=(a);i>(b);i--)\n#define rev_rep(...) overload3(__VA_ARGS__,\
+    \ rev_repb, rev_repa)(__VA_ARGS__)\n#define rev_rep1a(i, n) for(int i=(n);i>=1;i--)\n\
+    #define rev_rep1b(i, a, b) assert((a) >= (b));for(int i=(a);i>=(b);i--)\n#define\
+    \ rev_rep1(...) overload3(__VA_ARGS__, rev_rep1b, rev_rep1a)(__VA_ARGS__)\n#define\
+    \ for_subset(t, s) for(ll t = (s); t >= 0; t = (t == 0 ? -1 : (t - 1) & (s)))\n\
+    typedef pair<int, int> P;\ntypedef pair<ll, ll> LP;\n#define pb push_back\n#define\
+    \ pf push_front\n#define ppb pop_back\n#define ppf pop_front\n#define eb emplace_back\n\
+    #define mkp make_pair\n#define mkt make_tuple\n#define fr first\n#define sc second\n\
+    #define all(c) std::begin(c), std::end(c)\n#define rall(c) std::rbegin(c), std::rend(c)\n\
+    #define lb(c, x) distance(std::begin(c), lower_bound(all(c), (x)))\n#define ub(c,\
+    \ x) distance(std::begin(c), upper_bound(all(c), (x)))\n#define Sort(a) sort(all(a))\n\
+    #define Rev(a) reverse(all(a))\n#define Uniq(a) sort(all(a));(a).erase(unique(all(a)),std::end(a))\n\
+    #define si(c) (int)(c).size()\ninline ll popcnt(ull a){ return __builtin_popcountll(a);\
+    \ }\n#define kth_bit(x, k) ((x>>k)&1)\n#define unless(A) if(!(A))\n#define elif\
+    \ else if\nll modulo(ll n, ll d){ return (n % d + d) % d; };\nll intpow(ll a,\
+    \ ll b){ ll ans = 1; while(b){ if(b & 1) ans *= a; a *= a; b /= 2; } return ans;\
+    \ }\nll intpow(ll a, ll b, ll m) {ll ans = 1; while(b){ if(b & 1) (ans *= a) %=\
+    \ m; (a *= a) %= m; b /= 2; } return ans; }\ntemplate<class T> inline bool chmax(T&\
     \ a, T b) { if (a < b) { a = b; return 1; } return 0; }\ntemplate<class T> inline\
     \ bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }\n#define\
     \ INT(...) int __VA_ARGS__;in(__VA_ARGS__)\n#define LL(...) ll __VA_ARGS__;in(__VA_ARGS__)\n\
@@ -195,7 +195,7 @@ data:
   isVerificationFile: false
   path: test/atcoder/arc161_c.cpp
   requiredBy: []
-  timestamp: '2023-06-18 12:48:50+09:00'
+  timestamp: '2023-12-01 08:51:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: test/atcoder/arc161_c.cpp
